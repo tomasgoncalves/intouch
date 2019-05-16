@@ -1,0 +1,55 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+index:
+    path: /
+    controller: App\Controller\HomeController::index
+
+contactForm:
+    path: /contactForm
+    controller: App\Controller\HomeController::contactForm 
+
+creation:
+    path: /creation
+    controller: App\Controller\HomeController::creation
+
+who:
+    path: /index/who
+    controller: App\Controller\HomeController::who    
+
+seo:
+    path: /seo
+    controller: App\Controller\HomeController::seo
+
+products:
+    path: /products
+    controller: App\Controller\HomeController::products
+
+host:
+    path: /host
+    controller: App\Controller\HomeController::host
+
+portfolio:
+    path: /portfolio
+    controller: App\Controller\HomeController::portfolio
+
+contacts:
+    path: /contacts
+    controller: App\Controller\HomeController::contacts
+
+accomodation:
+    path: /host/accomodation
+    controller: App\Controller\HomeController::accomodation
+
+registration:
+    path: /host/registration
+    controller: App\Controller\HomeController::registration
+
+development:
+    path: /creation/development
+    controller: App\Controller\HomeController::development
+
+translation:
+    path: /translation/{lang}/{page}
+    controller: App\Controller\HomeController::userTranslation

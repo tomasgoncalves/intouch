@@ -1,0 +1,310 @@
+{% extends "base.html.twig" %}
+{% block content %}
+
+<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+
+<!-- CART BUTTON AND LANG -->
+<ul id="cart-list" class="borderBottomHeader">
+
+<li data-toggle="modal" data-target="#myModal" id="myfkingmodal" class="hidden-xs">
+
+<div class="social-flag">
+<img src="{{asset ('img/facebook.png')}}" alt="facebook" id="facebook">
+</div>
+</a>
+</li>
+<li>
+<a href="https://twitter.com/IntouchBiz_" target="_blank">
+<div class="social-flag">
+<img src="{{asset ('img/twitter.png')}}" alt="twitter" id="twitter">
+</div>
+</a>
+</li>
+<li>
+<a href="https://plus.google.com/u/0/111192249106908035114" target="_blank">
+<div class="social-flag">
+<img src="{{asset ('img/youtube.png')}}" alt="googleplus" id="googleplus">
+</div>
+</a>
+</li>
+</ul>
+
+</div>
+
+</div>
+</div>
+
+</header><!--/header-->
+
+<!-- SLIDER -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div id="carousel-generic" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="homepage-hero-module imgSlider">
+                            <div class="video-container">
+                                <div class="filter">
+                                </div>
+                                <!--Video of banner pages -->
+                                <div style="background-color:rgba(33, 64, 154, 0.65);position:absolute; width:100%; height:100%;z-index:9">
+                                </div>    
+                                <video autoplay loop class="fillWidth">
+                                    <source alt="rendimento mensal garantido" src="{{asset('video/Mock-up.mp4')}}" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                                    <source  src="{{asset('video/Mock-up.m4v')}}" type="video/m4v" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                                    <source  src="{{asset('video/Mock-up.webm')}}" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                                    <source  src="{{asset('video/Mock-up.ogg')}}" type="video/ogg" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                                    <source  src="{{asset('video/Mock-up.ogv')}}" type="video/ogv" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                                </video>
+                                <div class="poster hidden">
+                                    <img class="imgSlider" style="height=100% !important" src="{{ asset('img/slidehome.png')}}" alt="rendimento mensal garantido">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-caption container">
+                            <h1 class="title-slider">{% trans %}presence{% endtrans %}<br>{% trans %}internet{% endtrans %} <span class="textUnderlineBigSize">{% trans %}here{% endtrans %}.</span></h1>
+                            <hr class="textUnderline ">
+                            <h2 class="desc-slider"><p></p></h2>
+                            <a class="page-scroll" href="#firstSection"><img src="{{ asset('img/setaBottom.png')}}" class="setaBottom" alt="rendimento mensal garantido"></a>
+                        </div>                       
+                    </div>                    
+                </div>
+            </div>
+        </div>
+	</div>               
+</div>
+
+<div class="container ">
+
+<section>
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<h1 class="tituloCinza">Quem Somos</h1>
+</div>
+</div>
+
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<h1 class="tituloBold">A Intouchbiz Soluções Integradas é uma associada da FPF Sistemas de Gestão.</h1>
+</div>
+</div>
+
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<p>Uma evolução natural do negócio da FPF Sistemas de Gestão, Lda que tem como objectivo implementar soluções de gestão de processos com ERP sendo desde 1999 parceiro PHC, atualmente é parceiro certificado de trés grandes marcas de software a nível nacional, Parceiro PHC Advanced, Eticadata, Zonesoft.<br><br>
+Naturalmente e devido as necessidades dos clientes que na altura tínhamos de forma a responder a essas necessidades, vimo-nos obrigados a desenvolver algumas soluções web, ao nos apercebermos das necessidades e da oferta existente no mercado, verificamos que podíamos fazer a diferença e decidimos criar a Intouchbiz Soluções Integradas, mais do que a criação de um simples site, mas criamos conceitos desde 2005, altura em que começou a surgir os primeiros desenvolvimentos executados por nós.<br><br>
+desde ai até hoje já com 11 anos de experiência, temos sido agraciados com clientes exigentes e desafiadores que nos ajudam a sermos cada vez melhores.<br><br> 
+Aqui fica um muito obrigado a todos os clientes que nos confiaram os seus projetos e que continuam a confiar.</p><br><br>
+
+<h1 class="tituloCinza">Outras páginas de informação</h1>                    </div>
+</div>
+
+
+
+<div class="row">
+
+
+<a href="http://www.intouchbiz.com/pt/quem-somos-solucoes-integradas-fpf-sistemas-de-gestao-erp-phc-eticadata-zonesoft-solucoes-web-site-clientes-desafiadores-confiar">
+
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 paddingServicos">
+<div class="servicosHome" style="background-image: url('http://www.intouchbiz.com/template/quemsomos.png');">
+<div class="servicosHomeHover">
+
+<div class="row containerServicosHome">
+
+<div class="wrapper efectLogo">
+<i class="fa fa-users icon-style"></i>                                        
+</div>
+
+
+<h4 class="servicosColorText servicosHomeTitle">Quem Somos</h4>
+
+<p class="servicosColorText  servicosHomeText">A Intouchbiz Soluções Integradas é uma associada da FPF Sistemas de Gestão.</p>
+</div>
+
+</div>
+<div class="servicosHomeHoverAmarelo">
+<div class="containerServicosHomeSeta">
+<img src="http://www.intouchbiz.com/template/setaService.png" class="setaService" alt="desenvolvimento e integração de sites">
+</div>
+</div>
+
+</div>
+</div>
+
+</a><a href="http://www.intouchbiz.com/pt/atitude-empresa-jovem-dinamica-design-programacao-satisfacao-saber-inovacao-criatividade-dedicacao-qualidade-funcionalidade">
+
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 paddingServicos">
+<div class="servicosHome" style="background-image: url('http://www.intouchbiz.com/template/atitude.png');">
+<div class="servicosHomeHover">
+
+<div class="row containerServicosHome">
+
+<div class="wrapper efectLogo">
+<i class="fa fa-thumbs-up icon-style "></i>                                        </div>
+
+
+<h4 class="servicosColorText servicosHomeTitle">Atitude</h4>
+
+<p class="servicosColorText  servicosHomeText">A Intouchbiz é uma empresa jovem e dinâmica, especializada em Design e programação.</p>
+</div>
+
+</div>
+<div class="servicosHomeHoverAmarelo">
+<div class="containerServicosHomeSeta">
+<img src="http://www.intouchbiz.com/template/setaService.png" class="setaService" alt="desenvolvimento e integração de sites">
+</div>
+</div>
+
+</div>
+</div>
+
+</a><a href="http://www.intouchbiz.com/pt/missao-colectanea-estrategias-ampliacao-dos-lucros-negocios-empresa-competencia-retorno-investimentos-ponto-a-ponto-multi-plataforma-integra-produtos-fluxo-ilimitado-multi-canal-suporte-networking-webizacao-processos-trabalho-colaborativo-e-formacao">
+
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 paddingServicos">
+<div class="servicosHome" style="background-image: url('http://www.intouchbiz.com/template/mission.png');">
+<div class="servicosHomeHover">
+
+<div class="row containerServicosHome">
+
+<div class="wrapper efectLogo">
+<i class="fa fa-flag icon-style"></i>                                        </div>
+
+
+<h4 class="servicosColorText servicosHomeTitle">Missão</h4>
+
+<p class="servicosColorText  servicosHomeText">"Uma colectânea de estratégias para ampliação dos lucros e a realização dos seus negócios via internet"</p>
+</div>
+
+</div>
+<div class="servicosHomeHoverAmarelo">
+<div class="containerServicosHomeSeta">
+<img src="http://www.intouchbiz.com/template/setaService.png" class="setaService" alt="desenvolvimento e integração de sites">
+</div>
+</div>
+
+</div>
+</div>
+
+</a><a href="http://www.intouchbiz.com/pt/filosofia-de-trabalho-investimentos-tecnologia-informacao-negocio-empresa-valores-forca-identidade-compromisso-principios-confianca-experiencia-simplicidade-transparencia-inovacao-orientacao-para-o-cliente-espirito-de-equipa-clientes-mercado">
+
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 paddingServicos">
+<div class="servicosHome" style="background-image: url('http://www.intouchbiz.com/template/filosofia.png');">
+<div class="servicosHomeHover">
+
+<div class="row containerServicosHome">
+
+<div class="wrapper efectLogo">
+<i class="fa fa-book icon-style"></i>                                        </div>
+
+
+<h4 class="servicosColorText servicosHomeTitle">Filosofia</h4>
+
+<p class="servicosColorText  servicosHomeText">Nossa filosofia de trabalho fundamenta-se em que os investimentos realizados na Tecnologia de Informação devem estar intimamente relacionados no negócio da empresa.</p>
+</div>
+
+</div>
+<div class="servicosHomeHoverAmarelo">
+<div class="containerServicosHomeSeta">
+<img src="http://www.intouchbiz.com/template/setaService.png" class="setaService" alt="desenvolvimento e integração de sites">
+</div>
+</div>
+
+</div>
+</div>
+
+</a><a href="http://www.intouchbiz.com/pt/equipa-profissionais-jovem-dinamica-qualificada-negocios-consultoria-design-programacao-conteudos-comunicacao-marketing-imagem-som-movimento-cor-alegria-comercial-desenvolvimento-seo-apoio-ao-cliente-contabilidade">
+
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 paddingServicos">
+<div class="servicosHome" style="background-image: url('http://www.intouchbiz.com/template/teamwork.png');">
+<div class="servicosHomeHover">
+
+<div class="row containerServicosHome">
+
+<div class="wrapper efectLogo">
+<i class="fa fa-users icon-style"></i>                                        </div>
+
+
+<h4 class="servicosColorText servicosHomeTitle">Equipa</h4>
+
+<p class="servicosColorText  servicosHomeText">Contamos com uma equipa de profissionais, jovem dinámica e altamente qualificada, com especialistas nas áreas de: negócios e consultoria, design, programação, contéudos, comunicação e marketing.</p>
+</div>
+
+</div>
+<div class="servicosHomeHoverAmarelo">
+<div class="containerServicosHomeSeta">
+<img src="https://www.intouchbiz.com/template/setaService.png" class="setaService" alt="desenvolvimento e integração de sites">
+</div>
+</div>
+
+</div>
+</div>
+
+</a><a href="http://www.intouchbiz.com/pt/protocolo-socios-portimonense-sporting-clube-aquisicao-de-servicos-construcao-websites-desconto-apresentacao-cartao-quotas-em-dia">
+
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 paddingServicos">
+<div class="servicosHome" style="background-image: url('https://www.intouchbiz.com/template/protocol.png');">
+<div class="servicosHomeHover">
+
+<div class="row containerServicosHome">
+
+<div class="wrapper efectLogo">
+<i class="fa fa-futbol-o icon-style"></i>                                        </div>
+
+
+<h4 class="servicosColorText servicosHomeTitle">Protocolo</h4>
+
+<p class="servicosColorText  servicosHomeText">Os sócios do portimonense na aquisição de serviços ou construção de websites na intouchbiz.</p>
+</div>
+
+</div>
+<div class="servicosHomeHoverAmarelo">
+<div class="containerServicosHomeSeta">
+<img src="http://www.intouchbiz.com/template/setaService.png" class="setaService" alt="desenvolvimento e integração de sites">
+</div>
+</div>
+
+</div>
+</div>
+
+</a><a href="http://www.intouchbiz.com/pt/parceiros-rede-foco-know-how-criar-desenvolver-implementar-solucoes-clientes-empresa-oportunidade-web-tecnologia-certificacao-parceiros-formacao-capacitacao-negocio-competitiva">
+
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 paddingServicos">
+<div class="servicosHome" style="background-image: url('http://www.intouchbiz.com/template/partner.png');">
+<div class="servicosHomeHover">
+
+<div class="row containerServicosHome">
+
+<div class="wrapper efectLogo">
+<i class="fa fa-briefcase icon-style"></i>                                        </div>
+
+
+<h4 class="servicosColorText servicosHomeTitle">Parceiros</h4>
+
+<p class="servicosColorText  servicosHomeText">A Intouchbiz tem como objectivo crescer por intermédio de uma rede parceiros, não queremos sair do nosso foco e know how, que é o de criar, desenvolver e implementar soluções a medida dos nossos clientes.</p>
+</div>
+</div>
+<div class="servicosHomeHoverAmarelo">
+<div class="containerServicosHomeSeta">
+<img src="http://www.intouchbiz.com/template/setaService.png" class="setaService" alt="desenvolvimento e integração de sites">
+</div>
+</div>
+</div>
+</div>
+</a>                    
+</div>
+<section>
+</section> 
+<section>
+</section>
+<!-- END CONTENT -->
+</div><!--/#background-->
+</div>
+</div>
+</div>
+</body>
+
+</html>
+
+{% endblock %}

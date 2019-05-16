@@ -1,0 +1,191 @@
+
+{% extends "base.html.twig" %}
+{% block content %}
+<header>
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+        <!-- CART BUTTON AND LANG -->
+        <ul id="cart-list" class="borderBottomHeader">
+            <li>
+                <a href="https://www.facebook.com/connectedintouchbiz/" target="_blank">
+                    <div class="social-flag">
+                        <img src="{{asset ('img/facebook.png')}}" alt="facebook" id="facebook">
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://twitter.com/IntouchBiz_" target="_blank">
+                    <div class="social-flag">
+                        <img src="{{asset ('img/twitter.png')}}" alt="twitter" id="twitter">
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://plus.google.com/u/0/111192249106908035114" target="_blank">
+                    <div class="social-flag">
+                        <img src="{{asset ('img/youtube.png')}}" alt="googleplus" id="googleplus">
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>  
+</div>
+</div>
+</header>
+<!--/header-->
+
+<!-- SLIDER -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div id="carousel-generic" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="homepage-hero-module imgSlider">
+                            <div class="video-container">
+                                <div class="filter">
+                                </div>
+                                <!--Video of banner pages -->
+                                <div style="background-color:rgba(33, 64, 154, 0.65);position:absolute; width:100%; height:100%;z-index:9">
+                                </div>    
+                                <video autoplay loop class="fillWidth">
+                                    <source alt="rendimento mensal garantido" src="{{asset('video/Mock-up.mp4')}}" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                                    <source  src="{{asset('video/Mock-up.m4v')}}" type="video/m4v" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                                    <source  src="{{asset('video/Mock-up.webm')}}" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                                    <source  src="{{asset('video/Mock-up.ogg')}}" type="video/ogg" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                                    <source  src="{{asset('video/Mock-up.ogv')}}" type="video/ogv" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                                </video>
+                                <div class="poster hidden">
+                                    <img class="imgSlider" style="height:100%!important" src="{{ asset('img/slidehome.png')}}" alt="rendimento mensal garantido">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-caption container">
+                            <h1 class="title-slider">{% trans %}presence{% endtrans %}<br>{% trans %}internet{% endtrans %} <span class="textUnderlineBigSize">{% trans %}here{% endtrans %}.</span></h1>
+                            <hr class="textUnderline ">
+                            <h2 class="desc-slider"><p></p></h2>
+                            <a class="page-scroll" href="#firstSection"><img src="{{ asset('img/setaBottom.png')}}" class="setaBottom" alt="rendimento mensal garantido"></a>
+                        </div>
+                        
+                    </div>                    
+                </div>
+            </div>
+        </div>
+</div>
+
+<!-- array above banner --> 
+{% for array in article  %}
+<<<<<<< HEAD
+{% set a = 'article_' ~ loop.index0 ~ '.title'  %}
+{% set b = 'article_' ~ loop.index0 ~ '.subtitle'  %}
+{% set c = 'article_' ~ loop.index0 ~ '.text'  %}
+=======
+{% set a = 'article_' ~ loop.index0 ~ '.title' %}
+{% set b = 'article_' ~ loop.index0 ~ '.subtitle' %}
+{% set c = 'article_' ~ loop.index0 ~ '.text' %}
+
+>>>>>>> 78f9fc25884f7b8b74774e71bb9277cc8a3dc16a
+<div class="container">
+
+    <section>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h1 class="tituloCinza">{{ a|trans }}</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h1 class="tituloBold">{{ b|trans }}</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h1 class="textoSimples">{{ c|trans }}</h1>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                <section>
+                    <img src="{{asset('img/integrador.png')}}" class="center-block" alt="integrador">
+                </section>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                <section>
+                    <img src="{{asset('img/webdesign.png')}}" class="center-block" alt="web design">
+                </section>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                <section>
+                    <img src="{{asset('img/allinone.png')}}" class="center-block" alt="allinone">
+                </section>
+            </div>
+
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                <section>
+                    <img src="{{asset('img/desenvolvimento.png')}}" class="center-block" alt="desenvolvimento">
+                </section>
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <section>
+                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+                </div>
+                <a href="{{array}}">
+                <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 botaoVerde hvr-sweep-to-right">
+                    <h1>{% trans %}more{% endtrans %}</h1>
+                </div>
+                </a>
+            </section>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+</div>
+</div>
+
+<section>
+</section>
+<section>
+</section>
+
+<div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+</div>
+
+</div>
+
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+ </div>
+</div>
+<section>
+</section>
+<section>
+</section>
+</section>
+</div>
+<div>
+<section class="parallaxHome parallaxHomeMicrobiz ">
+</section>
+</div>
+<div class="container" id="funcionalidades">
+<section>
+</div>
+</section>
+<section>
+</section>
+</div>
+</div>
+</body>
+
+</html>
+{% endblock %}

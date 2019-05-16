@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+
+<!-- Title -->
+<title>Intouchbiz Connected We Stand | Criação de Sites, SEO | Algarve</title>
+<!-- Meta tags -->
+<!-- <link href="https://plus.google.com/{plusPageUrl}" rel="publisher" /> -->
+<link rel="Publisher" href="https://plus.google.com/u/0/111192249106908035114" />
+<link rel="alternate" href="https://www.intouchbiz.com/pt/" hreflang="pt-pt" />            
+<!-- Facebook Meta Tags -->
+
+<meta property="og:site_name" content="Intouchbiz"/>
+<meta property="og:image" content="https://www.intouchbiz.com/admin/img/slider/slidehome.png" />
+<meta property="og:see_also" content="https://www.intouchbiz.com" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Intouchbiz" />
+<meta property="og:description" content="Web Design Algarve, criação e desenvolvimento websites, software house no Algarve. Marketing e Comunicação à sua implementação de Sites. Criação de Mobile Apps"/>
+<!-- Google + Meta Tags -->
+
+<meta itemprop="name" content="Intouchbiz" />
+<meta itemprop="description" content="Web Design Algarve, criação e desenvolvimento websites, software house no Algarve. Marketing e Comunicação à sua implementação de Sites. Criação de Mobile Apps"/>
+<meta itemprop="image" content="https://www.intouchbiz.com/template/logo.png" />
+
+<!-- Core CSS -->
+<link href="https://www.intouchbiz.com/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+<link href="https://www.intouchbiz.com/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="https://www.intouchbiz.com/css/sweet-alert.css" rel="stylesheet" type="text/css"/>
+<link href="https://www.intouchbiz.com/css/style.custom.css" rel="stylesheet" type="text/css"/>
+
+<link href='https://fonts.googleapis.com/css?family=Roboto:700' rel='stylesheet' type='text/css'/>
+
+<!-- Core Js -->
+<script type="text/javascript" src="https://www.intouchbiz.com/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="https://www.intouchbiz.com/js/bootstrap.js"></script>
+<script type="text/javascript" src="https://www.intouchbiz.com/js/jquery-easing.min.1.3.js"></script>
+<script type="text/javascript" src="https://www.intouchbiz.com/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://www.intouchbiz.com/js/search.js"></script>
+<script type="text/javascript" src="httpss://www.intouchbiz.com/js/shadowbox.js"></script>
+<script type="text/javascript" src="https://www.intouchbiz.com/js/owl.carousel.js"></script>
+<script type="text/javascript" src="https://www.intouchbiz.com/js/main.js"></script>
+<script type="text/javascript" src="https://www.intouchbiz.com/js/ajax.unmin.js"></script>
+<script type="text/javascript" src="https://www.intouchbiz.com/js/functions.js"></script>
+<script type="text/javascript" src="https://www.intouchbiz.com/js/sweet-alert.min.js"></script>
+<script type="text/javascript" src="https://www.intouchbiz.com/js/jssor.js"></script>
+<script type="text/javascript" src="https://www.intouchbiz.com/js/jssor.slider.min.js"></script>
+<script type="text/javascript" src="https://www.intouchbiz.com/js/intlTelInput.js"></script>
+<script type="text/javascript" src="https://www.intouchbiz.com/js/jquery.dropdown.js"></script>
+<script type="text/javascript" src="https://www.intouchbiz.com/js/modernizr.custom.63321.js"></script>
+<script type="text/javascript" src="https://www.intouchbiz.com/js/jquery.mb.slider.js"></script>
+
+<!-- CSS Colors Style -->
+<style>
+html, body {
+background-color: transparent;
+}
+
+.panel-body {
+background: #ffffff;
+}
+
+.navbar-nav {
+background: transparent;
+}
+
+.navbar-default .navbar-nav>li>a {
+color: #ffffff;
+background-color: transparent;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+color: #FFF100;
+background-color: transparent;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+background-color: transparent;
+}
+
+#footer {
+background: transparent;
+}
+</style>
+</head>
+
+<body>
+<script>
+$(function(){
+$('#languages').css({'width':'100%','text-align':'right'});
+//$('#languages').prepend('<li><a class="support-icon" href="http://phcfpf.dyndns.org/Extranet/programs/login.aspx?ReturnUrl=%2fExtranet%2f" target="_blank"><div class="lang-flag">Area Cliente</div></a></li>');
+$('#languages li').css({'display':'inline-block'});
+});
+</script>
+
+<!-- Ajax Spinner -->
+<div id="spinner"></div>
+<!-- Background -->
+<div class="container-fluid" id="bground">
+<!-- Header -->
+
+<header id="header">
+
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<ul id="languages">
+<li>
+<a href="#">
+<div class="lang-flag">
+
+    <a href="{{ path('translation', {lang: 'en_EN', page: page}) }}" onclick="$('.w3-overlay').show()" class="w3-bar-item w3-center w3-hover-opacity"><img style="height: 40px" styleclass="w3-image">EN</a>
+
+    <a href="{{ path('translation', {lang: 'pt_PT', page:page}) }}" onclick="$('.w3-overlay').show()" class="w3-bar-item w3-center w3-hover-opacity"><img style="height: 40px" class="w3-image">PT</a>
+      
+</div>
+</a>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="container">
+<div class="row">
+<div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+<a href="{{ path('index')}}"><img src="https://www.intouchbiz.com/template/logo.png" class="borderBottomHeader logo" alt="Intouchbiz" id="logo"></a>
+<a href="{{ path('index')}}"><img src="https://www.intouchbiz.com/template/logoBlack.png" class="borderBottomHeader logo2" alt="Intouchbiz" id="logo"></a>
+</div>
+<div class="col-lg-8 col-md-8 col-sm-7 col-xs-6">
+
+
+<!--  NAV BAR  -->
+<nav class="navbar navbar-default">
+<div class="navbar-inner borderBottomHeader">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="bs-navbar">
+<ul class="nav navbar-nav">   
+<li >
+<a href="{{ path('creation') }}"  class="colorBlueScroll">{% trans %}creation{% endtrans %}</a>
+</li>
+<li>
+<a href="{{ path('seo') }}"  class="colorBlueScroll">SEO</a>
+</li>
+<li>
+<a href="{{ path('host') }}"  class="colorBlueScroll">HOST</a>
+</li>                
+<li>
+<a href="{{ path('products') }}"  class="colorBlueScroll">{% trans %}products{% endtrans %}</a>
+</li>
+<li>
+<a href="{{ path('portfolio') }}"  class="colorBlueScroll">{% trans %}portfolio{% endtrans %}</a>
+</li>
+<li>
+<a href="{{ path('contacts') }}"  class="colorBlueScroll">{% trans %}contacts{% endtrans %}</a>
+</li>
+</ul>
+</div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
+</div>      
+
+
+{% block content %}{% endblock %}
+
+<!-- Footer -->
+
+<div class="container-fluid" id="footer">
+<div class="container">
+
+
+<div class="row">
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+
+<h3 class="foot-title">{% trans %}marks{% endtrans %}</h3>
+
+
+
+<a href="https://www.intouchbiz.com/pt">
+<img src="https://www.intouchbiz.com/template/logoBlack.png" class="logoFooter" alt="Intouchbiz" style="display: block;">
+</a>
+
+</div>
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+<a href="https://www.intouchbiz.com/pt/empresa-quem-somos-atitude-missao-filosofia-equipa-protocolo-parceiros">
+<h3 class="foot-title">{% trans %}company{% endtrans %}</h3>
+</a>
+<ul class="list-group list-footer">
+
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/quem-somos-solucoes-integradas-fpf-sistemas-de-gestao-erp-phc-eticadata-zonesoft-solucoes-web-site-clientes-desafiadores-confiar">
+
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+{% trans %}who we are{% endtrans %}                                                                              
+</div>
+</div>
+</a>
+
+</li>
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/atitude-empresa-jovem-dinamica-design-programacao-satisfacao-saber-inovacao-criatividade-dedicacao-qualidade-funcionalidade">
+
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+{% trans %}attitude{% endtrans%}                                                                                                                                                            
+</div>
+</div>
+</a>
+
+</li>
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/missao-colectanea-estrategias-ampliacao-dos-lucros-negocios-empresa-competencia-retorno-investimentos-ponto-a-ponto-multi-plataforma-integra-produtos-fluxo-ilimitado-multi-canal-suporte-networking-webizacao-processos-trabalho-colaborativo-e-formacao">
+
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+{% trans %}mission{% endtrans %}
+</div>
+</div>
+</a>
+
+</li>
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/filosofia-de-trabalho-investimentos-tecnologia-informacao-negocio-empresa-valores-forca-identidade-compromisso-principios-confianca-experiencia-simplicidade-transparencia-inovacao-orientacao-para-o-cliente-espirito-de-equipa-clientes-mercado">
+
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+{% trans %}philosophy{% endtrans %}                                                                                   </div>
+</div>
+</a>
+
+</li>
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/equipa-profissionais-jovem-dinamica-qualificada-negocios-consultoria-design-programacao-conteudos-comunicacao-marketing-imagem-som-movimento-cor-alegria-comercial-desenvolvimento-seo-apoio-ao-cliente-contabilidade">
+
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+{% trans %}team{% endtrans %}                                                                                    </div>
+</div>
+</a>
+
+</li>
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/protocolo-socios-portimonense-sporting-clube-aquisicao-de-servicos-construcao-websites-desconto-apresentacao-cartao-quotas-em-dia">
+
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+{% trans %}protocol{% endtrans %}                                                                                    </div>
+</div>
+</a>
+
+</li>
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/parceiros-rede-foco-know-how-criar-desenvolver-implementar-solucoes-clientes-empresa-oportunidade-web-tecnologia-certificacao-parceiros-formacao-capacitacao-negocio-competitiva">
+
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+{% trans %}partners{% endtrans %}                                                                                   </div>
+</div>
+</a>
+
+</li>
+                                </ul>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+<a href="https://www.intouchbiz.com/pt/produtos-fastsms-crm-gestao-documental-comercio-b2c-b2b-integrated-erp-allinone-crm">
+<h3 class="foot-title">{% trans %}products{% endtrans %}</h3>
+</a>
+<ul class="list-group list-footer">
+
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/fastsms-solucoes-mensagens-segura-confiavel-instantaneamente-envio-end-to-end-todo-mundo-browser-cms-one-to-one-many-negocios-automatizar-agendamento-alertas-sistema-poupanca-comodidade-hipersegmentacao-rapidez-personalizacao-adaptabilidade">
+
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+FastSMS                                                                                    </div>
+</div>
+</a>
+
+</li>
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/crm-customer-relationship-management-gestao-relacionamento-com-cliente-ferramentas-contato-corporativa-inter-ralacionamento-empresa-necessidades-planeamento-marketing-qualidade-ecrm-portal-ecommerce-relacionamento-comunicacao-negocio">
+
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+CRM                                                                                    </div>
+</div>
+</a>
+
+</li>
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/gestao-documental-documento-electronico-texto-imagem-video-gestao-utilizadores-empresariais-empresa-desepenho-interface-web-multi-formato-armezenamento-word-excel-powerpoint-pdf-classificacao-versionamento-pesquisa-base-dados-tempo-fluxos">
+
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+{% trans %}document management{% endtrans %}                                                                                    </div>
+</div>
+</a>
+
+</li>
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/comercio-electronico-b2c-e-b2b-transaccoes-bens-servicos-empresa-organizacao-crm-erp-on-line-meios-pagamento-gateways-comunicacao-e-commerce-business-to-consumer-business-comercial-electronicos-solucoes-multibanco-visa-mastercard-paypal">
+
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+{% trans %}trade{% endtrans %} B2C & B2B                                                                                    </div>
+</div>
+</a>
+
+</li>
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/integrated-automatizacao-rentabilizacao-recursos-optimizacao-gestao-empresa-eficiencia-integracao-clientes-mercado-destinatarios-sincronizar-erp-plataforma-web-seguranca-licenciamento-base-dados-ftp-smtp-agendamentos-loja-on-line">
+
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+Integrated-ERP                                                                                    </div>
+</div>
+</a>
+
+</li>
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/allinone-plataforma-contactos-marketing-digital-campanha-sms-newsletters-dispositivo-movel-envio-base-de-dados-multi-canal-grupos-campanhas-agendamento-simultaneo-relatorios-white-label-marketing-mobile-corporate-agencias">
+
+<div class="row">
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+Allinone - CRM                                                                                    </div>
+</div>
+</a>
+
+</li>
+                                </ul>
+</div>
+
+
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+<a href="https://www.intouchbiz.com/pt/servicos-design-e-imagem-web-design-criacao-conteudos-desenvolvimento-comercio-on-line-seo-optimizacao-web-marketing-registo-de-dominios-alojamento">
+<h3 class="foot-title">{% trans %}services{% endtrans %}</h3>
+</a>
+<ul class="list-group list-footer">
+
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/design-e-imagem-a-medida-solucoes-web-resultados-mais-valias-organizacoes-desenvolver-ideias-grafico-original-marcar-a-diferenca-boa-impressao-ilustracao-marcas-conceitos-valor-clientes">
+Design {% trans %}img{% endtrans %}
+</a>
+</li>
+
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/web-design-criatividade-originalidade-presenca-on-line-empresa-sites-personalizados-imagem-primeiro-contacto-visual">
+Web Design
+</a>
+</li>
+
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/criacao-conteudos-tecnologia-informacao-ti-desenvolvimento-sistemas-web-equipa-qualificada-negocios-consultoria-design-programacao-conteudos-comunicacao-marketing-servicos-acessibilidade-usabilidade-navegabilidade-criatividade">
+{% trans %}creation{% endtrans %} - {% trans %}contents{% endtrans %}
+</a>
+</li>
+
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/desenvolvimento-programadores-criatividade-design-mercado-erp-integrado-integrado-software-personalizacao-funcionalidades-extras-integracao-de-sistemas-aproveitamento-tecnologico-vantagens-competitivas-crescimento-negocio-qualidade">
+{% trans %}development{% endtrans %}
+</a>
+</li>
+
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/comercio-online-area-negocio-empresas-microempresas-businessbiz-mercado-lojas-online-comerciantes-carrinho-compras-catalogo-produtos-imagens-destaque-promocoes-taxas-relatorios-analytics-publicidade-quantidades-backups-pagamento-entrega">
+{% trans %}trade{% endtrans %} On-line
+</a>
+</li>
+
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/optimizacao-seo-resultados-motores-de-busca-search-engine-optimization-sites-mob-buscas-ferramentas-melhor-posicionamento-directorios-google-maps-analytics-ad-words-facebook-redes-sociais-key-words-pesquisa-metatags-links">
+SEO - {% trans %}optimization{% endtrans %}
+</a>
+</li>
+
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/marketing-web-optimizacao-motores-de-busca-seo-search-engine-optimization-site-visibilidade-publicidade-links-com-keywords-titulo-pagina-meta-keywords-description-palavras-chave-analytics-blogs-corporativos-redes-sociais">
+web marketing
+</a>
+</li>
+
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/dominios-registo-servico-alojamento-fccn-fundacao-para-a-computacao-cientifica-nacional-em-24h-manutencao-renovacao-imagem-direitos-de-assistencia-necessidades-solucao">
+{% trans %}domain registration{% endtrans %}
+</a>
+</li>
+
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/alojamento-servicos-criacao-de-sites-tecnologia-software-actualizacoes-automaticas-qualidade-profissional-alojadas-servidor-manutencao-competencia-tecnica-suporte-controlo-spam-antivirus">
+{% trans %}accommodation{% endtrans %}
+</a>
+</li>
+
+
+</ul>
+</div>
+</div>
+
+<div class="row">
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+
+</div>
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+<a href="https://www.intouchbiz.com/pt/gamas-microbiz-firstbiz-businessbiz-posnet-showroom-lodging">
+<h3 class="foot-title">{% trans %}ranges{% endtrans %}</h3>
+</a>
+<ul class="list-group list-footer">
+
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/microbiz-criacao-site-ideia-de-negocio-mundo-virtual-plataforma-programacao-single-page-design-responsive-animacao-varios-idiomas-seo-optimizacao-nos-ligamos-captacao-leads-cms-home-made-monitorizacao-ao-servidor">
+
+<div class="row">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+<svg style="background-color:#ffffff00" xmlns="http://www.w3.org/2000/svg" width="175" height="50">
+<g class="svgClass" stroke-width="1" fill="none">
+<path class="st0" d="M44.3,1v28.2H16.1V1H44.3 M45.3,0H15.1v30.2h30.2V0L45.3,0z"/>
+<path class="st0" d="M29.2,16.1v28.2H1V16.1H29.2 M30.2,15.1H0v30.2h30.2V15.1L30.2,15.1z"/>
+</g>
+</svg>                                                                                    </div>
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 footerGamasTitle">
+MICROBIZ                                                                                    </div>
+</div>
+</a>
+
+</li>
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/firstbiz-ideias-espaco-criacao-site-ideia-de-negocio-plataforma-programacao-single-page-design-responsive-animacao-varios-idiomas-seo-optimizacao-nos-ligamos-captacao-leads-cms-home-made-monitorizacao-ao-servidor">
+
+<div class="row">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+<svg style="background-color:#ffffff00" xmlns="http://www.w3.org/2000/svg" width="175" height="50">
+<g class="svgClass" stroke-width="1" fill="none">
+<path class="st0" d="M14.8,2l13,22.6H1.7L14.8,2 M14.8,0L0,25.6h29.5L14.8,0L14.8,0z"/>
+<path class="st0" d="M29.5,2l13,22.6H16.5L29.5,2 M29.5,0L14.8,25.6h29.5L29.5,0L29.5,0z"/>
+<path class="st0" d="M14.8,2l13,22.6H1.7L14.8,2 M14.8,0L0,25.6h29.5L14.8,0L14.8,0z"/>
+<path class="st0" d="M29.5,2l13,22.6H16.5L29.5,2 M29.5,0L14.8,25.6h29.5L29.5,0L29.5,0z"/>
+</g>
+</svg>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 footerGamasTitle">
+FIRSTBIZ                                                                                    </div>
+</div>
+</a>
+
+</li>
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/businessbiz-negocio-customizada-criacao-de-site-ideia-plataforma-programacao-single-page-design-responsive-animacao-varios-idiomas-puv-design-a-medida-seo-optimizacao-nos-ligamos-pageland-leads-cms-home-made-monitorizacao-ao-servidor">
+
+<div class="row">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+<svg style="background-color:#ffffff00" xmlns="http://www.w3.org/2000/svg" width="175" height="50">
+<g class="svgClass" stroke-width="1" fill="none">
+<g>
+<path class="st0" d="M31,14.7c7,0,12.8,5.7,12.8,12.8c0,7-5.7,12.8-12.8,12.8c-7,0-12.7-5.7-12.7-12.8C18.3,20.5,24,14.7,31,14.7
+M31,13.7c-7.6,0-13.7,6.2-13.7,13.8c0,7.6,6.2,13.8,13.7,13.8c7.6,0,13.8-6.2,13.8-13.8C44.8,19.9,38.6,13.7,31,13.7L31,13.7z"/>
+<path class="st0" d="M13.8,14.7c7,0,12.7,5.7,12.7,12.8c0,7-5.7,12.8-12.7,12.8C6.7,40.2,1,34.5,1,27.5C1,20.5,6.7,14.7,13.8,14.7
+M13.8,13.7C6.2,13.7,0,19.9,0,27.5c0,7.6,6.2,13.8,13.8,13.8c7.6,0,13.7-6.2,13.7-13.8C27.5,19.9,21.3,13.7,13.8,13.7L13.8,13.7z
+"/>
+</g>
+<path class="st0" d="M22.4,1c7,0,12.7,5.7,12.7,12.7c0,7-5.7,12.8-12.7,12.8c-7,0-12.8-5.7-12.8-12.8C9.6,6.7,15.3,1,22.4,1
+M22.4,0C14.8,0,8.6,6.2,8.6,13.7c0,7.6,6.2,13.8,13.8,13.8c7.6,0,13.7-6.2,13.7-13.8C36.1,6.2,30,0,22.4,0L22.4,0z"/>
+</g>
+</svg>                                                                                    </div>
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 footerGamasTitle">
+BUSINESSBIZ                                                                                    </div>
+</div>
+</a>
+
+</li>
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/posnet-single-page-design-responsive-animacao-varios-idiomas-seo-optimizacao-nos-ligamos-captacao-leads-cms-home-made-monitorizacao-ao-servidor-produtos-analises-marketing-promocoes-integrated-metodos-pagamento-backffice-cliente">
+
+<div class="row">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+<svg style="background-color:#ffffff00" xmlns="http://www.w3.org/2000/svg" width="175" height="50">
+<g class="svgClass" stroke-width="1" fill="none">
+<path class="st0" d="M11.8,13.4l10.8,6.2v12.5l-10.8,6.2L1,32.1V19.6L11.8,13.4 M11.8,12.2L0,19v13.6l11.8,6.8l11.8-6.8V19
+L11.8,12.2L11.8,12.2z"/>
+<path class="st0" d="M11.8,1.2l10.8,6.2v12.5l-10.8,6.2L1,19.8V7.4L11.8,1.2 M11.8,0L0,6.8v13.6l11.8,6.8l11.8-6.8V6.8L11.8,0
+L11.8,0z"/>
+</g>
+</svg>                                                                                    </div>
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 footerGamasTitle">
+POS NET                                                                                    </div>
+</div>
+</a>
+
+</li>
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/showroom-catalogo-informacoes-single-page-design-responsive-animacao-varios-idiomas-seo-optimizacao-nos-ligamos-captacao-leads-cms-home-made-monitorizacao-ao-servidor-produtos-analises-marketing-promocoes-integrated-backffice-cliente">
+
+<div class="row">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+<svg style="background-color:#ffffff00" xmlns="http://www.w3.org/2000/svg" width="175" height="70">
+<g class="svgClass" stroke-width="1" fill="none">
+<circle class="st0" cx="24.1" cy="24.1" r="23.6"/>
+<circle class="st0" cx="24.1" cy="24.1" r="23.6"/>
+<circle class="st0" cx="47.6" cy="24.1" r="23.6"/>
+</g>
+</svg>                                                                                    </div>
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 footerGamasTitle">
+SHOWROOM                                                                                    </div>
+</div>
+</a>
+
+</li>
+
+<li class="list-group-item">
+
+<a href="https://www.intouchbiz.com/pt/lodging-alojamento-integracao-booking-viajantes-dormir-casa-quarto-tempo-real-reservas-online-gestao-canais-propriedade-single-page-design-responsive-animacao-varios-idiomas-seo-optimizacao-nos-ligamos-leads-cms-home-made-monitorizacao-ao-servidor">
+
+<div class="row">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+<svg style="background-color:#ffffff00" xmlns="http://www.w3.org/2000/svg" width="175" height="70">
+<g class="svgClass" stroke-width="1" fill="none">
+<polygon class="st0" points="25.4,0.6 50.1,18.6 40.7,47.7 10.1,47.7 0.6,18.6    "/>
+<polygon class="st0" points="49.8,0.6 74.6,18.6 65.1,47.7 34.5,47.7 25,18.6     "/>
+</g>
+</svg>                                                                                    </div>
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 footerGamasTitle">
+LODGING                                                                                    </div>
+</div>
+</a>
+
+</li>
+                                </ul>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+<a href="https://integrated-erp.com/" target="_blank">
+<h3 class="foot-title">Integrated-ERP</h3>
+</a>
+<ul class="list-group list-footer">
+<li class="list-group-item"><a href="https://www.integrated-erp.com/" target="_blank"><!-- Plataformas --> {% trans %}functionalities{% endtrans %}</a></li>
+<li class="list-group-item"><a href="https://www.integrated-erp.com/pt/solucao-caracteristicas" target="_blank"><!-- Software -->{% trans %}features{% endtrans %}</a></li>
+<li class="list-group-item"><a href="https://www.integrated-erp.com/pt/solucao-erps" target="_blank"><!-- faq's --> ERPs</a></li>
+<li class="list-group-item"><a href="https://www.integrated-erp.com/pt/portfolio" target="_blank"><!-- Portfólio -->{% trans %}portfolio{% endtrans %}</a></li>
+</ul>s
+</div>
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+<a href="http://enjoybesmart.com/" target="_blank">
+<h3 class="foot-title">EnjoybeSmart CRM</h3>
+</a>
+<ul class="list-group list-footer">
+<li class="list-group-item"><a href="https://enjoybesmart.com/" target="_blank"><!-- funcionalidades --> {% trans %}functionalities{% endtrans %}</a></li>
+<li class="list-group-item"><a href="https://enjoybesmart.com/vantagens/" target="_blank"><!-- vantagens --> {% trans %}vantages{% endtrans %}</a></li>
+<li class="list-group-item"><a href="https://enjoybesmart.com/solucoes/" target="_blank"><!-- soluções --> {% trans %}solutions{% endtrans %}</a></li>
+<li class="list-group-item"><a href="https://enjoybesmart.com/contacto/" target="_blank"><!-- faq -->{% trans %}contacts{% endtrans %}</a></li>
+<li class="list-group-item"><a href="https://enjoybesmart.com/pricing/" target="_blank"><!-- preçário --> {% trans %}precarious{% endtrans %}</a></li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="container-fluid" id="botfooter">
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <ul class="list-group">
+                        <li class="list-fotter list-foot-info"><h3><strong>{% trans %}information{% endtrans %}</strong></h3></li>
+                        <li class="list-fotter list-foot-info"><a href="" data-toggle="modal" data-target="#entregas">{% trans %}deliveries and returns{% endtrans %}</a></li>
+                        <li class="list-fotter list-foot-info"><a href="" data-toggle="modal" data-target="#termos">{% trans %}terms and conditions{% endtrans %}</a></li>
+                        <li class="list-fotter list-foot-info"><a href="" data-toggle="modal" data-target="#pay-safe">{% trans %}safe payment{% endtrans %}</a></li>
+                        <li class="list-fotter list-foot-info"><a href="https://www.vimaguese.pt/pt/sitemap_user">Mapa Site</a></li>
+                    </ul>
+                </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <ul class="list-group">
+                    <li class="list-fotter list-foot-info"><h3><strong>Social Media</strong></h3></li>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                            <ul id="cart-list ">
+                                <li>
+                                    <a href="https://www.facebook.com/connectedintouchbiz/" target="_blank">
+                                    <div class="social-flag">
+                                        <img src="{{asset ('img/facebook.png')}}" alt="facebook" id="facebook">
+                                    </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/IntouchBiz_" target="_blank">
+                                    <div class="social-flag">
+                                        <img src="{{asset ('img/twitter.png')}}" alt="twitter" id="twitter">
+                                    </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://plus.google.com/u/0/111192249106908035114" target="_blank">
+                                    <div class="social-flag">
+                                        <img src="{{asset ('img/youtube.png')}}" alt="googleplus" id="googleplus">
+                                    </div>
+                                    </a>
+                                </li>
+                                </ul>
+                            </ul>
+                        </div>
+                <ul class="list-group">
+                    <li class="list-fotter list-foot-info"><h3><strong>{% trans %}contacts{% endtrans %}</strong></h3></li>
+                    <input type="text" name="nome" id="nome" placeholder="Nome">
+                    <input type="text" name="email"  id="email" placeholder="Email"><br>    
+                </ul>
+                <textarea type="text" name="mensagem" id="mensagem" placeholder="Mensagem" maxlength="755"></textarea>
+            </div>
+        </div>
+    </footer>   
+</div>
+
+<!--Footer -->
+<div class="container-fluid" id="botfooter">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <p class="text-center" id="footer-text">
+                <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;" target="_top" class="simpleLink">&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;</a> | +351 282 353 994 | Rua Município S. Domingos Lote 2  | 8400 - 415 Lagoa | Algarve | Portugal  <br><br> Copyright &copy; 2019 <a href="https://www.intouchbiz.com/" class="simpleLink" target="_blank">IntouchBiz</a>. {% trans %}rights{% endtrans %}</p>
+        </div>
+    </div>
+</div>
+
+<!-- Google Analytics -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-5718893-3', 'auto');
+    ga('send', 'pageview');
+</script>
+
+<script>
+var $btns = $('.btn').on('change', function(e){
+    var text = $(e.target).val();
+    /*console.log('Entrou no evento');*/
+    if (text == 'All') {
+        /*console.log('Mostrando tudo');*/
+        $('#parent > div').fadeIn(450);
+    } else {
+        /*console.log('Entrou no filtro!');*/
+        var $el = $('.' + text).fadeIn(450);
+        console.log($el);
+        $('#parent > div').not($el).hide();
+    }
+})
+</script> 
+<script>
+        $(document).ready(function(){
+        $("#contactform").on("#submit", function(event) {
+            event.preventDefault();
+            console.log($(this).serialize());
+            $.ajax({
+              url:'{{ (path('contactForm')) }}',
+              type:"POST",
+              data: $(this).serialize(),
+              success: function(data)
+              {
+                if(data.status==1){
+                console.log("Campos preenchidos com sucesso")
+                }
+                if(data.status==0){
+                console.log("Preencha todos os campos")  
+                }
+              },
+              error: function(data)
+              {
+                console.log(data)
+              }
+            });
+        });
+    });
+    </script> 
+<script>
+//VIDEO SLIDER DA HOME PAGE
+$(document).ready(function () {
+
+    scaleVideoContainer();
+
+    initBannerVideoSize('.video-container .poster img');
+    initBannerVideoSize('.video-container .filter');
+    initBannerVideoSize('.video-container video');
+
+    $(window).on('resize', function () {
+        scaleVideoContainer();
+        scaleBannerVideoSize('.video-container .poster img');
+        scaleBannerVideoSize('.video-container .filter');
+        scaleBannerVideoSize('.video-container video');
+    });
+});
+
+function scaleVideoContainer() {
+    var height = $(window).height() + 5;
+    var unitHeight = parseInt(height) + 'px';
+    $('.homepage-hero-module').css('height', unitHeight);
+}
+
+function initBannerVideoSize(element) {
+    $(element).each(function () {
+        $(this).data('height', $(this).height());
+        $(this).data('width', $(this).width());
+    });
+    scaleBannerVideoSize(element);
+}
+
+function scaleBannerVideoSize(element) {
+
+    var windowWidth = $(window).width(),
+    windowHeight = $(window).height() + 5,
+    videoWidth,
+    videoHeight;
+
+    $(element).each(function () {
+        var videoAspectRatio = $(this).data('height') / $(this).data('width');
+
+        $(this).width(windowWidth);
+
+        if (windowWidth < 1000) {
+        videoHeight = windowHeight;
+        videoWidth = videoHeight / videoAspectRatio;
+        $(this).css({'margin-top': 0, 'margin-left': -(videoWidth - windowWidth) / 2 + 'px'});
+
+        $(this).width(videoWidth).height(videoHeight);
+    }   
+
+        $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
+    });
+}
+</script>
+
+<script>
+/* MOVE BACKGROUND HOME */
+$(function () {
+
+    var parallax = document.querySelectorAll(".parallaxHome");
+
+
+    $(window).scroll(function () {
+        [].slice.call(parallax).forEach(function (el, i) {
+
+        $(document).scroll(function () {
+
+            var scroll_bottom = 0;
+            scroll_bottom = $(window).scrollTop() + $(window).height();
+
+            $(".parallaxHome").each(function () {
+                var obj = $(this);
+                var top = obj.offset().top;
+                if (scroll_bottom >= top) {
+
+                var width = $(window).width();
+                var heightDiv = ((width * 500) / 2114);
+                var alturaJanela = $(window).height();
+                var distanciaWindow = (alturaJanela + heightDiv);
+                var percentagemScroll = (((window.pageYOffset + alturaJanela) - top) * 100) / distanciaWindow;
+                var folgaBackground = ((heightDiv * 2301) / 500) - heightDiv;
+                var windowYOffset = window.pageYOffset,
+                elBackgrounPos = "50% " + (-(percentagemScroll * folgaBackground) / 100) + "px";
+                el.style.backgroundPosition = elBackgrounPos;
+            }
+        });
+    });
+});
+</script>
+
+<script>
+
+    // Hide broken picture icon
+    $(function () {
+        $("img").error(function () {
+            $(this).attr('src', 'http://www.intouchbiz.com/template/noimage.png');
+        });
+    });
+
+    // Hide broken picture icon only for productFilter.php hack
+    function imgError(image) {
+        image.onerror = "";
+        image.src = 'http://www.intouchbiz.com/template/noimage.png';
+        return true;
+    }
+
+    //PARTILHAR PRODUTO NO FACEBOOK
+    function streamPublish(name, description, hrefTitle, hrefLink, userPrompt, image) {
+        FB.ui({method: 'feed',
+            message: userPrompt,
+            picture: image,
+            link: hrefLink,
+            caption: hrefTitle
+        });
+    }
+
+    function publishStream(idproduto) {
+        streamPublish("Stream Publish", 'descrição', 'titulo href', 'http://www.intouchbiz.com/facebookPublish.php?idproduto=' + idproduto, "title");
+    }
+
+    function showHeight(element, height) {
+        $(".imgSlider").css('height', height);
+    }
+
+    function resizeimage() {
+
+        var height = $(window).height();
+        var width = $(window).width();
+
+        var menuScroll = $(".menu-scroll").height();
+
+        //CALCULA A ALTURA DO SLIDER
+
+        if (width >= height) {
+
+            $(".imgSlider").css('width', width)
+            height = height + 5;
+            $(".imgSlider").css('height', height);
+
+        } else if (width < height) {
+
+            $(".imgSlider").css('width', 'auto');
+            height = height + 5;
+            $(".imgSlider").css('height', height);
+
+        } else {
+
+            $('html').text('oláaaaaaaaaaaaaaaaa');
+            $(".imgSlider").css('width', 'auto');
+            height = height + 5;
+            $(".imgSlider").css('height', height);
+        }
+
+        //CALCULA O TAMANHO DO TITULO DO SLIDER E CENTRA
+
+        var size = (height * width) / 150000;
+        var min_size = 4;
+        var max_size = 6.7;
+
+        size = size < min_size ? min_size : size;
+
+        size = size > max_size ? max_size : size;
+
+
+        var alturaDiv = $(".carousel-caption").height();
+        var alturaP = $(".title-slider").height();
+        var alturaSeta = $(".setaBottom").height();
+
+        $(".title-slider").css('margin-top', ((alturaDiv - alturaSeta) * .5) - (alturaP * 0.5));
+
+        $(".title-slider").css('font-size', size + 'em');
+
+        //CALCULA A ALTURA DOS SERVIÇOS NA HOME
+
+        if (width <= 767) {
+
+            //$(".servicosHome").css('height', height);
+            $(".servicosHomeHover").css('background', 'transparent');
+            $(".servicosColorText").css('color', 'rgb(255,255,255)');
+        }
+
+        //CALCULA A ALTURA DA DIV .parallaxHome
+
+        $(".parallaxHome").css('height', (width * 500) / 2114);
+
+
+        // scroll para baixo do banner
+
+        $('.page-scroll').click(function () {
+
+            $('html, body').stop().animate({
+                scrollTop: $('#firstSection').offset().top - menuScroll
+                }, 400);
+                return false;
+            });
+
+            // scroll para baixo do funcionalidades
+
+            $('.funcionalidades').click(function () {
+
+                $('html, body').stop().animate({
+                    scrollTop: $('#funcionalidades').offset().top - menuScroll
+                    }, 400);
+                return false;
+            });
+
+            // scroll para baixo do comparativo
+
+            $('.comparativo').click(function () {
+
+                $('html, body').stop().animate({
+                scrollTop: $('#comparativo').offset().top - menuScroll
+                }, 400);
+            return false;
+        });
+
+    }
+
+    //BACKGROUND DO MENU
+    function backgroundMenu() {
+
+        var nummenu = 1;
+
+        if ($(window).scrollTop() > nummenu) {
+
+            $('#header').addClass('menu-scroll');
+            $('#logo').css('display', 'none');
+            $('.logo2').css('display', 'block');
+            $('.logoMenu').css('display', 'none');
+            $('.logoMenuScroll').css('display', 'block');
+            $("#facebook").attr("src", "http://www.intouchbiz.com/admin/template/socialmedia/rectangular/facebookBlack.png");
+            $("#twitter").attr("src", "http://www.intouchbiz.com/admin/template/socialmedia/rectangular/twitterBlack.png");
+            $("#googleplus").attr("src", "http://www.intouchbiz.com/admin/template/socialmedia/rectangular/googleplusBlack.png");
+            $("#Portugal").attr("src", "http://www.intouchbiz.com/admin/template/flags/PortugalBlack.png");
+            $("#Spain").attr("src", "http://www.intouchbiz.com/admin/template/flags/SpainBlack.png");
+            $("#United-Kingdom").attr("src", "http://www.intouchbiz.com/admin/template/flags/United-KingdomBlack.png");
+
+        } else {
+
+            $('#header').removeClass('menu-scroll');
+            $('#logo').css('display', 'block');
+            $('.logo2').css('display', 'none');
+            $('.logoMenu').css('display', 'block');
+            $('.logoMenuScroll').css('display', 'none');
+            $("#facebook").attr("src", "http://www.intouchbiz.com/admin/template/socialmedia/rectangular/facebook.png");
+            $("#twitter").attr("src", "http://www.intouchbiz.com/admin/template/socialmedia/rectangular/twitter.png");
+            $("#googleplus").attr("src", "http://www.intouchbiz.com/admin/template/socialmedia/rectangular/googleplus.png");
+            $("#Portugal").attr("src", "http://www.intouchbiz.com/admin/template/flags/Portugal.png");
+            $("#Spain").attr("src", "http://www.intouchbiz.com/admin/template/flags/Spain.png");
+            $("#United-Kingdom").attr("src", "http://www.intouchbiz.com/admin/template/flags/United-Kingdom.png");
+        }
+    };
+
+    //efeito do hover do serviços
+    $('.servicosHomeHover').mouseenter( function () {
+        var obj = $(this);
+        var parent = obj.closest('.servicosHome');
+        parent.find('.servicosHomeHoverAmarelo').addClass('servicosHomeHoverAmarelo-hover');
+        parent.find('.servicosColorText').addClass('servicosColorText-hover', 200);
+        parent.find('.setaService').addClass('setaService-hover');
+        parent.find('.svgClass').css('stroke', '#fff');
+        var $svg = obj.find('svg').drawsvg();
+        $svg.drawsvg('animate');
+    });
+
+    $('.servicosHomeHover').mouseleave( function () {
+        var obj = $(this);
+        var parent = obj.closest('.servicosHome');
+        parent.find('.svgClass').css('stroke', '#A7A9AC');
+        parent.find('.servicosHomeHoverAmarelo').removeClass('servicosHomeHoverAmarelo-hover');
+        parent.find('.servicosColorText').removeClass('servicosColorText-hover', 200);
+        parent.find('.setaService').removeClass('setaService-hover');
+    });
+
+    //efeito do hover dos botoes verdes
+    $('.botaoVerde').mouseenter(function () {
+        $('.botaoVerde').addClass('botaoverdeHover');
+    });
+
+    $('.botaoVerde').mouseleave(function () {
+        $('.botaoVerde').removeClass('botaoverdeHover');
+    });
+
+    //click no telefone do callme
+    $(document).on('click', '#floating-contact .maisVerde', function () {
+        $('#floating-contact .telefoneDisplayNone').css('display', 'block');
+        $('#floating-contact .intl-tel-input').css('display', 'block');
+        $('#floating-contact .telfProposta').css('display', 'none');
+        $('#floating-contact .selected-flag')[0].click();
+    });
+
+    $(document).on('click', '#floating-contact .imputMaisVerde',function () {
+        $('#floating-contact .telefoneDisplayNone').css('display', 'block');
+        $('#floating-contact .intl-tel-input').css('display', 'block');
+        $('#floating-contact .telfProposta').css('display', 'none');
+        $('#floating-contact .telefone')[0].focus();
+    });
+
+    $(document).on('focus', '#floating-contact .imputMaisVerde',function () {
+        $('#floating-contact .telefoneDisplayNone').css('display', 'block');
+        $('#floating-contact .intl-tel-input').css('display', 'block');
+        $('#floating-contact .telfProposta').css('display', 'none');
+        $('#floating-contact .telefone')[0].focus();
+    });
+
+    //click no telefone da pag. proposta
+    $(document).on('click', '#form-proposta .maisVerde', function () {
+        $('#form-proposta .telefoneDisplayNone').css('display', 'block');
+        $('#form-proposta .intl-tel-input').css('display', 'block');
+        $('#form-proposta .telfProposta').css('display', 'none');
+        $('#form-proposta .selected-flag')[0].click();
+    });
+
+    $(document).on('click', '#form-proposta .imputMaisVerde', function () {
+        $('#form-proposta .telefoneDisplayNone').css('display', 'block');
+        $('#form-proposta .intl-tel-input').css('display', 'block');
+        $('#form-proposta .telfProposta').css('display', 'none');
+        $('#form-proposta .telefone')[0].focus();
+    });
+
+    $(document).on('focus', '#form-proposta .imputMaisVerde', function () {
+        $('#form-proposta .telefoneDisplayNone').css('display', 'block');
+        $('#form-proposta .intl-tel-input').css('display', 'block');
+        $('#form-proposta .telfProposta').css('display', 'none');
+        $('#form-proposta .telefone')[0].focus();
+    });
+
+    /*$(document).ready(function(){
+        $("#contactform").on("#submit", function(event) {
+            event.preventDefault();
+            console.log($(this).serialize());
+            $.ajax({
+              url:'{{ (path('contactForm')) }}',
+              type:"POST",
+              data: $(this).serialize(),
+              success: function(data)
+              {
+                if(data.status==1){
+                console.log("Campos preenchidos com sucesso")
+                }
+                if(data.status==0){
+                console.log("Preencha todos os campos")  
+                }
+              },
+              error: function(data)
+              {
+                console.log(data)
+              }
+            });
+        });
+    });*/
+
+    //margin-top + servicos
+    var height = $(window).height();
+    function resizeContent() {
+        var modal = $("#modal-bodyMaisServicos .container").height();
+        var heightContent = ((modal) + 40);
+
+        if (heightContent < height) {
+            var heightModal = ((height - heightContent) * 0.5);
+
+            //var heightModal = '100px';
+            $("#modal-bodyMaisServicos .container").css({'margin-top': heightModal});
+
+        } else {
+
+            $("#modal-bodyMaisServicos .container").css({'margin-top': 0});
+
+            $("body, html").css('overflow', 'hidden');
+
+            $('.closeMaisServicos').click(function () {
+                $("body, html").css('overflow', 'auto');
+                });
+
+                $(document).on('keyup', function (evt) {
+                    if (evt.keyCode == 27) {
+                        $("body, html").css('overflow', 'auto');
+                    }
+            });
+        }
+        $("body").css({'overflow': 'hidden'});
+    };
+
+    //comparativo - botoes do responsive
+    $(document).on('click', '.btStarter', function () {
+        $('.starter').addClass('visible-xs', 200);
+        $('.starter').removeClass('hidden-xs', 200);
+        $('.express').addClass('hidden-xs', 200);
+        $('.express').removeClass('visible-xs', 200);
+        $('.profissional').addClass('hidden-xs', 200);
+        $('.profissional').removeClass('visible-xs', 200);
+        $('.executive').addClass('hidden-xs', 200);
+        $('.executive').removeClass('visible-xs', 200);
+        $('.btStarter').addClass('comparativoSelect', 200);
+        $('.btExpress').removeClass('comparativoSelect', 200);
+        $('.btProfissional').removeClass('comparativoSelect', 200);
+        $('.btExecutive').removeClass('comparativoSelect', 200);
+    });
+
+    $(document).on('click', '.btExpress', function () {
+        $('.starter').addClass('hidden-xs', 200);
+        $('.starter').removeClass('visible-xs', 200);
+        $('.express').addClass('visible-xs', 200);
+        $('.express').removeClass('hidden-xs', 200);
+        $('.profissional').addClass('hidden-xs', 200);
+        $('.profissional').removeClass('visible-xs', 200);
+        $('.executive').addClass('hidden-xs', 200);
+        $('.executive').removeClass('visible-xs', 200);
+        $('.btExpress').addClass('comparativoSelect', 200);
+        $('.btStarter').removeClass('comparativoSelect', 200);
+        $('.btProfissional').removeClass('comparativoSelect', 200);
+        $('.btExecutive').removeClass('comparativoSelect', 200);
+    });
+
+    $(document).on('click', '.btProfissional', function () {
+        $('.starter').addClass('hidden-xs', 200);
+        $('.starter').removeClass('visible-xs', 200);
+        $('.express').addClass('hidden-xs', 200);
+        $('.express').removeClass('visible-xs', 200);
+        $('.profissional').addClass('visible-xs', 200);
+        $('.profissional').removeClass('hidden-xs', 200);
+        $('.executive').addClass('hidden-xs', 200);
+        $('.executive').removeClass('visible-xs', 200);
+
+        $('.btProfissional').addClass('comparativoSelect', 200);
+        $('.btStarter').removeClass('comparativoSelect', 200);
+        $('.btExpress').removeClass('comparativoSelect', 200);
+        $('.btExecutive').removeClass('comparativoSelect', 200);
+    });
+
+    $(document).on('click', '.btExecutive', function () {
+        $('.starter').addClass('hidden-xs', 200);
+        $('.starter').removeClass('visible-xs', 200);
+        $('.express').addClass('hidden-xs', 200);
+        $('.express').removeClass('visible-xs', 200);
+        $('.profissional').addClass('hidden-xs', 200);
+        $('.profissional').removeClass('visible-xs', 200);
+        $('.executive').addClass('visible-xs', 200);
+        $('.executive').removeClass('hidden-xs', 200);
+        $('.btExecutive').addClass('comparativoSelect', 200);
+        $('.btStarter').removeClass('comparativoSelect', 200);
+        $('.btExpress').removeClass('comparativoSelect', 200);
+        $('.btProfissional').removeClass('comparativoSelect', 200);
+    });
+
+
+    $(document).scroll(function () {
+        backgroundMenu();
+        resizeContent();
+    });
+
+    $(document).ready(function () {
+        resizeimage();
+        backgroundMenu();
+    });
+
+    $(window).resize(function () {
+        resizeimage();
+        backgroundMenu();
+        resizeContent();
+    });
+
+    $(document).on('click', '#myfkingmodal', function () {
+        /*resizeContent();*/
+    });
+
+    $(document).on('click', '#myfkingmodal', function (e) {
+        setTimeout(function () {
+            resizeContent();
+        }, 300);
+
+    });
+
+    resizeimage();
+    backgroundMenu();
+
+</script>
+</htm>
+</body>
+
