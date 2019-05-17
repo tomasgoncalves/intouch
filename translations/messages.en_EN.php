@@ -141,8 +141,7 @@ return array(
         'Food & Beverage Outlets',
     ),
 
-    'port1_0' => array(
-        'act' =>
+    'port1' => array(
         "Instuticional Site",
         "Site Single Page",
         "Custom SIte",
