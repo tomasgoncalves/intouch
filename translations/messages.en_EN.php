@@ -46,6 +46,12 @@ return array(
     'work' => 'Our work', 
     'category' => 'Category',
     'activity' => 'Activity',
+    'name' => 'Name', 
+    'msg' => 'Message',
+    'sub' => 'Subject',
+    'intouch' => 'Intouchbiz Soluções Integradas is an associate of FPF Management Systems.',
+    
+
 
 
     //--------------------Index--------------------------------//
@@ -57,7 +63,7 @@ return array(
 
     'article_3' => array ( 'title' => 'Where we make diference', 'subtitle' => 'We provide the interaction of your business with your customers. ', 'text' => 'Our secret is to listen carefully to your needs, to fully understand your goals, to realize your idea, for this we have a highly specialized team, experienced, with Know How in several areas of the process (Marketeer, Designer, Programmers, SEO) we are focused on turning your unique idea into a unique online presence.'),
 
-    'article_3' => array ( 'title' => 'We call', 'subtitle' => 'We provide the interaction of your business with your customers. ', 'text' => 'Our secret is to listen carefully to your needs, to fully understand your goals, to realize your idea, for this we have a highly specialized team, experienced, with Know How in several areas of the process (Marketeer, Designer, Programmers, SEO) we are focused on turning your unique idea into a unique online presence.'),
+    'article_4' => array ( 'title' => 'We call', 'subtitle' => 'We provide the interaction of your business with your customers. ', 'text' => 'Our secret is to listen carefully to your needs, to fully understand your goals, to realize your idea, for this we have a highly specialized team, experienced, with Know How in several areas of the process (Marketeer, Designer, Programmers, SEO) we are focused on turning your unique idea into a unique online presence.'),
     //-----------------------------------------------------------//
 
 
@@ -93,7 +99,7 @@ return array(
     //-----------------------------------------------------------//
 
 
-
+    //--------------------Products--------------------------------//
     'product_0' => array ('title' => 'Institutional Site ', 'subtitle' => 'All you need to get started is to focus on your business area, we take care of the rest.', 'img' => 'http://www.intouchbiz.com/template/online_shop.png'),
 
     'product_1' => array ('title' => 'Site Single Page', 'subtitle' => 'Creativity and originality are essential to becoming like people in an online presence.', 'img' => 'http://www.intouchbiz.com/template/webdesign_1.png'),
@@ -103,39 +109,45 @@ return array(
     'product_3' => array ('title' => 'Online stores', 'subtitle' => 'Over time we have put together the best team of programmers to bring the creativity of our design team to life.', 'img' => 'http://www.intouchbiz.com/template/develop.png'),
 
      'product_4' => array ('title' => 'Lodging', 'subtitle' => 'Over time we have put together the best team of programmers to bring the creativity of our design team to life.', 'img' => 'http://www.intouchbiz.com/template/develop.png'),
+    //-----------------------------------------------------------//
 
 
     /*------------------Portfolio-------------------------*/
 
-    'vet' => "Vet",
-    'res' => 'Restaurant',
-    'drug' => 'Drugstore',
-    'cons' => 'Construcion',
-    'plants' => 'Plants',
-    'church' => 'Church',
-    'events' => 'Events',           
-    'ele' => 'Electric',
-    'school' => 'Driving school',
-    'phy' => 'Physiotherapy',
-    'hair' => 'Hair stylist',  
-    'distribution' => 'Distribution',
-    'furniture' => 'Furniture',
-    'store' => 'Stationary store', 
-    'electrician' => 'Electrician',
-    'stand' => 'Stand machines',
-    'park' => 'Park',
-    'agriculture' => 'Agriculture',
-    'house' => 'Household appliances',
-    'local' => 'Local accommodation',
-    'insurance' => 'Insurance',
-    'air' => 'Air conditioning',
-    'fences' => 'Fences',
-    'food' => 'Food & Beverage Outlets',
+    'port' => array( 
+        'Vet', 
+        'Restaurant',
+        'Drugstore',
+        'Construcion',
+        'Plants',
+        'Church',
+        'Events',           
+        'Electric',
+        'Driving school',
+        'Physiotherapy',
+        'Hair stylist',  
+        'Distribution',
+        'Furniture',
+        'Stationary store', 
+        'Electrician',
+        'Stand machines',
+        'Park',
+        'Agriculture',
+        'Household appliances',
+        'Local accommodation',
+        'Insurance',
+        'Air conditioning',
+        'Fences',
+        'Food & Beverage Outlets',
+    ),
 
-
-
-
-
-
+    'port1_0' => array(
+        'act' =>
+        "Instuticional Site",
+        "Site Single Page",
+        "Custom SIte",
+        "Online stores",
+        "Lodging",
+    ),
 
 );
