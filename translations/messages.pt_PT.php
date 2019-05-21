@@ -135,13 +135,11 @@ return array(
     'port_22' => array ( 'act' => 'Vedações'),
     'port_23' => array ( 'act' => 'Material Restauração'),
 
-	'port1_0' =>	 array(
-        "Site Instuticional",
-        "Site Single Page",
-        "Site à Medida",
-        "Lojas On-line",
-        "Lodging",
-    ),
+	'port1_0' => array('act' => "Site Instuticional"),
+    'port1_1' => array('act' => "Site Single Page"),
+    'port1_2' => array('act' => "Site à Medida"),
+    'port1_3' => array('act' => "Lojas Online"),
+    'port1_4' => array('act' => "Lodging"),
 );
 
 

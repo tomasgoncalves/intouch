@@ -140,12 +140,10 @@ return array(
     'port_23' => array ( 'act' => 'Food & Beverage Outlets'),
     
 
-    'port1' => array(
-        "Instuticional Site",
-        "Site Single Page",
-        "Custom SIte",
-        "Online stores",
-        "Lodging",
-    ),
-
+    'port1_0' => array('act' => "Instuticional Site"),
+    'port1_1' => array('act' => "Site Single Page"),
+    'port1_2' => array('act' => "Custom Site"),
+    'port1_3' => array('act' => "Online stores"),
+    'port1_4' => array('act' => "Lodging"),
 );
+

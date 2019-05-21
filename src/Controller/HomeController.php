@@ -148,12 +148,13 @@ class HomeController extends AbstractController
       
 
     $port =  ['criacao', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''];
-
+    
+    $port1 = ['','','','',''];
       
       
 
       return $this->render('/lucky/portefolio.html.twig', [ 
-        'port' => $port, 'page' => 'portfolio'
+        'port' => $port, 'page' => 'portfolio', 'port1' => $port1
         ]);
     }
 
