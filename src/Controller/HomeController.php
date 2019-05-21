@@ -145,88 +145,15 @@ class HomeController extends AbstractController
 
     public function portfolio(){
 
-      $port = array(
-        "Site Instuticional",
-        "Site Single Page",
-        "Site à Medida",
-        "Lojas On-line",
-        "Lodging",
-      );
+      
 
-      $port1 = array(
-        "All",
-        "Veterinário",
-        "Restaurante",
-        "Drogaria",
-        "Construção",
-        "Plantas",
-        "Igreja",
-        "Restaurante",
-        "Eventos",
-        "Electrico",
-        "Escola Condução",
-        "Fisioterapia",
-        "Drogaria",
-        "Distribuição",
-        "Moveis",
-        "Papelaria",
-        "Plantas",
-        "Electricista",
-        "Stand maquinas",
-        "Parque",
-        "Cabeleireiro",
-        "Agricultura",
-        "Moveis",
-        "Electrodomésticos",
-        "Restaurante",
-        "Alojamento Local",
-        "Restaurante",
-        "Seguros",
-        "Ar Condicionado",
-        "Alojamento Local",
-        "Vedações",
-        "Alojamento Local",
-        "Material Restauração",   
-      );
+    $port =  ['criacao', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''];
 
-      $port2 = array(
-        "All",
-        "Vet",
-        "Restaurant",
-        "Drugstore",
-        "Construction",
-        "Plants",
-        "Church",
-        "Restaurant",
-        "Events",
-        "Electric",
-        "Driving School",
-        "Physiotherapy",
-        "Drugstore",
-        "Distribution",
-        "Furniture",
-        "Stationary store",
-        "Plants",
-        "Electrician",
-        "Stand machines",
-        "Park",
-        "Hair stylist",
-        "Agriculture",
-        "Furniture",
-        "Household appliances",
-        "Restaurant",
-        "Local accommodation",
-        "Restaurant",
-        "Insurance",
-        "Air conditioning",
-        "Local accommodation",
-        "Fences",
-        "Local accommodation",
-        "Restoration Material",   
-      );
+      
+      
 
       return $this->render('/lucky/portefolio.html.twig', [ 
-        'port' => $port, 'port1' => $port1, 'page' => 'portfolio', 'port2' => $port2
+        'port' => $port, 'page' => 'portfolio'
         ]);
     }
 

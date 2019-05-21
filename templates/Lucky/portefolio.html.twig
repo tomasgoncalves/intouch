@@ -107,7 +107,7 @@
 					<td style="border-left: 1px solid #fff; font-weight:400; letter-spacing:7px; font-size: 17pt;">
 						<select onChange="window.location.href=this.value" class="form-control" id="categoria">
 							<option selected disabled>{% trans %}category{% endtrans %}</option>
-							{% for array in port %}
+							{% for array in port %}						
 							<option>{{array}}</option>
 							{% endfor %}                              
 						</select>
@@ -116,8 +116,9 @@
 					<td style="border-left: 1px solid #fff; font-weight:400; letter-spacing:7px; font-size: 17pt;">
 						<select class="form-control btn" id="activity">
 							<option selected disabled>{% trans %}activity{% endtrans %}</option>
-							{% for array in port1 %}
-							<option id="all">{{array}}</option>
+							{% for array in port %}
+							{% set a = 'port_' ~ loop.index0 ~ '.act'  %}
+							<option id="all">{{ a| trans}}</option>
 							{% endfor %}                              
 						</select>
 					</td>

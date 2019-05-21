@@ -126,46 +126,44 @@ $('#languages li').css({'display':'inline-block'});
 <a href="{{ path('index')}}"><img src="https://www.intouchbiz.com/template/logoBlack.png" class="borderBottomHeader logo2" alt="Intouchbiz" id="logo"></a>
 </div>
 <div class="col-lg-8 col-md-8 col-sm-7 col-xs-6">
+	<!--  NAV BAR  -->
+	<nav class="navbar navbar-default">
+	<div class="navbar-inner borderBottomHeader">
+	<!-- Brand and toggle get grouped for better mobile display -->
+	<div class="navbar-header">
+	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
+	<span class="sr-only">Toggle navigation</span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	</button>
+	</div>
 
-
-<!--  NAV BAR  -->
-<nav class="navbar navbar-default">
-<div class="navbar-inner borderBottomHeader">
-<!-- Brand and toggle get grouped for better mobile display -->
-<div class="navbar-header">
-<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
-<span class="sr-only">Toggle navigation</span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</button>
-</div>
-
-<!-- Collect the nav links, forms, and other content for toggling -->
-<div class="collapse navbar-collapse" id="bs-navbar">
-<ul class="nav navbar-nav">   
-<li >
-<a href="{{ path('creation') }}"  class="colorBlueScroll">{% trans %}creation{% endtrans %}</a>
-</li>
-<li>
-<a href="{{ path('seo') }}"  class="colorBlueScroll">SEO</a>
-</li>
-<li>
-<a href="{{ path('host') }}"  class="colorBlueScroll">HOST</a>
-</li>                
-<li>
-<a href="{{ path('products') }}"  class="colorBlueScroll">{% trans %}products{% endtrans %}</a>
-</li>
-<li>
-<a href="{{ path('portfolio') }}"  class="colorBlueScroll">{% trans %}portfolio{% endtrans %}</a>
-</li>
-<li>
-<a href="{{ path('contacts') }}"  class="colorBlueScroll">{% trans %}contacts{% endtrans %}</a>
-</li>
-</ul>
-</div><!-- /.navbar-collapse -->
-</div><!-- /.container-fluid -->
-</nav>
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse" id="bs-navbar">
+	<ul class="nav navbar-nav">   
+	<li >
+	<a href="{{ path('creation') }}"  class="colorBlueScroll">{% trans %}creation{% endtrans %}</a>
+	</li>
+	<li>
+	<a href="{{ path('seo') }}"  class="colorBlueScroll">SEO</a>
+	</li>
+	<li>
+	<a href="{{ path('host') }}"  class="colorBlueScroll">HOST</a>
+	</li>                
+	<li>
+	<a href="{{ path('products') }}"  class="colorBlueScroll">{% trans %}products{% endtrans %}</a>
+	</li>
+	<li>
+	<a href="{{ path('portfolio') }}"  class="colorBlueScroll">{% trans %}portfolio{% endtrans %}</a>
+	</li>
+	<li>
+	<a href="{{ path('contacts') }}"  class="colorBlueScroll">{% trans %}contacts{% endtrans %}</a>
+	</li>
+	</ul>
+	</div><!-- /.navbar-collapse -->
+	</div><!-- /.container-fluid -->
+	</nav>
 </div>      
 
 
@@ -619,67 +617,72 @@ LODGING                                                                         
 </div>
 
 <div class="container-fluid" id="botfooter">
-    <footer id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                    <ul class="list-group">
-                        <li class="list-fotter list-foot-info"><h3><strong>{% trans %}information{% endtrans %}</strong></h3></li>
-                        <li class="list-fotter list-foot-info"><a href="" data-toggle="modal" data-target="#entregas">{% trans %}deliveries and returns{% endtrans %}</a></li>
-                        <li class="list-fotter list-foot-info"><a href="" data-toggle="modal" data-target="#termos">{% trans %}terms and conditions{% endtrans %}</a></li>
-                        <li class="list-fotter list-foot-info"><a href="" data-toggle="modal" data-target="#pay-safe">{% trans %}safe payment{% endtrans %}</a></li>
-                        <li class="list-fotter list-foot-info"><a href="https://www.vimaguese.pt/pt/sitemap_user">Mapa Site</a></li>
-                    </ul>
-                </div>
+    <div class="container">
+        <div class="row">        
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <ul class="list-group">
-                    <li class="list-fotter list-foot-info"><h3><strong>Social Media</strong></h3></li>
-                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-                            <ul id="cart-list ">
-                                <li>
-                                    <a href="https://www.facebook.com/connectedintouchbiz/" target="_blank">
-                                    <div class="social-flag">
-                                        <img src="{{asset ('img/facebook.png')}}" alt="facebook" id="facebook">
-                                    </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://twitter.com/IntouchBiz_" target="_blank">
-                                    <div class="social-flag">
-                                        <img src="{{asset ('img/twitter.png')}}" alt="twitter" id="twitter">
-                                    </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://plus.google.com/u/0/111192249106908035114" target="_blank">
-                                    <div class="social-flag">
-                                        <img src="{{asset ('img/youtube.png')}}" alt="googleplus" id="googleplus">
-                                    </div>
-                                    </a>
-                                </li>
-                                </ul>
-                            </ul>
-                        </div>
-                <ul class="list-group">
-                    <li class="list-fotter list-foot-info"><h3><strong>{% trans %}contacts{% endtrans %}</strong></h3></li>
-                    <input type="text" name="nome" id="nome" placeholder="Nome">
-                    <input type="text" name="email"  id="email" placeholder="Email"><br>    
-                </ul>
-                <textarea type="text" name="mensagem" id="mensagem" placeholder="Mensagem" maxlength="755"></textarea>
-            </div>
-        </div>
-    </footer>   
-</div>
+                <h4 class="foot-title">Informação</h4>
 
-<!--Footer -->
-<div class="container-fluid" id="botfooter">
-    <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <p class="text-center" id="footer-text">
-                <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;" target="_top" class="simpleLink">&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;</a> | +351 282 353 994 | Rua Município S. Domingos Lote 2  | 8400 - 415 Lagoa | Algarve | Portugal  <br><br> Copyright &copy; 2019 <a href="https://www.intouchbiz.com/" class="simpleLink" target="_blank">IntouchBiz</a>. {% trans %}rights{% endtrans %}</p>
-        </div>
+                
+                <ul class="list-group list-footer">
+                    <li class="list-group-item"><i class="fa fa-building"></i> Edifício Aurora Sol Rua do Barranco Loja L</li>
+                    <li class="list-group-item">8400-508 Carvoeiro, Lagoa</li>
+                    <li class="list-group-item"><i class="fa fa-phone"></i> +351 282 313 477</li>
+                    <li class="list-group-item"><i class="fa fa-mobile"></i> +351 969 830 371</li>
+                    <li class="list-group-item"><i class="fa fa-inbox"></i> construcoes.a.a.goncalves@gmail.com</li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                <h4 class="foot-title">Siga-nos</h4>
+                <ul>                           
+					<li>
+						<a href="https://www.facebook.com/agconstrucoes" target="_blank">
+							<div class="lang-flag">
+								<img src="http://www.agconstrucoes.com/admin/template/socialmedia/rectangular/facebook.png" alt="facebook" id="facebook">
+							</div>
+						</a>
+					</li>
+
+					<li>
+						<a href="https://www.facebook.com/agconstrucoes" target="_blank">
+							<div class="lang-flag">
+								<img src="http://www.agconstrucoes.com/admin/template/socialmedia/rectangular/instagram.png" alt="facebook" id="facebook">
+							</div>
+						</a>
+					</li>
+
+					<li>
+						<a href="https://www.facebook.com/agconstrucoes" target="_blank">
+							<div class="lang-flag">
+								<img src="http://www.agconstrucoes.com/admin/template/socialmedia/rectangular/youtube.png" alt="facebook" id="facebook">
+							</div>
+						</a>
+					</li>
+				</ul>
+            </div>
+			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+				<h4 class="foot-title">Form</h4>
+		            <form role="form" action="" method="POST" id="form-contact">                                                   
+		                <input type="text" name="nome" class="form-control" style="background: white;" id="nome" placeholder="{% trans %}name{% endtrans %}"><br>                   
+		                <input type="text" name="email" class="form-control" style="background: white;" id="email" placeholder="Email"><br>           
+		                <input type="text" name="assunto" class="form-control" style="background: white;" id="assunto" placeholder="{% trans %}sub{% endtrans %}"><br>
+		                <textarea type="text" name="mensagem" class="form-control" style="background: white;" id="mensagem" placeholder="{% trans %}msg{% endtrans %}" maxlength="755"></textarea><br>
+		                <button name="submit" id="btn-cont" class="btn botaoEnviar hvr-sweep-to-left">{% trans %}send{%endtrans%}</button>         
+		            	</div>
+		        	</form>
+	        </div>
+	       <br>
+	        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	            <p class="text-center" id="footer-text">
+	                <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;" target="_top" class="simpleLink">&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;</a> | +351 282 353 994 | Rua Município S. Domingos Lote 2  | 8400 - 415 Lagoa | Algarve | Portugal  <br><br> Copyright &copy; 2019 <a href="https://www.intouchbiz.com/" class="simpleLink" target="_blank">IntouchBiz</a>. {% trans %}rights{% endtrans %}</p>
+	        </div>
+		</div>
     </div>
 </div>
+
+
+<!--Footer -->
+
+
 
 <!-- Google Analytics -->
 <script>
