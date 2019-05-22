@@ -22,7 +22,7 @@ class HomeController extends AbstractController
           $this->session = $session;
     }
 
-    public function contactForm(Request $request, Swift_Mailer $mailer) {
+    public function contactForm(Request $request, \Swift_Mailer $mailer) {
 
         $error = array();
 
@@ -33,8 +33,8 @@ class HomeController extends AbstractController
 
         !$request->request->get('nome') ? $error[] = 'nome' : false;
         !$request->request->get('email') ? $error[] = 'email' : false;
-        !$request->request->get('message') ? $error[] = 'assunto' : false;
-        !$request->request->get('value') ? $error[] = 'mensagem' : false;
+        !$request->request->get('assunto') ? $error[] = 'assunto' : false;
+        !$request->request->get('mensagem') ? $error[] = 'mensagem' : false;
 
 
         if (count($error)>0){
@@ -52,7 +52,7 @@ class HomeController extends AbstractController
             // Create a message
             $mail = (new \Swift_Message(''))
               ->setFrom(['tomas.goncalves@intouchbiz.com' => 'Tomás'])
-              ->setTo(['tafg2000@gmail.com' => 'Tomás'])
+              ->setTo([$request->request->get('email')])
               ->setBody('asda')
               ;
 
