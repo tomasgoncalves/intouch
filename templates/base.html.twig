@@ -753,7 +753,38 @@ function scaleBannerVideoSize(element) {
     });
 }
 </script>
+<script>
+ 
+	$("#contactform").on("submit", function(event) {
+	    event.preventDefault();
+	    console.log($(this).serialize());
+	    $.ajax({
+	      url:'{{ path("contactForm") }}',
+	      type:"POST",
+	      data: $(this).serialize(),
+	      success: function(data)
+	      {   
+	        if( status == 1 ){
+	            console.log("Campos preenchidos com sucesso", data)
+	            alert('Sucesso');
+	        }
 
+	        if( status == 0 ){
+	            console.log("Preencha todos os campos ", data)  
+	            alert('error');
+	        }
+	      },
+	      
+	      error: function(data)
+	      {
+	        console.log(data)
+	      }
+
+	    });
+	});
+
+    
+</script> 
 <script>
 /* MOVE BACKGROUND HOME */
 $(function () {

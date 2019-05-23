@@ -113,14 +113,10 @@
                                     <input type="text" name="nome" class="form-control" id="nome" placeholder="{% trans %}name{% endtrans %}">
                                     <span class="error" id="invalid_nome">*</span>
                                 </div>
-                                <div class="form-group">
-                                    <input type="text" name="telefone" class="form-control telefone" id="telefone" placeholder="{% trans %}contact{% endtrans %}">
-                                    <span class="error" id="invalid_telefone">*</span>
-                                </div>
+                                
                                 <div class="form-group">
                                     <input type="text" name="email" class="form-control" id="email" placeholder="Email">
-                                    <span class="error" id="invalid_email">*</span>
-                                    <span class="error" id="invalid_email_sintaxe2">**</span>
+             
                                 </div>
                                 <div class="form-group">
                                     <input type="text" name="assunto" class="form-control" id="assunto" placeholder="{% trans %}sub{% endtrans %}">
@@ -128,25 +124,17 @@
                                 </div>
                                 <div class="form-group">
                                     <textarea type="text" name="mensagem" class="form-control input-msg" id="mensagem" placeholder="{% trans %}msg{% endtrans %}" maxlength="755"></textarea>
-                                    <span class="error" id="invalid_mensagem">*</span>
+                                   
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <p class="checkboxTitle paragrafForm">{% trans %}terms{%endtrans%}</p> <input type="checkbox" value="true" name="checkbox" id="checkbox">
-                                        <span class="error" id="invalid_checkbox">*</span>
+                                        
+                                   
                                     </label>
                                 </div>
-                                <p class="checkboxSubTitle paragrafForm" style="padding:20px">{% trans %}contactzone{%endtrans%}</div></p>
-                                <div class="checkbox">
-                                    <label>
-                                        <span class="error" id="invalid_geral">* {% trans %}required{%endtrans%}</span>
-                                        <br>
-                                        <span class="error" id="invalid_email_sintaxe">**{% trans %}error{%endtrans%}</span>
-                                    </label>
-                                </div>
+                                
                                 <button name="submit" id="submit" class="btn-marg botaoEnviar hvr-sweep-to-left">{% trans %}send{%endtrans%}</button>
-                                <input type="hidden" name="subFormContact" value="true">
-                                <input type="hidden" name="antibot" value="">
+                                
                             </div>
                             
                         </form>
@@ -157,32 +145,7 @@
     </div>
 </div>
 
-<script>
-    
-$("#contactform").on("submit", function(event) {
-    event.preventDefault();
-    console.log($(this).serialize());
-    $.ajax({
-      url:'{{ path("contactForm") }}',
-      type:"POST",
-      data: $(this).serialize(),
-      success: function(data)
-      {   
-        if(data.status==1){
-        console.log("Campos preenchidos com sucesso")
-        }
-        if(data.status==0){
-        console.log("Preencha todos os campos")  
-        }
-      },
-      error: function(data)
-      {
-        console.log(data)
-      }
-    });
-});
-    
-</script> 
+
                     
 {% endblock %}
                                     

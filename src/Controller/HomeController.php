@@ -38,7 +38,7 @@ class HomeController extends AbstractController
 
 
         if (count($error)>0){
-              return new JsonResponse(array('status' => 0,'err' => $error)); 
+              return new JsonResponse(array('status' => 1,'err' => $error)); 
         } else { 
 
             $transport = (new \Swift_SmtpTransport('mail.intouchbiz.com', 465, 'ssl'))
@@ -59,7 +59,7 @@ class HomeController extends AbstractController
             // Send the message
             $result = $mailer->send($mail);
 
-            return new JsonResponse(array('status' => 1, 'nome' => $request->request->get('nome'), 'email' => $request->request->get('email'), 'assunto' => $request->request->get('assunto'), 'value' => $request->request->get('mensagem')));
+            return new JsonResponse(array('status' => 0, 'nome' => $request->request->get('nome'), 'email' => $request->request->get('email'), 'assunto' => $request->request->get('assunto'), 'value' => $request->request->get('mensagem')));
         }
     }
  
