@@ -80,7 +80,7 @@ return array(
 
     'seo_0' => array( 'title' => 'SEO Optimização', 'subtitle' => 'Tudo o que precisa para começar, é concentrar-se na sua sua área de negócio, nós cuidamos do resto.', 'img' => 'http://www.intouchbiz.com/template/online_shop.png'),
 
-    'se0_1' => array( 'title' => 'SEM', 'subtitle' => 'A Criatividade e a originalidade são essenciais para transformar as suas ideias numa presença on-line.', 'img' => 'https://www.intouchbiz.com/template/webdesign_1.png'),
+    'seo_1' => array( 'title' => 'SEM', 'subtitle' => 'Criatividade e originalidade são essenciais para se tornar como pessoas em uma presença online.', 'img' => 'https://www.intouchbiz.com/template/webdesign_1.png'),
 
    	'seo_2' => array( 'title' => 'WEB MARKETING', 'subtitle' => 'A plataforma que o ajuda a gerir os seus contactos e a definir as suas estratégias de Marketing Digital.', 'img' => 'https://www.intouchbiz.com/template/crm.png'),
 

@@ -106,42 +106,31 @@
                 <div class="panel-body">
                     <h3 class="contact-title">{% trans %}contact{%endtrans%}</h3>
                     <div class="row">
-                        <form role="form" action="" method="POST" id="contactform">
+                        <form   id="contactform">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <!-- Form-->
                                 <div class="form-group">
-                                    <input type="text" name="nome" class="form-control" id="nome" placeholder="{% trans %}name{% endtrans %}">
-                                    <span class="error" id="invalid_nome">*</span>
+                                    <input type="text" name="name" class="form-control" id="nome" placeholder="{% trans %}name{% endtrans %}">                                   
                                 </div>
-                                
+
                                 <div class="form-group">
-                                    <input type="text" name="email" class="form-control" id="email" placeholder="Email">
-             
+                                    <input type="text" name="email" class="form-control" id="email" placeholder="Email">             
                                 </div>
+
                                 <div class="form-group">
-                                    <input type="text" name="assunto" class="form-control" id="assunto" placeholder="{% trans %}sub{% endtrans %}">
-                                    <span class="error" id="invalid_assunto">*</span>
+                                    <input type="text" name="subject" class="form-control" id="assunto" placeholder="{% trans %}sub{% endtrans %}">                       
                                 </div>
+
                                 <div class="form-group">
-                                    <textarea type="text" name="mensagem" class="form-control input-msg" id="mensagem" placeholder="{% trans %}msg{% endtrans %}" maxlength="755"></textarea>
-                                   
+                                    <textarea type="text" name="message" class="form-control input-msg" id="mensagem" placeholder="{% trans %}msg{% endtrans %}"></textarea>
                                 </div>
-                                <div class="checkbox">
-                                    <label>
-                                        
-                                   
-                                    </label>
-                                </div>
-                                
-                                <button name="submit" id="submit" class="btn-marg botaoEnviar hvr-sweep-to-left">{% trans %}send{%endtrans%}</button>
-                                
-                            </div>
-                            
+
+                                <button name="submit" id="submit" class="btn-marg botaoEnviar hvr-sweep-to-left">{% trans %}send{%endtrans%}</button>                               
+                            </div>                           
                         </form>
                     </div>
                 </div>
             </div>
-         </section>
+        </section>
     </div>
 </div>
 

@@ -8,7 +8,11 @@ index:
 
 contactForm:
     path: /contactForm
-    controller: App\Controller\HomeController::contactForm 
+    controller: App\Controller\HomeController::contactForm
+
+footerForm:
+    path: /footerForm
+    controller: App\Controller\HomeController::footerForm     
 
 creation:
     path: /creation

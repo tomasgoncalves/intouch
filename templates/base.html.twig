@@ -108,9 +108,9 @@ $('#languages li').css({'display':'inline-block'});
 <a href="#">
 <div class="lang-flag">
 
-    <a href="{{ path('translation', {lang: 'en_EN', page: page}) }}" onclick="$('.w3-overlay').show()" class="w3-bar-item w3-center w3-hover-opacity"><img style="height: 40px" styleclass="w3-image">EN</a>
+    <a href="{{ path('translation', {lang: 'en_EN', page: page}) }}" onclick="$('.w3-overlay').show()"><img style="height: 40px" src="{{asset ('img/pt.png')}}" styleclass="w3-image"></a>
 
-    <a href="{{ path('translation', {lang: 'pt_PT', page:page}) }}" onclick="$('.w3-overlay').show()" class="w3-bar-item w3-center w3-hover-opacity"><img style="height: 40px" class="w3-image">PT</a>
+    <a href="{{ path('translation', {lang: 'pt_PT', page:page}) }}" onclick="$('.w3-overlay').show()"><img style="height: 40px" src="{{asset ('img/uk.png')}}" class="w3-image"></a>
       
 </div>
 </a>
@@ -169,452 +169,7 @@ $('#languages li').css({'display':'inline-block'});
 
 {% block content %}{% endblock %}
 
-<!-- Footer -->
 
-<div class="container-fluid" id="footer">
-<div class="container">
-
-
-<div class="row">
-<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-
-<h3 class="foot-title">{% trans %}marks{% endtrans %}</h3>
-
-
-
-<a href="https://www.intouchbiz.com/pt">
-<img src="https://www.intouchbiz.com/template/logoBlack.png" class="logoFooter" alt="Intouchbiz" style="display: block;">
-</a>
-
-</div>
-<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-<a href="https://www.intouchbiz.com/pt/empresa-quem-somos-atitude-missao-filosofia-equipa-protocolo-parceiros">
-<h3 class="foot-title">{% trans %}company{% endtrans %}</h3>
-</a>
-<ul class="list-group list-footer">
-
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/quem-somos-solucoes-integradas-fpf-sistemas-de-gestao-erp-phc-eticadata-zonesoft-solucoes-web-site-clientes-desafiadores-confiar">
-
-<div class="row">
-<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-{% trans %}who we are{% endtrans %}                                                                              
-</div>
-</div>
-</a>
-
-</li>
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/atitude-empresa-jovem-dinamica-design-programacao-satisfacao-saber-inovacao-criatividade-dedicacao-qualidade-funcionalidade">
-
-<div class="row">
-<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-{% trans %}attitude{% endtrans%}                                                                                                                                                            
-</div>
-</div>
-</a>
-
-</li>
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/missao-colectanea-estrategias-ampliacao-dos-lucros-negocios-empresa-competencia-retorno-investimentos-ponto-a-ponto-multi-plataforma-integra-produtos-fluxo-ilimitado-multi-canal-suporte-networking-webizacao-processos-trabalho-colaborativo-e-formacao">
-
-<div class="row">
-<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-{% trans %}mission{% endtrans %}
-</div>
-</div>
-</a>
-
-</li>
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/filosofia-de-trabalho-investimentos-tecnologia-informacao-negocio-empresa-valores-forca-identidade-compromisso-principios-confianca-experiencia-simplicidade-transparencia-inovacao-orientacao-para-o-cliente-espirito-de-equipa-clientes-mercado">
-
-<div class="row">
-<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-{% trans %}philosophy{% endtrans %}                                                                                   </div>
-</div>
-</a>
-
-</li>
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/equipa-profissionais-jovem-dinamica-qualificada-negocios-consultoria-design-programacao-conteudos-comunicacao-marketing-imagem-som-movimento-cor-alegria-comercial-desenvolvimento-seo-apoio-ao-cliente-contabilidade">
-
-<div class="row">
-<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-{% trans %}team{% endtrans %}                                                                                    </div>
-</div>
-</a>
-
-</li>
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/protocolo-socios-portimonense-sporting-clube-aquisicao-de-servicos-construcao-websites-desconto-apresentacao-cartao-quotas-em-dia">
-
-<div class="row">
-<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-{% trans %}protocol{% endtrans %}                                                                                    </div>
-</div>
-</a>
-
-</li>
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/parceiros-rede-foco-know-how-criar-desenvolver-implementar-solucoes-clientes-empresa-oportunidade-web-tecnologia-certificacao-parceiros-formacao-capacitacao-negocio-competitiva">
-
-<div class="row">
-<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-{% trans %}partners{% endtrans %}                                                                                   </div>
-</div>
-</a>
-
-</li>
-                                </ul>
-</div>
-<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-<a href="https://www.intouchbiz.com/pt/produtos-fastsms-crm-gestao-documental-comercio-b2c-b2b-integrated-erp-allinone-crm">
-<h3 class="foot-title">{% trans %}products{% endtrans %}</h3>
-</a>
-<ul class="list-group list-footer">
-
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/fastsms-solucoes-mensagens-segura-confiavel-instantaneamente-envio-end-to-end-todo-mundo-browser-cms-one-to-one-many-negocios-automatizar-agendamento-alertas-sistema-poupanca-comodidade-hipersegmentacao-rapidez-personalizacao-adaptabilidade">
-
-<div class="row">
-<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-FastSMS                                                                                    </div>
-</div>
-</a>
-
-</li>
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/crm-customer-relationship-management-gestao-relacionamento-com-cliente-ferramentas-contato-corporativa-inter-ralacionamento-empresa-necessidades-planeamento-marketing-qualidade-ecrm-portal-ecommerce-relacionamento-comunicacao-negocio">
-
-<div class="row">
-<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-CRM                                                                                    </div>
-</div>
-</a>
-
-</li>
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/gestao-documental-documento-electronico-texto-imagem-video-gestao-utilizadores-empresariais-empresa-desepenho-interface-web-multi-formato-armezenamento-word-excel-powerpoint-pdf-classificacao-versionamento-pesquisa-base-dados-tempo-fluxos">
-
-<div class="row">
-<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-{% trans %}document management{% endtrans %}                                                                                    </div>
-</div>
-</a>
-
-</li>
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/comercio-electronico-b2c-e-b2b-transaccoes-bens-servicos-empresa-organizacao-crm-erp-on-line-meios-pagamento-gateways-comunicacao-e-commerce-business-to-consumer-business-comercial-electronicos-solucoes-multibanco-visa-mastercard-paypal">
-
-<div class="row">
-<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-{% trans %}trade{% endtrans %} B2C & B2B                                                                                    </div>
-</div>
-</a>
-
-</li>
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/integrated-automatizacao-rentabilizacao-recursos-optimizacao-gestao-empresa-eficiencia-integracao-clientes-mercado-destinatarios-sincronizar-erp-plataforma-web-seguranca-licenciamento-base-dados-ftp-smtp-agendamentos-loja-on-line">
-
-<div class="row">
-<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-Integrated-ERP                                                                                    </div>
-</div>
-</a>
-
-</li>
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/allinone-plataforma-contactos-marketing-digital-campanha-sms-newsletters-dispositivo-movel-envio-base-de-dados-multi-canal-grupos-campanhas-agendamento-simultaneo-relatorios-white-label-marketing-mobile-corporate-agencias">
-
-<div class="row">
-<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-Allinone - CRM                                                                                    </div>
-</div>
-</a>
-
-</li>
-                                </ul>
-</div>
-
-
-<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-<a href="https://www.intouchbiz.com/pt/servicos-design-e-imagem-web-design-criacao-conteudos-desenvolvimento-comercio-on-line-seo-optimizacao-web-marketing-registo-de-dominios-alojamento">
-<h3 class="foot-title">{% trans %}services{% endtrans %}</h3>
-</a>
-<ul class="list-group list-footer">
-
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/design-e-imagem-a-medida-solucoes-web-resultados-mais-valias-organizacoes-desenvolver-ideias-grafico-original-marcar-a-diferenca-boa-impressao-ilustracao-marcas-conceitos-valor-clientes">
-Design {% trans %}img{% endtrans %}
-</a>
-</li>
-
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/web-design-criatividade-originalidade-presenca-on-line-empresa-sites-personalizados-imagem-primeiro-contacto-visual">
-Web Design
-</a>
-</li>
-
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/criacao-conteudos-tecnologia-informacao-ti-desenvolvimento-sistemas-web-equipa-qualificada-negocios-consultoria-design-programacao-conteudos-comunicacao-marketing-servicos-acessibilidade-usabilidade-navegabilidade-criatividade">
-{% trans %}creation{% endtrans %} - {% trans %}contents{% endtrans %}
-</a>
-</li>
-
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/desenvolvimento-programadores-criatividade-design-mercado-erp-integrado-integrado-software-personalizacao-funcionalidades-extras-integracao-de-sistemas-aproveitamento-tecnologico-vantagens-competitivas-crescimento-negocio-qualidade">
-{% trans %}development{% endtrans %}
-</a>
-</li>
-
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/comercio-online-area-negocio-empresas-microempresas-businessbiz-mercado-lojas-online-comerciantes-carrinho-compras-catalogo-produtos-imagens-destaque-promocoes-taxas-relatorios-analytics-publicidade-quantidades-backups-pagamento-entrega">
-{% trans %}trade{% endtrans %} On-line
-</a>
-</li>
-
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/optimizacao-seo-resultados-motores-de-busca-search-engine-optimization-sites-mob-buscas-ferramentas-melhor-posicionamento-directorios-google-maps-analytics-ad-words-facebook-redes-sociais-key-words-pesquisa-metatags-links">
-SEO - {% trans %}optimization{% endtrans %}
-</a>
-</li>
-
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/marketing-web-optimizacao-motores-de-busca-seo-search-engine-optimization-site-visibilidade-publicidade-links-com-keywords-titulo-pagina-meta-keywords-description-palavras-chave-analytics-blogs-corporativos-redes-sociais">
-web marketing
-</a>
-</li>
-
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/dominios-registo-servico-alojamento-fccn-fundacao-para-a-computacao-cientifica-nacional-em-24h-manutencao-renovacao-imagem-direitos-de-assistencia-necessidades-solucao">
-{% trans %}domain registration{% endtrans %}
-</a>
-</li>
-
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/alojamento-servicos-criacao-de-sites-tecnologia-software-actualizacoes-automaticas-qualidade-profissional-alojadas-servidor-manutencao-competencia-tecnica-suporte-controlo-spam-antivirus">
-{% trans %}accommodation{% endtrans %}
-</a>
-</li>
-
-
-</ul>
-</div>
-</div>
-
-<div class="row">
-<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-
-</div>
-<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-<a href="https://www.intouchbiz.com/pt/gamas-microbiz-firstbiz-businessbiz-posnet-showroom-lodging">
-<h3 class="foot-title">{% trans %}ranges{% endtrans %}</h3>
-</a>
-<ul class="list-group list-footer">
-
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/microbiz-criacao-site-ideia-de-negocio-mundo-virtual-plataforma-programacao-single-page-design-responsive-animacao-varios-idiomas-seo-optimizacao-nos-ligamos-captacao-leads-cms-home-made-monitorizacao-ao-servidor">
-
-<div class="row">
-<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-<svg style="background-color:#ffffff00" xmlns="http://www.w3.org/2000/svg" width="175" height="50">
-<g class="svgClass" stroke-width="1" fill="none">
-<path class="st0" d="M44.3,1v28.2H16.1V1H44.3 M45.3,0H15.1v30.2h30.2V0L45.3,0z"/>
-<path class="st0" d="M29.2,16.1v28.2H1V16.1H29.2 M30.2,15.1H0v30.2h30.2V15.1L30.2,15.1z"/>
-</g>
-</svg>                                                                                    </div>
-<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 footerGamasTitle">
-MICROBIZ                                                                                    </div>
-</div>
-</a>
-
-</li>
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/firstbiz-ideias-espaco-criacao-site-ideia-de-negocio-plataforma-programacao-single-page-design-responsive-animacao-varios-idiomas-seo-optimizacao-nos-ligamos-captacao-leads-cms-home-made-monitorizacao-ao-servidor">
-
-<div class="row">
-<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-<svg style="background-color:#ffffff00" xmlns="http://www.w3.org/2000/svg" width="175" height="50">
-<g class="svgClass" stroke-width="1" fill="none">
-<path class="st0" d="M14.8,2l13,22.6H1.7L14.8,2 M14.8,0L0,25.6h29.5L14.8,0L14.8,0z"/>
-<path class="st0" d="M29.5,2l13,22.6H16.5L29.5,2 M29.5,0L14.8,25.6h29.5L29.5,0L29.5,0z"/>
-<path class="st0" d="M14.8,2l13,22.6H1.7L14.8,2 M14.8,0L0,25.6h29.5L14.8,0L14.8,0z"/>
-<path class="st0" d="M29.5,2l13,22.6H16.5L29.5,2 M29.5,0L14.8,25.6h29.5L29.5,0L29.5,0z"/>
-</g>
-</svg>
-</div>
-<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 footerGamasTitle">
-FIRSTBIZ                                                                                    </div>
-</div>
-</a>
-
-</li>
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/businessbiz-negocio-customizada-criacao-de-site-ideia-plataforma-programacao-single-page-design-responsive-animacao-varios-idiomas-puv-design-a-medida-seo-optimizacao-nos-ligamos-pageland-leads-cms-home-made-monitorizacao-ao-servidor">
-
-<div class="row">
-<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-<svg style="background-color:#ffffff00" xmlns="http://www.w3.org/2000/svg" width="175" height="50">
-<g class="svgClass" stroke-width="1" fill="none">
-<g>
-<path class="st0" d="M31,14.7c7,0,12.8,5.7,12.8,12.8c0,7-5.7,12.8-12.8,12.8c-7,0-12.7-5.7-12.7-12.8C18.3,20.5,24,14.7,31,14.7
-M31,13.7c-7.6,0-13.7,6.2-13.7,13.8c0,7.6,6.2,13.8,13.7,13.8c7.6,0,13.8-6.2,13.8-13.8C44.8,19.9,38.6,13.7,31,13.7L31,13.7z"/>
-<path class="st0" d="M13.8,14.7c7,0,12.7,5.7,12.7,12.8c0,7-5.7,12.8-12.7,12.8C6.7,40.2,1,34.5,1,27.5C1,20.5,6.7,14.7,13.8,14.7
-M13.8,13.7C6.2,13.7,0,19.9,0,27.5c0,7.6,6.2,13.8,13.8,13.8c7.6,0,13.7-6.2,13.7-13.8C27.5,19.9,21.3,13.7,13.8,13.7L13.8,13.7z
-"/>
-</g>
-<path class="st0" d="M22.4,1c7,0,12.7,5.7,12.7,12.7c0,7-5.7,12.8-12.7,12.8c-7,0-12.8-5.7-12.8-12.8C9.6,6.7,15.3,1,22.4,1
-M22.4,0C14.8,0,8.6,6.2,8.6,13.7c0,7.6,6.2,13.8,13.8,13.8c7.6,0,13.7-6.2,13.7-13.8C36.1,6.2,30,0,22.4,0L22.4,0z"/>
-</g>
-</svg>                                                                                    </div>
-<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 footerGamasTitle">
-BUSINESSBIZ                                                                                    </div>
-</div>
-</a>
-
-</li>
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/posnet-single-page-design-responsive-animacao-varios-idiomas-seo-optimizacao-nos-ligamos-captacao-leads-cms-home-made-monitorizacao-ao-servidor-produtos-analises-marketing-promocoes-integrated-metodos-pagamento-backffice-cliente">
-
-<div class="row">
-<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-<svg style="background-color:#ffffff00" xmlns="http://www.w3.org/2000/svg" width="175" height="50">
-<g class="svgClass" stroke-width="1" fill="none">
-<path class="st0" d="M11.8,13.4l10.8,6.2v12.5l-10.8,6.2L1,32.1V19.6L11.8,13.4 M11.8,12.2L0,19v13.6l11.8,6.8l11.8-6.8V19
-L11.8,12.2L11.8,12.2z"/>
-<path class="st0" d="M11.8,1.2l10.8,6.2v12.5l-10.8,6.2L1,19.8V7.4L11.8,1.2 M11.8,0L0,6.8v13.6l11.8,6.8l11.8-6.8V6.8L11.8,0
-L11.8,0z"/>
-</g>
-</svg>                                                                                    </div>
-<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 footerGamasTitle">
-POS NET                                                                                    </div>
-</div>
-</a>
-
-</li>
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/showroom-catalogo-informacoes-single-page-design-responsive-animacao-varios-idiomas-seo-optimizacao-nos-ligamos-captacao-leads-cms-home-made-monitorizacao-ao-servidor-produtos-analises-marketing-promocoes-integrated-backffice-cliente">
-
-<div class="row">
-<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-<svg style="background-color:#ffffff00" xmlns="http://www.w3.org/2000/svg" width="175" height="70">
-<g class="svgClass" stroke-width="1" fill="none">
-<circle class="st0" cx="24.1" cy="24.1" r="23.6"/>
-<circle class="st0" cx="24.1" cy="24.1" r="23.6"/>
-<circle class="st0" cx="47.6" cy="24.1" r="23.6"/>
-</g>
-</svg>                                                                                    </div>
-<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 footerGamasTitle">
-SHOWROOM                                                                                    </div>
-</div>
-</a>
-
-</li>
-
-<li class="list-group-item">
-
-<a href="https://www.intouchbiz.com/pt/lodging-alojamento-integracao-booking-viajantes-dormir-casa-quarto-tempo-real-reservas-online-gestao-canais-propriedade-single-page-design-responsive-animacao-varios-idiomas-seo-optimizacao-nos-ligamos-leads-cms-home-made-monitorizacao-ao-servidor">
-
-<div class="row">
-<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-<svg style="background-color:#ffffff00" xmlns="http://www.w3.org/2000/svg" width="175" height="70">
-<g class="svgClass" stroke-width="1" fill="none">
-<polygon class="st0" points="25.4,0.6 50.1,18.6 40.7,47.7 10.1,47.7 0.6,18.6    "/>
-<polygon class="st0" points="49.8,0.6 74.6,18.6 65.1,47.7 34.5,47.7 25,18.6     "/>
-</g>
-</svg>                                                                                    </div>
-<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 footerGamasTitle">
-LODGING                                                                                    </div>
-</div>
-</a>
-
-</li>
-                                </ul>
-</div>
-<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-<a href="https://integrated-erp.com/" target="_blank">
-<h3 class="foot-title">Integrated-ERP</h3>
-</a>
-<ul class="list-group list-footer">
-<li class="list-group-item"><a href="https://www.integrated-erp.com/" target="_blank"><!-- Plataformas --> {% trans %}functionalities{% endtrans %}</a></li>
-<li class="list-group-item"><a href="https://www.integrated-erp.com/pt/solucao-caracteristicas" target="_blank"><!-- Software -->{% trans %}features{% endtrans %}</a></li>
-<li class="list-group-item"><a href="https://www.integrated-erp.com/pt/solucao-erps" target="_blank"><!-- faq's --> ERPs</a></li>
-<li class="list-group-item"><a href="https://www.integrated-erp.com/pt/portfolio" target="_blank"><!-- Portfólio -->{% trans %}portfolio{% endtrans %}</a></li>
-</ul>s
-</div>
-<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-<a href="http://enjoybesmart.com/" target="_blank">
-<h3 class="foot-title">EnjoybeSmart CRM</h3>
-</a>
-<ul class="list-group list-footer">
-<li class="list-group-item"><a href="https://enjoybesmart.com/" target="_blank"><!-- funcionalidades --> {% trans %}functionalities{% endtrans %}</a></li>
-<li class="list-group-item"><a href="https://enjoybesmart.com/vantagens/" target="_blank"><!-- vantagens --> {% trans %}vantages{% endtrans %}</a></li>
-<li class="list-group-item"><a href="https://enjoybesmart.com/solucoes/" target="_blank"><!-- soluções --> {% trans %}solutions{% endtrans %}</a></li>
-<li class="list-group-item"><a href="https://enjoybesmart.com/contacto/" target="_blank"><!-- faq -->{% trans %}contacts{% endtrans %}</a></li>
-<li class="list-group-item"><a href="https://enjoybesmart.com/pricing/" target="_blank"><!-- preçário --> {% trans %}precarious{% endtrans %}</a></li>
-</ul>
-</div>
-
-</div>
-
-</div>
-
-</div>
 
 <div class="container-fluid" id="botfooter">
     <div class="container">
@@ -656,7 +211,7 @@ LODGING                                                                         
             </div>
 			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 				<h4 style="color: white;">Form</h4>
-		            <form role="form" action="" method="POST" id="contactform">                                                   
+		            <form role="form" action="" method="POST" id="footerform">                                                   
 		                <input type="text" name="nome" class="form-control" style="background: white; margin-top: 5%;"" id="nome" placeholder="{% trans %}name{% endtrans %}"><br>                   
 		                <input type="text" name="email" class="form-control" style="background: white;" id="email" placeholder="Email"><br>           	
 		                <input type="text" name="assunto" class="form-control" style="background: white;" id="assunto" placeholder="{% trans %}sub{% endtrans %}"><br>
@@ -674,10 +229,58 @@ LODGING                                                                         
     </div>
 </div>
 
+<!--<div class="container-fluid" id="botfooter">
+   <div class="container">
+       <div class="row">
 
-<!--Footer -->
 
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h1 class="contact-us" style="text-align: center; color: ">{%trans%} contact_us {%endtrans%}</h1><br>
+                    <form role="form" action="" method="POST" id="form-contact">
+                        <input type="text" name="nome" class="form-control" style="background: white;" id="nome" placeholder="{% trans %}name{% endtrans %}"><br>
+                        <input type="text" name="email" class="form-control" style="background: white;" id="email" placeholder="Email"><br>
+                        <input type="text" name="assunto" class="form-control" style="background: white;" id="assunto" placeholder="{% trans %}sub{% endtrans %}"><br>
+                        <textarea type="text" name="mensagem" class="form-control" style="background: white;" id="mensagem" placeholder="{% trans %}msg{% endtrans %}" maxlength="755"></textarea><br>
+                        <button name="submit" id="btn-cont" class="btn botaoEnviar hvr-sweep-to-left">{% trans %}send{%endtrans%}</button>
+                        </div>
+                    </form>
+            </div>
+            <div class="row">
+           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" align="center" >
+               <h1 class="tituloCinza">{%trans%} follow_us {%endtrans%}</h1>
+                        <a target="_blank">
+                            <div class="lang-flag">
+                                <img href="https://www.facebook.com/pages/category/Company/IntouchBiz-Solu%C3%A7%C3%B5es-Integradas-Unipessoal-Lda-219075511487928/" src="img/facebook_foot.png"> &emsp;&emsp;
+                                <img href="https://www.youtube.com/user/fpfsistemas" src="/img/youtube_foot.png" alt="youtube" id="youtube"> &emsp;&emsp;
+                                <img href="https://www.instagram.com/intouchbiz/" src="img/instagram_foot.png" alt="instagram" id="instagram">
+                            </div>
+                        </a>
+                    </div>
+               </div> <br>
+          
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <p class="text-center" id="footer-text">
+                    <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;" target="_top" class="simpleLink">&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;</a> | +351 282 353 994 | Rua Município S. Domingos Lote 2  | 8400 - 415 Lagoa | Algarve | Portugal  <br><br> Copyright &copy; 2019 <a href="https://www.intouchbiz.com/" class="simpleLink" target="_blank">IntouchBiz</a>.{% trans %}rights{% endtrans %}<br> <br> <br>
 
+                           <a href="">
+                               {% trans %} site_map {% endtrans %}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                           </a>
+                           <a href="">
+                               {% trans %}terms_and_conditions{% endtrans %}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                           </a>
+                           <a href="">
+                               {% trans %}safe_payment{% endtrans %}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                           </a>
+                           <a href="">
+                               {% trans %}deliveries_and_returns{% endtrans %}
+                           </a>
+                   </a>
+               </p>
+
+            </div>
+        </div>
+   </div>
+</div>-->
 
 
 <!-- Google Analytics -->
@@ -753,38 +356,72 @@ function scaleBannerVideoSize(element) {
     });
 }
 </script>
+
 <script>
  
-	$("#contactform").on("submit", function(event) {
+$("#contactform").submit(function(e) {
+	  e.preventDefault();
+	  console.log($(this).serialize());
+	   $.ajax({
+	           type: "POST",
+	           url: '{{ path('contactForm') }}',
+	           data: $(this).serialize(),
+	           success: function(data)
+	           {
+
+	            console.log(data);
+
+
+	            if(data.status == 0){
+
+	             alert("YOU NEED TO FILL " + data.status);
+
+
+	            } else {
+	           
+
+	              document.getElementById("contactform").reset();
+	              alert("GOOD JOB");
+	            }
+	        }
+
+	});
+});
+
+    
+</script> 
+<script>
+ 
+	$("#footerform").on("submit", function(event) {
 	    event.preventDefault();
 	    console.log($(this).serialize());
 	    $.ajax({
-	      url:'{{ path("contactForm") }}',
+	      url:'{{ path("footerForm") }}',
 	      type:"POST",
 	      data: $(this).serialize(),
 	      success: function(data)
 	      {   
 	        if( status == 1 ){
-	            console.log("Campos preenchidos com sucesso", data)
+	           
 	            alert('Sucesso');
 	        }
 
 	        if( status == 0 ){
-	            console.log("Preencha todos os campos ", data)  
+	            
 	            alert('error');
 	        }
 	      },
 	      
 	      error: function(data)
 	      {
-	        console.log(data)
+	        
 	      }
 
 	    });
 	});
 
     
-</script> 
+</script>
 <script>
 /* MOVE BACKGROUND HOME */
 $(function () {

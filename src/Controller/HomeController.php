@@ -24,21 +24,32 @@ class HomeController extends AbstractController
 
     public function contactForm(Request $request, \Swift_Mailer $mailer) {
 
-        $error = array();
+         $arr= array();
 
-        $request->request->get('nome');
-        $request->request->get('email');
-        $request->request->get('assunto');
-        $request->request->get('mensagem');
+         $err= array();
 
-        !$request->request->get('nome') ? $error[] = 'nome' : false;
-        !$request->request->get('email') ? $error[] = 'email' : false;
-        !$request->request->get('assunto') ? $error[] = 'assunto' : false;
-        !$request->request->get('mensagem') ? $error[] = 'mensagem' : false;
+        $arr =array('name' => $request->request->get('name'),'email' => 
+        $request->request->get('email'),'message' => 
+        $request->request->get('message'),'subject' => 
+        $request->request->get('subject'));
 
 
-        if (count($error)>0){
-              return new JsonResponse(array('status' => 1,'err' => $error)); 
+                $request->request->get('name') ? $name = 
+        $request->request->get('name') : $err[]= 'name';
+                $request->request->get('subject') ? $subject = 
+        $request->request->get('subject') : $err[]= 'subject';
+                $request->request->get('message') ? $message = 
+        $request->request->get('message') : $err[]= 'message';
+                $request->request->get('email') ? $email = 
+        $request->request->get('email') : $err[]= 'email';
+
+
+
+        if ($err){
+
+            $arr =array('status' =>0, 'mensage' => $err );
+            return new JsonResponse($arr);
+
         } else { 
 
             $transport = (new \Swift_SmtpTransport('mail.intouchbiz.com', 465, 'ssl'))
@@ -53,13 +64,54 @@ class HomeController extends AbstractController
             $mail = (new \Swift_Message(''))
               ->setFrom(['tomas.goncalves@intouchbiz.com' => 'Tomás'])
               ->setTo([$request->request->get('email')])
-              ->setBody('asda')
+              ->setBody('asdasf')
               ;
 
             // Send the message
             $result = $mailer->send($mail);
 
-            return new JsonResponse(array('status' => 0, 'nome' => $request->request->get('nome'), 'email' => $request->request->get('email'), 'assunto' => $request->request->get('assunto'), 'value' => $request->request->get('mensagem')));
+            return new JsonResponse(array('status' => 1, 'name' => $request->request->get('name'), 'email' => $request->request->get('email'), 'subject' => $request->request->get('subject'), 'message' => $request->request->get('message')));
+        }
+    }
+
+    public function footerForm(Request $request, \Swift_Mailer $mailer) {
+
+        $error = array();
+
+        $request->request->get('nome');
+        $request->request->get('email');
+        $request->request->get('assunto');
+        $request->request->get('mensagem');
+
+        !$request->request->get('nome') ? $error[] = 'nome' : false;
+        !$request->request->get('email') ? $error[] = 'email' : false;
+        !$request->request->get('assunto') ? $error[] = 'assunto' : false;
+        !$request->request->get('mensagem') ? $error[] = 'mensagem' : false;
+
+
+        if (count($error)>0){
+              return new JsonResponse(array('err' => $error, 'status' => 0)); 
+        } else { 
+
+            $transport = (new \Swift_SmtpTransport('mail.intouchbiz.com', 465, 'ssl'))
+              ->setUsername('tomas.goncalves@intouchbiz.com')
+              ->setPassword('intouchbiz#2019')
+            ;
+
+            // Create the Mailer using your created Transport
+            $mailer = new \Swift_Mailer($transport);
+
+            // Create a message
+            $mail = (new \Swift_Message(''))
+              ->setFrom(['tomas.goncalves@intouchbiz.com' => 'Tomás'])
+              ->setTo([$request->request->get('email')])
+              ->setBody('asdasf')
+              ;
+
+            // Send the message
+            $result = $mailer->send($mail);
+
+            return new JsonResponse(array( 'nome' => $request->request->get('nome'), 'email' => $request->request->get('email'), 'assunto' => $request->request->get('assunto'), 'mensagem' => $request->request->get('mensagem'), 'status' => 1));
         }
     }
  
@@ -114,7 +166,7 @@ class HomeController extends AbstractController
 
     public function seo(){
       
-      $seo =  $creation = ['creation/development', 'creation/development', 'creation/development', 'creation/development'];
+      $seo = ['creation/development', 'creation/development', 'creation/development', 'creation/development', ''];
        
       return $this->render('/lucky/seo.html.twig', [ 
         'seo' => $seo, 'page' => 'seo'
