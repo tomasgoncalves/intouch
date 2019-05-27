@@ -49,6 +49,11 @@ return array(
     'msg' => 'Message',
     'sub' => 'Subject',
     'intouch' => 'Intouchbiz Soluções Integradas is an associate of FPF Management Systems.',
+    'contact_us' => 'Contact us',
+    'follow_us' => 'Follow us',
+    'site_map' => 'Map',
+    'safe_payment' => 'Payment',
+
     
 
 

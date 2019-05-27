@@ -24,32 +24,21 @@ class HomeController extends AbstractController
 
     public function contactForm(Request $request, \Swift_Mailer $mailer) {
 
-         $arr= array();
+        $error = array();
 
-         $err= array();
+        $request->request->get('name');
+        $request->request->get('email');
+        $request->request->get('subject');
+        $request->request->get('message');
 
-        $arr =array('name' => $request->request->get('name'),'email' => 
-        $request->request->get('email'),'message' => 
-        $request->request->get('message'),'subject' => 
-        $request->request->get('subject'));
-
-
-                $request->request->get('name') ? $name = 
-        $request->request->get('name') : $err[]= 'name';
-                $request->request->get('subject') ? $subject = 
-        $request->request->get('subject') : $err[]= 'subject';
-                $request->request->get('message') ? $message = 
-        $request->request->get('message') : $err[]= 'message';
-                $request->request->get('email') ? $email = 
-        $request->request->get('email') : $err[]= 'email';
+        !$request->request->get('name') ? $error[] = 'nome' : false;
+        !$request->request->get('email') ? $error[] = 'email' : false;
+        !$request->request->get('subject') ? $error[] = 'assunto' : false;
+        !$request->request->get('message') ? $error[] = 'mensagem' : false;
 
 
-
-        if ($err){
-
-            $arr =array('status' =>0, 'mensage' => $err );
-            return new JsonResponse($arr);
-
+        if (count($error)>0){
+              return new JsonResponse(array('status' => 0,'err' => $error)); 
         } else { 
 
             $transport = (new \Swift_SmtpTransport('mail.intouchbiz.com', 465, 'ssl'))
@@ -78,19 +67,19 @@ class HomeController extends AbstractController
 
         $error = array();
 
-        $request->request->get('nome');
+        $request->request->get('name');
         $request->request->get('email');
-        $request->request->get('assunto');
-        $request->request->get('mensagem');
+        $request->request->get('subject');
+        $request->request->get('message');
 
-        !$request->request->get('nome') ? $error[] = 'nome' : false;
+        !$request->request->get('name') ? $error[] = 'nome' : false;
         !$request->request->get('email') ? $error[] = 'email' : false;
-        !$request->request->get('assunto') ? $error[] = 'assunto' : false;
-        !$request->request->get('mensagem') ? $error[] = 'mensagem' : false;
+        !$request->request->get('subject') ? $error[] = 'assunto' : false;
+        !$request->request->get('message') ? $error[] = 'mensagem' : false;
 
 
         if (count($error)>0){
-              return new JsonResponse(array('err' => $error, 'status' => 0)); 
+              return new JsonResponse(array('status' => 0,'err' => $error)); 
         } else { 
 
             $transport = (new \Swift_SmtpTransport('mail.intouchbiz.com', 465, 'ssl'))
@@ -111,7 +100,7 @@ class HomeController extends AbstractController
             // Send the message
             $result = $mailer->send($mail);
 
-            return new JsonResponse(array( 'nome' => $request->request->get('nome'), 'email' => $request->request->get('email'), 'assunto' => $request->request->get('assunto'), 'mensagem' => $request->request->get('mensagem'), 'status' => 1));
+            return new JsonResponse(array('status' => 1, 'name' => $request->request->get('name'), 'email' => $request->request->get('email'), 'subject' => $request->request->get('subject'), 'message' => $request->request->get('message')));
         }
     }
  
@@ -253,4 +242,32 @@ class HomeController extends AbstractController
         'development' => $development, 'page' => 'development'
        ]);
     }
-}
+
+    public function terms(){
+
+      return $this->render('/lucky/terms.html.twig', [
+       'page' => 'terms'
+      ]);
+    }
+
+    public function safe_payment(){
+
+      return $this->render('/lucky/safe_payment.html.twig', [
+       'page' => 'safe_payment'
+      ]);
+    }
+
+    public function map (){
+
+      return $this->render('/lucky/map.html.twig', [
+       'page' => 'map'
+      ]);
+    }
+
+    public function deliveries(){
+
+      return $this->render('/lucky/deliveries.html.twig', [
+       'page' => 'deliveries'
+      ]); 
+    }
+  }

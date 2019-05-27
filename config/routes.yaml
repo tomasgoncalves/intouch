@@ -57,3 +57,19 @@ development:
 translation:
     path: /translation/{lang}/{page}
     controller: App\Controller\HomeController::userTranslation
+
+terms:
+   path: /terms
+   controller: App\Controller\HomeController::terms
+
+safe_payment:
+   path: /safe_payment
+   controller: App\Controller\HomeController::safe_payment
+
+deliveries:
+   path: /deliveries
+   controller: App\Controller\HomeController::deliveries
+
+map:
+   path: /map
+   controller: App\Controller\HomeController::map

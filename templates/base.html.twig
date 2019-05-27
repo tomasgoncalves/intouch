@@ -171,7 +171,7 @@ $('#languages li').css({'display':'inline-block'});
 
 
 
-<div class="container-fluid" id="botfooter">
+<!--<div class="container-fluid" id="botfooter">
     <div class="container">
         <div class="row">        
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -179,11 +179,10 @@ $('#languages li').css({'display':'inline-block'});
 
                 
                 <ul class="list-group list-footer">
-                    <li class="list-group-item"><i class="fa fa-building"></i> Edifício Aurora Sol Rua do Barranco Loja L</li>
-                    <li class="list-group-item">8400-508 Carvoeiro, Lagoa</li>
-                    <li class="list-group-item"><i class="fa fa-phone"></i> +351 282 313 477</li>
-                    <li class="list-group-item"><i class="fa fa-mobile"></i> +351 969 830 371</li>
-                    <li class="list-group-item"><i class="fa fa-inbox"></i> construcoes.a.a.goncalves@gmail.com</li>
+                    <li class="list-group-item"><i class="fa fa-building"></i> Rua Município S. Domingos Lote</li>
+                    <li class="list-group-item"><i class="fa fa-building"></i> 8400 - 415 Lagoa</li>
+                    <li class="list-group-item"><i class="fa fa-phone"></i> +351 282 353 994</li>                   
+                    <li class="list-group-item"><i class="fa fa-inbox"></i> <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;" target="_top" class="simpleLink">&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;</a><li>
                 </ul>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
@@ -227,16 +226,16 @@ $('#languages li').css({'display':'inline-block'});
 	        </div>
 		</div>
     </div>
-</div>
+</div>-->
 
-<!--<div class="container-fluid" id="botfooter">
+<div class="container-fluid" id="botfooter">
    <div class="container">
        <div class="row">
 
 
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h1 class="contact-us" style="text-align: center; color: ">{%trans%} contact_us {%endtrans%}</h1><br>
-                    <form role="form" action="" method="POST" id="form-contact">
+                    <form role="form" action="" method="POST" id="footerform">
                         <input type="text" name="nome" class="form-control" style="background: white;" id="nome" placeholder="{% trans %}name{% endtrans %}"><br>
                         <input type="text" name="email" class="form-control" style="background: white;" id="email" placeholder="Email"><br>
                         <input type="text" name="assunto" class="form-control" style="background: white;" id="assunto" placeholder="{% trans %}sub{% endtrans %}"><br>
@@ -280,7 +279,10 @@ $('#languages li').css({'display':'inline-block'});
             </div>
         </div>
    </div>
-</div>-->
+</div>
+
+
+
 
 
 <!-- Google Analytics -->
@@ -359,35 +361,33 @@ function scaleBannerVideoSize(element) {
 
 <script>
  
-$("#contactform").submit(function(e) {
-	  e.preventDefault();
-	  console.log($(this).serialize());
-	   $.ajax({
-	           type: "POST",
-	           url: '{{ path('contactForm') }}',
-	           data: $(this).serialize(),
-	           success: function(data)
-	           {
-
-	            console.log(data);
-
-
-	            if(data.status == 0){
-
-	             alert("YOU NEED TO FILL " + data.status);
-
-
-	            } else {
-	           
-
-	              document.getElementById("contactform").reset();
-	              alert("GOOD JOB");
-	            }
+	$("#contactform").on("submit", function(event) {
+	    event.preventDefault();
+	    console.log($(this).serialize());
+	    $.ajax({
+	      url:'{{ path("contactForm") }}',
+	      type:"POST",
+	      data: $(this).serialize(),
+	      success: function(data)
+	      {   
+	        if( status == 1 ){
+	            console.log("Campos preenchidos com sucesso", data)
+	            alert('Sucesso');
 	        }
 
-	});
-});
+	        if( status == 0 ){
+	            console.log("Preencha todos os campos ", data)  
+	            alert('error');
+	        }
+	      },
+	      
+	      error: function(data)
+	      {
+	        
+	      }
 
+	    });
+	});
     
 </script> 
 <script>
