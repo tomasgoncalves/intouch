@@ -232,6 +232,15 @@ $('#languages li').css({'display':'inline-block'});
    <div class="container">
        <div class="row">
 
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h1 class="contact-us" style="text-align: center; color: ">{%trans%} information {%endtrans%}</h1>
+                 <ul class="list-group list-footer" style="text-align: center;">
+                    <li class="list-group-item"><i class="fa fa-building"></i> Rua Município S. Domingos Lote</li>
+                    <li class="list-group-item"><i class="fa fa-building"></i> 8400 - 415 Lagoa</li>
+                    <li class="list-group-item"><i class="fa fa-phone"></i> +351 282 353 994</li>                   
+                    <li class="list-group-item"><i class="fa fa-inbox"></i> <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;" target="_top" class="simpleLink">&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;</a><li>
+                </ul>                   
+            </div>
 
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h1 class="contact-us" style="text-align: center; color: ">{%trans%} contact_us {%endtrans%}</h1><br>
@@ -246,12 +255,12 @@ $('#languages li').css({'display':'inline-block'});
             </div>
             <div class="row">
            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" align="center" >
-               <h1 class="tituloCinza">{%trans%} follow_us {%endtrans%}</h1>
+               <h1 class="tituloCinza">{%trans%}follow_us{%endtrans%}</h1>
                         <a target="_blank">
                             <div class="lang-flag">
-                                <img href="https://www.facebook.com/pages/category/Company/IntouchBiz-Solu%C3%A7%C3%B5es-Integradas-Unipessoal-Lda-219075511487928/" src="img/facebook_foot.png"> &emsp;&emsp;
-                                <img href="https://www.youtube.com/user/fpfsistemas" src="/img/youtube_foot.png" alt="youtube" id="youtube"> &emsp;&emsp;
-                                <img href="https://www.instagram.com/intouchbiz/" src="img/instagram_foot.png" alt="instagram" id="instagram">
+                                <img href="https://www.facebook.com/pages/category/Company/IntouchBiz-Solu%C3%A7%C3%B5es-Integradas-Unipessoal-Lda-219075511487928/" src="{{asset ('img/facebook_foot.png') }}"> &emsp;&emsp;
+                                <img href="https://www.youtube.com/user/fpfsistemas" src="{{asset ('img/youtube_foot.png') }}" alt="youtube" id="youtube"> &emsp;&emsp;
+                                <img href="https://www.instagram.com/intouchbiz/" src="{{ asset ('img/instagram_foot.png') }}" alt="instagram" id="instagram">
                             </div>
                         </a>
                     </div>
@@ -259,9 +268,9 @@ $('#languages li').css({'display':'inline-block'});
           
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <p class="text-center" id="footer-text">
-                    <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;" target="_top" class="simpleLink">&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;</a> | +351 282 353 994 | Rua Município S. Domingos Lote 2  | 8400 - 415 Lagoa | Algarve | Portugal  <br><br> Copyright &copy; 2019 <a href="https://www.intouchbiz.com/" class="simpleLink" target="_blank">IntouchBiz</a>.{% trans %}rights{% endtrans %}<br> <br> <br>
+                    <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;" target="_top" class="simpleLink">&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;</a> | +351 282 353 994 | Rua Município S. Domingos Lote 2  | 8400 - 415 Lagoa | Algarve | Portugal  <br><br> Copyright &copy; 2019 <a href="https://www.intouchbiz.com/" class="simpleLink" target="_blank">IntouchBiz</a>.{% trans %}rights{% endtrans %}<!--<br> <br> <br>-->
 
-                           <a href="">
+                           <!--<a href="">
                                {% trans %} site_map {% endtrans %}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
                            </a>
                            <a href="">
@@ -272,7 +281,7 @@ $('#languages li').css({'display':'inline-block'});
                            </a>
                            <a href="">
                                {% trans %}deliveries_and_returns{% endtrans %}
-                           </a>
+                           </a>-->
                    </a>
                </p>
 
@@ -361,35 +370,36 @@ function scaleBannerVideoSize(element) {
 
 <script>
  
-	$("#contactform").on("submit", function(event) {
-	    event.preventDefault();
-	    console.log($(this).serialize());
-	    $.ajax({
-	      url:'{{ path("contactForm") }}',
-	      type:"POST",
-	      data: $(this).serialize(),
-	      success: function(data)
-	      {   
-	        if( status == 1 ){
-	            console.log("Campos preenchidos com sucesso", data)
-	            alert('Sucesso');
-	        }
+$("#contactform").on("submit", function(event) {
+    event.preventDefault();
+    console.log($(this).serialize());
+    $.ajax({
+      url:'{{ path("contactForm") }}',
+      type:"POST",
+      data: $(this).serialize(),
+      success: function(data)
+      {   
+        if( status == 1 ){
+            console.log("Campos preenchidos com sucesso", data)
+            alert('Sucesso');
+        }
 
-	        if( status == 0 ){
-	            console.log("Preencha todos os campos ", data)  
-	            alert('error');
-	        }
-	      },
-	      
-	      error: function(data)
-	      {
-	        
-	      }
+        if( status == 0 ){
+            console.log("Preencha todos os campos ", data)  
+            alert('error');
+        }
+      },
+      
+      error: function(data)
+      {
+        
+      }
 
-	    });
-	});
+    });
+});
     
 </script> 
+
 <script>
  
 	$("#footerform").on("submit", function(event) {

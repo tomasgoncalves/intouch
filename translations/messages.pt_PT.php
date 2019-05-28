@@ -82,6 +82,7 @@ return array(
 
 
 
+
     'seo_0' => array( 'title' => 'SEO Optimização', 'subtitle' => 'Tudo o que precisa para começar, é concentrar-se na sua sua área de negócio, nós cuidamos do resto.', 'img' => 'http://www.intouchbiz.com/template/online_shop.png'),
 
     'seo_1' => array( 'title' => 'SEM', 'subtitle' => 'Criatividade e originalidade são essenciais para se tornar como pessoas em uma presença online.', 'img' => 'https://www.intouchbiz.com/template/webdesign_1.png'),
@@ -95,9 +96,12 @@ return array(
 
 
 
+
     'host_0' => array('title' => 'Alojamento', 'subtitle' => 'Todos os nossos serviços de criação de sites, são baseados em tecnologia própria e por isso requerem software especifico e próprio.', 'img' => '{{asset("img/alojamento.png"}}'),
 
     'host_1' => array('title' => 'Registo de Dominios', 'subtitle' => 'O seu domínio www.asuaempresa.pt, .com, .eu, etc., é a sua imagem na internet.', 'img' => '{{asset("img/registo.png"}}'),
+
+
 
 
     'product_0' => array ('title' => 'Site Instuticional', 'subtitle' => 'Tudo o que precisa para começar, é concentrar-se na sua sua área de negócio, nós cuidamos do resto.', 'img' => 'http://www.intouchbiz.com/template/online_shop.png'),
@@ -138,6 +142,8 @@ return array(
     'port_21' => array ( 'act' => 'Ar condicionado'),
     'port_22' => array ( 'act' => 'Vedações'),
     'port_23' => array ( 'act' => 'Material Restauração'),
+
+
 
 	'port1_0' => array('act' => "Site Instuticional"),
     'port1_1' => array('act' => "Site Single Page"),
