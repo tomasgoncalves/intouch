@@ -1,75 +1,75 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
-
 index:
-    path: /
-    controller: App\Controller\HomeController::index
+  path: /
+  controller: App\Controller\HomeController::index
 
 contactForm:
-    path: /contactForm
-    controller: App\Controller\HomeController::contactForm
+  path: /contactForm
+  controller: App\Controller\HomeController::contactForm
 
 footerForm:
-    path: /footerForm
-    controller: App\Controller\HomeController::footerForm     
+  path: /footerForm
+  controller: App\Controller\HomeController::footerForm     
 
 creation:
-    path: /creation
-    controller: App\Controller\HomeController::creation
+  path: /creation
+  controller: App\Controller\HomeController::creation
 
 who:
-    path: /index/who
-    controller: App\Controller\HomeController::who    
+  path: /index/who
+  controller: App\Controller\HomeController::who    
 
 seo:
-    path: /seo
-    controller: App\Controller\HomeController::seo
+  path: /seo
+  controller: App\Controller\HomeController::seo
 
 products:
-    path: /products
-    controller: App\Controller\HomeController::products
+  path: /products
+  controller: App\Controller\HomeController::products
 
 host:
-    path: /host
-    controller: App\Controller\HomeController::host
+  path: /host
+  controller: App\Controller\HomeController::host
 
 portfolio:
-    path: /portfolio
-    controller: App\Controller\HomeController::portfolio
+  path: /portfolio
+  controller: App\Controller\HomeController::portfolio
 
 contacts:
-    path: /contacts
-    controller: App\Controller\HomeController::contacts
+  path: /contacts
+  controller: App\Controller\HomeController::contacts
 
 accomodation:
-    path: /host/accomodation
-    controller: App\Controller\HomeController::accomodation
+  path: /host/accomodation
+  controller: App\Controller\HomeController::accomodation
 
 registration:
-    path: /host/registration
-    controller: App\Controller\HomeController::registration
+  path: /host/registration
+  controller: App\Controller\HomeController::registration
 
 development:
-    path: /creation/development
-    controller: App\Controller\HomeController::development
+  path: /creation/development
+  controller: App\Controller\HomeController::development
 
 translation:
-    path: /translation/{lang}/{page}
-    controller: App\Controller\HomeController::userTranslation
+  path: /translation/{lang}/{page}
+  controller: App\Controller\HomeController::userTranslation
 
 terms:
-   path: /terms
-   controller: App\Controller\HomeController::terms
+  path: /terms
+  controller: App\Controller\HomeController::terms
 
 safe_payment:
-   path: /safe_payment
-   controller: App\Controller\HomeController::safe_payment
+  path: /safe_payment
+  controller: App\Controller\HomeController::safe_payment
 
 deliveries:
-   path: /deliveries
-   controller: App\Controller\HomeController::deliveries
+  path: /deliveries
+  controller: App\Controller\HomeController::deliveries
 
 map:
-   path: /map
-   controller: App\Controller\HomeController::map
+  path: /map
+  controller: App\Controller\HomeController::map
+
+we_call:
+  path: /we_call
+  controller: App\Controller\HomeController::we_call

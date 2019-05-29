@@ -1,0 +1,135 @@
+{% extends "base.html.twig" %}
+{% block content %}
+
+<!--Banner-->
+<header>
+    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+        <!-- CART BUTTON AND LANG -->
+        <ul id="cart-list" class="borderBottomHeader">
+            <li>
+                <a href="https://www.facebook.com/connectedintouchbiz/" target="_blank">
+                    <div class="social-flag">
+                        <img src="{{asset ('img/facebook.png')}}" alt="facebook" id="facebook">
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://twitter.com/IntouchBiz_" target="_blank">
+                    <div class="social-flag">
+                        <img src="{{asset ('img/twitter.png')}}" alt="twitter" id="twitter">
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://plus.google.com/u/0/111192249106908035114" target="_blank">
+                    <div class="social-flag">
+                        <img src="{{asset ('img/youtube.png')}}" alt="googleplus" id="googleplus">
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>  
+</div>
+</div>
+</header>
+
+<!-- SLIDER -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div id="carousel-generic" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="homepage-hero-module imgSlider">
+                            <div class="video-container">
+                                <div class="filter">
+                                </div>
+                                <!--Video of banner pages -->
+                                <div style="background-color:rgba(33, 64, 154, 0.65);position:absolute; width:100%; height:100%;z-index:9">
+                                </div>    
+                                <video autoplay loop class="fillWidth">
+                                    <source alt="rendimento mensal garantido" src="{{asset('video/Mock-up.mp4')}}" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                                    <source  src="{{asset('video/Mock-up.m4v')}}" type="video/m4v" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                                    <source  src="{{asset('video/Mock-up.webm')}}" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                                    <source  src="{{asset('video/Mock-up.ogg')}}" type="video/ogg" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                                    <source  src="{{asset('video/Mock-up.ogv')}}" type="video/ogv" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                                </video>
+                                <div class="poster hidden">
+                                    <img class="imgSlider" style="height:100%!important" src="{{ asset('img/slidehome.png')}}" alt="rendimento mensal garantido">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-caption container">
+                            <h1 class="title-slider">{% trans %}presence{% endtrans %}<br>{% trans %}internet{% endtrans %} <span class="textUnderlineBigSize">{% trans %}here{% endtrans %}.</span></h1>
+                            <hr class="textUnderline ">
+                            <h2 class="desc-slider"><p></p></h2>
+                            <a class="page-scroll" href="#firstSection"><img src="{{ asset('img/setaBottom.png')}}" class="setaBottom" alt="rendimento mensal garantido"></a>
+                        </div>
+                        
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+<section>
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<h1 class="tituloCinza">{% trans %}registration{% endtrans %}</h1>
+</div>
+</div>
+
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<h1 class="tituloBold">{% trans %}registration{% endtrans %}</h1>
+</div>
+</div>
+
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<p>Na intouchbiz os domínios .com ou .net estão incluídos no serviço de alojamento que disponibilizamos de acordo com a opção que escolha, mas podemos registar outros domínios como por exemplo o .pt.
+<br><br>
+E porque somos parceiros da FCCN(Fundação para a Computação Cientifica Nacional), a Intouchbiz efectua o registo do seu domínio www.asuaempresa.pt em 24H.
+<br><br>
+Temos pessoas qualificadas que o ajudam a escolher e registar o melhor domínio para a sua empresa.
+<br><br>
+Conte com a nossa experiência para gerir o seu domínio de uma forma activa, garantindo a sua manutenção e renovação. Sabemos o quanto o seu nome e imagem é importante para si.
+<br><br>Todos os domínios que estão sobre a gestão da Intouchbiz, são propriedade dos nossos clientes e numa necessidade de mudança a Intouchbiz não colocará qualquer obstáculo desde que as contas com a Intouchbiz estejam saldadas, num motivo de transferência, assim que dermos a autorização de transferência o cliente deverá proceder ao mesmo num prazo máximo de sete dias, a partir do momento em que autorizamos uma transferência as nossas responsabilidades cessam automaticamente, não podendo ser exigidas ao cliente quaisquer direitos de assistência.<br><br>
+<a href="http://intouchbiz.com/pt/contactos-rua-municipio-domingos-lagoa-portimao-algarve-portugal" style="color:#21409A">Contacte-nos</a>
+<br><br>
+A Intouchbiz avalia as suas necessidades e apresenta-lhe a solução.</p>
+
+<section>
+</section>
+
+<section>
+</section>
+
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+</div>
+
+<a href="http://intouchbiz.com/pt/proposta-com-budget-web-makers-negocio-clientes-objetivo-designers-programadores-presenca-online">
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 botaoVerde hvr-sweep-to-right">
+<h1>Saiba Mais</h1>
+</div>
+</a>
+
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+</div>
+</div>
+<section>
+</section>
+<section>
+</section>
+</div>
+</div>
+</div>
+</section>
+</body>
+</html>
+{% endblock %}

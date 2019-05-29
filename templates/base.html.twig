@@ -85,213 +85,212 @@ background: transparent;
 </head>
 
 <body>
-<script>
-$(function(){
-$('#languages').css({'width':'100%','text-align':'right'});
-//$('#languages').prepend('<li><a class="support-icon" href="http://phcfpf.dyndns.org/Extranet/programs/login.aspx?ReturnUrl=%2fExtranet%2f" target="_blank"><div class="lang-flag">Area Cliente</div></a></li>');
-$('#languages li').css({'display':'inline-block'});
-});
-</script>
+    <script>
+    $(function(){
+    $('#languages').css({'width':'100%','text-align':'right'});
+    //$('#languages').prepend('<li><a class="support-icon" href="http://phcfpf.dyndns.org/Extranet/programs/login.aspx?ReturnUrl=%2fExtranet%2f" target="_blank"><div class="lang-flag">Area Cliente</div></a></li>');
+    $('#languages li').css({'display':'inline-block'});
+    });
+    </script>
 
-<!-- Ajax Spinner -->
-<div id="spinner"></div>
-<!-- Background -->
-<div class="container-fluid" id="bground">
-<!-- Header -->
 
-<header id="header">
+    <div id="spinner"></div>
+    <div class="container-fluid" id="bground">
+        <header id="header">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <ul id="languages">
+                        <li>
+                            <a href="#">
+                                <div class="lang-flag">
+                                    <a href="{{ path('translation', {lang: 'en_EN', page: page}) }}" onclick="$('.w3-overlay').show()"><img style="height: 40px" src="{{asset ('img/pt.png')}}" styleclass="w3-image"></a>
 
-<div class="row">
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-<ul id="languages">
-<li>
-<a href="#">
-<div class="lang-flag">
+                                    <a href="{{ path('translation', {lang: 'pt_PT', page:page}) }}" onclick="$('.w3-overlay').show()"><img style="height: 40px" src="{{asset ('img/uk.png')}}" class="w3-image"></a>      
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-    <a href="{{ path('translation', {lang: 'en_EN', page: page}) }}" onclick="$('.w3-overlay').show()"><img style="height: 40px" src="{{asset ('img/pt.png')}}" styleclass="w3-image"></a>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
+                        <a href="{{ path('index')}}"><img src="https://www.intouchbiz.com/template/logo.png" class="borderBottomHeader logo" alt="Intouchbiz" id="logo"></a>
+                        <a href="{{ path('index')}}"><img src="https://www.intouchbiz.com/template/logoBlack.png" class="borderBottomHeader logo2" alt="Intouchbiz" id="logo"></a>
+                    </div>
 
-    <a href="{{ path('translation', {lang: 'pt_PT', page:page}) }}" onclick="$('.w3-overlay').show()"><img style="height: 40px" src="{{asset ('img/uk.png')}}" class="w3-image"></a>
-      
-</div>
-</a>
-</li>
-</ul>
-</div>
-</div>
+                    <div class="col-lg-8 col-md-8 col-sm-7 col-xs-6">
+                    	<!--  NAV BAR  -->
+                    	<nav class="navbar navbar-default">
+                    	   <div class="navbar-inner borderBottomHeader">
+                    	        <!-- Brand and toggle get grouped for better mobile display -->
+                    	        <div class="navbar-header">
+                    	            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
+                        	           <span class="sr-only">Toggle navigation</span>
+                        	           <span class="icon-bar"></span>
+                        	           <span class="icon-bar"></span>
+                        	           <span class="icon-bar"></span>
+                    	            </button>
+                    	        </div>
+                            	<!-- Collect the nav links, forms, and other content for toggling -->
+                        	    <div class="collapse navbar-collapse" id="bs-navbar">
+                        	        <ul class="nav navbar-nav">   
+                        	            <li>
+                        	               <a href="{{ path('creation') }}"  class="colorBlueScroll">{% trans %}creation{% endtrans %}</a>
+                        	            </li>
 
-<div class="container">
-<div class="row">
-<div class="col-lg-2 col-md-2 col-sm-3 col-xs-6">
-<a href="{{ path('index')}}"><img src="https://www.intouchbiz.com/template/logo.png" class="borderBottomHeader logo" alt="Intouchbiz" id="logo"></a>
-<a href="{{ path('index')}}"><img src="https://www.intouchbiz.com/template/logoBlack.png" class="borderBottomHeader logo2" alt="Intouchbiz" id="logo"></a>
-</div>
-<div class="col-lg-8 col-md-8 col-sm-7 col-xs-6">
-	<!--  NAV BAR  -->
-	<nav class="navbar navbar-default">
-	<div class="navbar-inner borderBottomHeader">
-	<!-- Brand and toggle get grouped for better mobile display -->
-	<div class="navbar-header">
-	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
-	<span class="sr-only">Toggle navigation</span>
-	<span class="icon-bar"></span>
-	<span class="icon-bar"></span>
-	<span class="icon-bar"></span>
-	</button>
-	</div>
+                        	            <li>
+                        	               <a href="{{ path('seo') }}"  class="colorBlueScroll">SEO</a>
+                        	            </li>
 
-	<!-- Collect the nav links, forms, and other content for toggling -->
-	<div class="collapse navbar-collapse" id="bs-navbar">
-	<ul class="nav navbar-nav">   
-	<li >
-	<a href="{{ path('creation') }}"  class="colorBlueScroll">{% trans %}creation{% endtrans %}</a>
-	</li>
-	<li>
-	<a href="{{ path('seo') }}"  class="colorBlueScroll">SEO</a>
-	</li>
-	<li>
-	<a href="{{ path('host') }}"  class="colorBlueScroll">HOST</a>
-	</li>                
-	<li>
-	<a href="{{ path('products') }}"  class="colorBlueScroll">{% trans %}products{% endtrans %}</a>
-	</li>
-	<li>
-	<a href="{{ path('portfolio') }}"  class="colorBlueScroll">{% trans %}portfolio{% endtrans %}</a>
-	</li>
-	<li>
-	<a href="{{ path('contacts') }}"  class="colorBlueScroll">{% trans %}contacts{% endtrans %}</a>
-	</li>
-	</ul>
-	</div><!-- /.navbar-collapse -->
-	</div><!-- /.container-fluid -->
-	</nav>
-</div>      
+                        	            <li>
+                        	               <a href="{{ path('host') }}"  class="colorBlueScroll">HOST</a>
+                        	            </li>  
+
+                        	            <li>
+                        	               <a href="{{ path('products') }}"  class="colorBlueScroll">{% trans %}products{% endtrans %}</a>
+                        	            </li>
+
+                        	            <li>
+                        	               <a href="{{ path('portfolio') }}"  class="colorBlueScroll">{% trans %}portfolio{% endtrans %}</a>
+                        	            </li>
+
+                        	            <li>
+                        	               <a href="{{ path('contacts')  }}"  class="colorBlueScroll">{% trans %}contacts{% endtrans %}</a>
+                        	            </li>
+                        	        </ul>
+                        	    </div><!-- /.navbar-collapse -->
+                            </div><!-- /.container-fluid -->
+                        </nav>
+                    </div> 
 
 
 {% block content %}{% endblock %}
 
+                    <!--<div class="container-fluid" id="botfooter">
+                        <div class="container">
+                            <div class="row">        
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <h4 style="color: white;">Nós ligamos</h4>
 
-
-<!--<div class="container-fluid" id="botfooter">
-    <div class="container">
-        <div class="row">        
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <h4 style="color: white;">Nós ligamos</h4>
-
-                
-                <ul class="list-group list-footer">
-                    <li class="list-group-item"><i class="fa fa-building"></i> Rua Município S. Domingos Lote</li>
-                    <li class="list-group-item"><i class="fa fa-building"></i> 8400 - 415 Lagoa</li>
-                    <li class="list-group-item"><i class="fa fa-phone"></i> +351 282 353 994</li>                   
-                    <li class="list-group-item"><i class="fa fa-inbox"></i> <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;" target="_top" class="simpleLink">&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;</a><li>
-                </ul>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <h4 style="margin-left: 20%; color: white;">Siga-nos</h4>
-                <ul style="margin-left: 8.5%; margin-top: 5%;">                           			
-						<a href="https://www.facebook.com/agconstrucoes" target="_blank">
-							<div class="lang-flag">
-								<img src="http://www.agconstrucoes.com/admin/template/socialmedia/rectangular/facebook.png" alt="facebook" id="facebook">
-							</div>
-						</a>
-			
-						<a href="https://www.facebook.com/agconstrucoes" target="_blank">
-							<div class="lang-flag">
-								<img src="http://www.agconstrucoes.com/admin/template/socialmedia/rectangular/instagram.png" alt="facebook" id="facebook">&emsp;
-							</div>
-						</a>
-								
-						<a href="https://www.facebook.com/agconstrucoes" target="_blank">
-							<div class="lang-flag">
-								<img src="http://www.agconstrucoes.com/admin/template/socialmedia/rectangular/youtube.png" alt="facebook" id="facebook">
-							</div>
-						</a>
-			
-				</ul>
-            </div>
-			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-				<h4 style="color: white;">Form</h4>
-		            <form role="form" action="" method="POST" id="footerform">                                                   
-		                <input type="text" name="nome" class="form-control" style="background: white; margin-top: 5%;"" id="nome" placeholder="{% trans %}name{% endtrans %}"><br>                   
-		                <input type="text" name="email" class="form-control" style="background: white;" id="email" placeholder="Email"><br>           	
-		                <input type="text" name="assunto" class="form-control" style="background: white;" id="assunto" placeholder="{% trans %}sub{% endtrans %}"><br>
-		                <textarea type="text" name="mensagem" class="form-control" style="background: white;" id="mensagem" placeholder="{% trans %}msg{% endtrans %}" maxlength="755"></textarea><br>
-		                <button name="submit" id="submit" class="btn botaoEnviar hvr-sweep-to-left" style="height: 50px;">{% trans %}send{%endtrans%}</button>         
-		            	</div>
-		        	</form>
-	        </div>
-	       <br>
-	        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-	            <p class="text-center" id="footer-text">
-	                <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;" target="_top" class="simpleLink">&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;</a> | +351 282 353 994 | Rua Município S. Domingos Lote 2  | 8400 - 415 Lagoa | Algarve | Portugal  <br><br> Copyright &copy; 2019 <a href="https://www.intouchbiz.com/" class="simpleLink" target="_blank">IntouchBiz</a>. {% trans %}rights{% endtrans %}</p>
-	        </div>
-		</div>
-    </div>
-</div>-->
-
-<div class="container-fluid" id="botfooter">
-   <div class="container">
-       <div class="row">
-
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <h1 class="contact-us" style="text-align: center; color: ">{%trans%} information {%endtrans%}</h1>
-                 <ul class="list-group list-footer" style="text-align: center;">
-                    <li class="list-group-item"><i class="fa fa-building"></i> Rua Município S. Domingos Lote</li>
-                    <li class="list-group-item"><i class="fa fa-building"></i> 8400 - 415 Lagoa</li>
-                    <li class="list-group-item"><i class="fa fa-phone"></i> +351 282 353 994</li>                   
-                    <li class="list-group-item"><i class="fa fa-inbox"></i> <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;" target="_top" class="simpleLink">&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;</a><li>
-                </ul>                   
-            </div>
-
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <h1 class="contact-us" style="text-align: center; color: ">{%trans%} contact_us {%endtrans%}</h1><br>
-                    <form role="form" action="" method="POST" id="footerform">
-                        <input type="text" name="nome" class="form-control" style="background: white;" id="nome" placeholder="{% trans %}name{% endtrans %}"><br>
-                        <input type="text" name="email" class="form-control" style="background: white;" id="email" placeholder="Email"><br>
-                        <input type="text" name="assunto" class="form-control" style="background: white;" id="assunto" placeholder="{% trans %}sub{% endtrans %}"><br>
-                        <textarea type="text" name="mensagem" class="form-control" style="background: white;" id="mensagem" placeholder="{% trans %}msg{% endtrans %}" maxlength="755"></textarea><br>
-                        <button name="submit" id="btn-cont" class="btn botaoEnviar hvr-sweep-to-left">{% trans %}send{%endtrans%}</button>
+                                    
+                                    <ul class="list-group list-footer">
+                                        <li class="list-group-item"><i class="fa fa-building"></i> Rua Município S. Domingos Lote</li>
+                                        <li class="list-group-item"><i class="fa fa-building"></i> 8400 - 415 Lagoa</li>
+                                        <li class="list-group-item"><i class="fa fa-phone"></i> +351 282 353 994</li>                   
+                                        <li class="list-group-item"><i class="fa fa-inbox"></i> <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;" target="_top" class="simpleLink">&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;</a><li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <h4 style="margin-left: 20%; color: white;">Siga-nos</h4>
+                                    <ul style="margin-left: 8.5%; margin-top: 5%;">                           			
+                    						<a href="https://www.facebook.com/agconstrucoes" target="_blank">
+                    							<div class="lang-flag">
+                    								<img src="http://www.agconstrucoes.com/admin/template/socialmedia/rectangular/facebook.png" alt="facebook" id="facebook">
+                    							</div>
+                    						</a>
+                    			
+                    						<a href="https://www.facebook.com/agconstrucoes" target="_blank">
+                    							<div class="lang-flag">
+                    								<img src="http://www.agconstrucoes.com/admin/template/socialmedia/rectangular/instagram.png" alt="facebook" id="facebook">&emsp;
+                    							</div>
+                    						</a>
+                    								
+                    						<a href="https://www.facebook.com/agconstrucoes" target="_blank">
+                    							<div class="lang-flag">
+                    								<img src="http://www.agconstrucoes.com/admin/template/socialmedia/rectangular/youtube.png" alt="facebook" id="facebook">
+                    							</div>
+                    						</a>                        		
+                    				</ul>
+                                </div>
+                    			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    				<h4 style="color: white;">Form</h4>
+                    		            <form role="form" action="" method="POST" id="footerform">                                                   
+                    		                <input type="text" name="nome" class="form-control" style="background: white; margin-top: 5%;"" id="nome" placeholder="{% trans %}name{% endtrans %}"><br>                   
+                    		                <input type="text" name="email" class="form-control" style="background: white;" id="email" placeholder="Email"><br>           	
+                    		                <input type="text" name="assunto" class="form-control" style="background: white;" id="assunto" placeholder="{% trans %}sub{% endtrans %}"><br>
+                    		                <textarea type="text" name="mensagem" class="form-control" style="background: white;" id="mensagem" placeholder="{% trans %}msg{% endtrans %}" maxlength="755"></textarea><br>
+                    		                <button name="submit" id="submit" class="btn botaoEnviar hvr-sweep-to-left" style="height: 50px;">{% trans %}send{%endtrans%}</button>         
+                    		            	</div>
+                    		        	</form>
+                    	        </div>
+                    	       <br>
+                    	        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    	            <p class="text-center" id="footer-text">
+                    	                <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;" target="_top" class="simpleLink">&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;</a> | +351 282 353 994 | Rua Município S. Domingos Lote 2  | 8400 - 415 Lagoa | Algarve | Portugal  <br><br> Copyright &copy; 2019 <a href="https://www.intouchbiz.com/" class="simpleLink" target="_blank">IntouchBiz</a>. {% trans %}rights{% endtrans %}</p>
+                    	        </div>
+                    		</div>
                         </div>
-                    </form>
-            </div>
-            <div class="row">
-           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" align="center" >
-               <h1 class="tituloCinza">{%trans%}follow_us{%endtrans%}</h1>
-                        <a target="_blank">
-                            <div class="lang-flag">
-                                <img href="https://www.facebook.com/pages/category/Company/IntouchBiz-Solu%C3%A7%C3%B5es-Integradas-Unipessoal-Lda-219075511487928/" src="{{asset ('img/facebook_foot.png') }}"> &emsp;&emsp;
-                                <img href="https://www.youtube.com/user/fpfsistemas" src="{{asset ('img/youtube_foot.png') }}" alt="youtube" id="youtube"> &emsp;&emsp;
-                                <img href="https://www.instagram.com/intouchbiz/" src="{{ asset ('img/instagram_foot.png') }}" alt="instagram" id="instagram">
+                    </div>-->
+
+                    <div class="container-fluid" id="botfooter">
+                       <div class="container">
+                           <div class="row">
+
+                                <!--<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <h1 class="contact-us" style="text-align: center; color: ">{%trans%} information {%endtrans%}</h1>
+                                     <ul class="list-group list-footer" style="text-align: center;">
+                                        <li class="list-group-item"><i class="fa fa-building"></i> Rua Município S. Domingos Lote</li>
+                                        <li class="list-group-item"><i class="fa fa-building"></i> 8400 - 415 Lagoa</li>
+                                        <li class="list-group-item"><i class="fa fa-phone"></i> +351 282 353 994</li>                   
+                                        <li class="list-group-item"><i class="fa fa-inbox"></i> <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;" target="_top" class="simpleLink">&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;</a><li>
+                                    </ul>                   
+                                </div>-->
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <h1 class="contact-us" style="text-align: center; color: ">{%trans%} contact_us {%endtrans%}</h1><br>
+                                    <form role="form" action="" method="POST" id="footerform">
+                                        <input type="text" name="nome" class="form-control" style="background: white;" id="nome" placeholder="{% trans %}name{% endtrans %}"><br>
+                                        <input type="text" name="email" class="form-control" style="background: white;" id="email" placeholder="Email"><br>
+                                        <input type="text" name="assunto" class="form-control" style="background: white;" id="assunto" placeholder="{% trans %}sub{% endtrans %}"><br>
+                                        <textarea type="text" name="mensagem" class="form-control" style="background: white;" id="mensagem" placeholder="{% trans %}msg{% endtrans %}" maxlength="755"></textarea><br>
+                                        <button name="submit" id="btn-cont" class="btn botaoEnviar hvr-sweep-to-left">{% trans %}send{%endtrans%}</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" align="center" >
+                                       <h1 class="tituloCinza">{%trans%}follow_us{%endtrans%}</h1>
+                                        <a target="_blank">
+                                            <div class="lang-flag">
+                                                <img href="https://www.facebook.com/pages/category/Company/IntouchBiz-Solu%C3%A7%C3%B5es-Integradas-Unipessoal-Lda-219075511487928/" src="{{asset ('img/facebook_foot.png') }}"> &emsp;&emsp;
+                                                <img href="https://www.youtube.com/user/fpfsistemas" src="{{asset ('img/youtube_foot.png') }}" alt="youtube" id="youtube"> &emsp;&emsp;
+                                                <img href="https://www.instagram.com/intouchbiz/" src="{{ asset ('img/instagram_foot.png') }}" alt="instagram" id="instagram">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div><br>
+                              
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <p class="text-center" id="footer-text">
+                                        <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;" target="_top" class="simpleLink">&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;</a> | +351 282 353 994 | Rua Município S. Domingos Lote 2  | 8400 - 415 Lagoa | Algarve | Portugal  <br><br> Copyright &copy; 2019 <a href="https://www.intouchbiz.com/" class="simpleLink" target="_blank">IntouchBiz</a>.{% trans %}rights{% endtrans %}<br><br><br>                       
+                                        <a href="{{ path('map') }}">
+                                            {% trans %} site_map {% endtrans %}&emsp;&emsp;&emsp;&emsp;&emsp;
+                                        </a>
+                                        <a href="{{ path('terms') }}">
+                                            {% trans %}terms_and_conditions{% endtrans %}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                                        </a>
+                                        <a href="{{ path('safe_payment') }}">
+                                            {% trans %}safe_payment{% endtrans %}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                                        </a>
+                                        <a href="{{ path('deliveries') }}">
+                                            {% trans %}deliveries_and_returns{% endtrans %}&emsp;&emsp;&emsp;&emsp;&emsp;
+                                        </a>
+                                        <a href="{{ path('we_call') }}">
+                                            {% trans %}we_call{% endtrans %}
+                                        </a>                                     
+                                    </p>
+                                </div>
                             </div>
-                        </a>
+                       </div>
                     </div>
-               </div> <br>
-          
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <p class="text-center" id="footer-text">
-                    <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;" target="_top" class="simpleLink">&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;</a> | +351 282 353 994 | Rua Município S. Domingos Lote 2  | 8400 - 415 Lagoa | Algarve | Portugal  <br><br> Copyright &copy; 2019 <a href="https://www.intouchbiz.com/" class="simpleLink" target="_blank">IntouchBiz</a>.{% trans %}rights{% endtrans %}<!--<br> <br> <br>-->
-
-                           <!--<a href="">
-                               {% trans %} site_map {% endtrans %}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                           </a>
-                           <a href="">
-                               {% trans %}terms_and_conditions{% endtrans %}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                           </a>
-                           <a href="">
-                               {% trans %}safe_payment{% endtrans %}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-                           </a>
-                           <a href="">
-                               {% trans %}deliveries_and_returns{% endtrans %}
-                           </a>-->
-                   </a>
-               </p>
-
+                </div>
             </div>
-        </div>
-   </div>
-</div>
-
-
-
+        </header>
+    </div>
+</body>
 
 
 <!-- Google Analytics -->
@@ -379,22 +378,15 @@ $("#contactform").on("submit", function(event) {
       data: $(this).serialize(),
       success: function(data)
       {   
-        if( status == 1 ){
-            console.log("Campos preenchidos com sucesso", data)
-            alert('Sucesso');
-        }
-
         if( status == 0 ){
-            console.log("Preencha todos os campos ", data)  
+            console.log("Preencha todos os campos ")  
             alert('error');
         }
-      },
-      
-      error: function(data)
-      {
-        
-      }
 
+        if( status == 1 ){            
+            alert('Sucesso');
+        }
+      }
     });
 });
     
@@ -854,6 +846,6 @@ $(function () {
     backgroundMenu();
 
 </script>
-</htm>
-</body>
+</html>
+
 

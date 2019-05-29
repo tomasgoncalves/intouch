@@ -9,6 +9,7 @@ return array(
 	'marks' => 'Marcas',
 	'company' => 'Empresa',
 	'who_we_are' => 'Quem somos',
+    'we_call' => 'Nós ligamos',
 	'attitude' => 'Atitude',
 	'mission' => 'Missão',
 	'philosophy' => 'Filosofia',
@@ -55,9 +56,15 @@ return array(
     'follow_us' => 'Siga-nos',
     'site_map' => 'Mapa',
     'safe_payment' => 'Pagamento',
+    'development' => 'Desenvolvimento',
+    'title' => 'Todos os nossos serviços de criação de sites, são baseados em tecnologia própria e por isso requerem software especifico e próprio.',
+    'subtitle' => 'Assim como actualizações automáticas de versões e os nossos servidores estão preparados para isso, apenas conseguimos garantir uma alta qualidade e serviço 100 % profissional, se as páginas que criamos estiverem alojadas nos nossos servidores.',
+    'registration' => 'Registo de Dominios',
+    'registration1' => 'O seu domínio www.asuaempresa.pt, .com, .eu, etc., é a sua imagem na internet.',
 
 
 
+    //--------------------Index--------------------------------//
    	'article_0' => array('title' => 'O que fazemos', 'subtitle' => 'Nós proporcionamos a interacção do seu negócio com os seus clientes.', 'text' => 'O nosso segredo é ouvir atentamente as suas necessidades, compreender perfeitamente os seus objetivos, perceber a sua ideia, para isso dispomos de uma equipa altamente especializada, experiente, com know How em diversas áreas do processo (Marketeer, Designer, Programadores, SEO) estamos focados em transformar a sua ideia única numa presença on-line única.'),
 
    	'article_1' => array('title' => 'Como fazemos', 'subtitle' => 'Nós proporcionamos a interacção do seu negócio com os seus clientes.', 'text' => 'O nosso segredo é ouvir atentamente as suas necessidades, compreender perfeitamente os seus objetivos, perceber a sua ideia, para isso dispomos de uma equipa altamente especializada, experiente, com know How em diversas áreas do processo (Marketeer, Designer, Programadores, SEO) estamos focados em transformar a sua ideia única numa presença on-line única.'),
@@ -67,11 +74,11 @@ return array(
     'article_3' => array('title' => 'Onde fazemos a diferença', 'subtitle' => 'O que oferece o nosso serviço que é unico na nossa empresa', 'text' => 'O nosso segredo é ouvir atentamente as suas necessidades, compreender perfeitamente os seus objetivos, perceber a sua ideia, para isso dispomos de uma equipa altamente especializada, experiente, com know How em diversas áreas do processo (Marketeer, Designer, Programadores, SEO) estamos focados em transformar a sua ideia única numa presença on-line única.'),
 
     'article_4' => array('title' => 'Nós Ligamos', 'subtitle' => 'Nós proporcionamos a interacção do seu negócio com os seus clientes.', 'text' => 'O nosso segredo é ouvir atentamente as suas necessidades, compreender perfeitamente os seus objetivos, perceber a sua ideia, para isso dispomos de uma equipa altamente especializada, experiente, com know How em diversas áreas do processo (Marketeer, Designer, Programadores, SEO) estamos focados em transformar a sua ideia única numa presença on-line única.'),
+    //-----------------------------------------------------------//
 
 
 
-
-
+    //--------------------Creation------------------------------//
     'creation_0' => array ('title' => 'Design e imagem', 'subtitle' => 'Tudo o que precisa para começar, é concentrar-se na sua sua área de negócio, nós cuidamos do resto.', 'img' => 'http://www.intouchbiz.com/template/online_shop.png'),
 
     'creation_1' => array ('title' => 'Web Design', 'subtitle' => 'A Criatividade e a originalidade são essenciais para transformar as suas ideias numa presença on-line.', 'img' => 'http://www.intouchbiz.com/template/webdesign_1.png'),
@@ -79,10 +86,11 @@ return array(
     'creation_2' => array ('title' => 'Criação de conteudos', 'subtitle' => 'A plataforma que o ajuda a gerir os seus contactos e a definir as suas estratégias de Marketing Digital.', 'img' => 'http://www.intouchbiz.com/template/crm.png'),
 
     'creation_3' => array ('title' => 'Desenvolvimento', 'subtitle' => 'Ao longo do tempo juntamos a melhor equipa de programadores para dar vida a criatividade da nossa equipa de design.', 'img' => 'http://www.intouchbiz.com/template/develop.png'),
+    //--------------------------------------------------------//
 
 
 
-
+    //--------------------SEO--------------------------------//
     'seo_0' => array( 'title' => 'SEO Optimização', 'subtitle' => 'Tudo o que precisa para começar, é concentrar-se na sua sua área de negócio, nós cuidamos do resto.', 'img' => 'http://www.intouchbiz.com/template/online_shop.png'),
 
     'seo_1' => array( 'title' => 'SEM', 'subtitle' => 'Criatividade e originalidade são essenciais para se tornar como pessoas em uma presença online.', 'img' => 'https://www.intouchbiz.com/template/webdesign_1.png'),
@@ -92,18 +100,19 @@ return array(
     'seo_3' => array( 'title' => 'Gestão Redes Sociais', 'subtitle' => 'Ao longo do tempo juntamos a melhor equipa de programadores para dar vida a criatividade da nossa equipa de design.', 'img' => 'https://www.intouchbiz.com/template/develop.png'),
       
     'seo_4' => array( 'title' => 'Inteligênçia Artificial', 'subtitle' => 'Ao longo do tempo juntamos a melhor equipa de programadores para dar vida a criatividade da nossa equipa de design.', 'img' => 'https://www.intouchbiz.com/template/develop.png'),
+    //-----------------------------------------------------//
 
 
 
-
-
+    //--------------------HOST----------------------------//
     'host_0' => array('title' => 'Alojamento', 'subtitle' => 'Todos os nossos serviços de criação de sites, são baseados em tecnologia própria e por isso requerem software especifico e próprio.', 'img' => '{{asset("img/alojamento.png"}}'),
 
     'host_1' => array('title' => 'Registo de Dominios', 'subtitle' => 'O seu domínio www.asuaempresa.pt, .com, .eu, etc., é a sua imagem na internet.', 'img' => '{{asset("img/registo.png"}}'),
+    //---------------------------------------------------//
 
 
 
-
+    //--------------------Products----------------------//
     'product_0' => array ('title' => 'Site Instuticional', 'subtitle' => 'Tudo o que precisa para começar, é concentrar-se na sua sua área de negócio, nós cuidamos do resto.', 'img' => 'http://www.intouchbiz.com/template/online_shop.png'),
 
     'product_1' => array ('title' => 'Site Single Page', 'subtitle' => 'A Criatividade e a originalidade são essenciais para transformar as suas ideias numa presença on-line.', 'img' => 'http://www.intouchbiz.com/template/webdesign_1.png'),
@@ -113,11 +122,42 @@ return array(
     'product_3' => array ('title' => 'Lojas On-line', 'subtitle' => 'Ao longo do tempo juntamos a melhor equipa de programadores para dar vida a criatividade da nossa equipa de design.', 'img' => 'http://www.intouchbiz.com/template/develop.png'),
 
     'product_4' => array ('title' => 'Lodging', 'subtitle' => 'Ao longo do tempo juntamos a melhor equipa de programadores para dar vida a criatividade da nossa equipa de design.', 'img' => 'http://www.intouchbiz.com/template/develop.png'),
+    //-------------------------------------------------//
 
 
-    /*------------------Portfolio-------------------------*/
+
+    //--------------------Development-----------------//
+    'development_0' => array('title' => 'Plataformas', 'subtitle' => 'Tudo o que precisa para começar, é concentrar-se na sua sua área de negócio, nós cuidamos do resto.', 'img' => 'http://www.intouchbiz.com/template/online_shop.png'),
+
+    'development_1' => array('title' => 'APP Android e IOS', 'subtitle' => 'A Criatividade e a originalidade são essenciais para transformar as suas ideias numa presença on-line.', 'img' => 'http://www.intouchbiz.com/template/webdesign_1.png'),
+
+    'development_2' => array('title' => 'Soluções e medida', 'subtitle' => 'A plataforma que o ajuda a gerir os seus contactos e a definir as suas estratégias de Marketing Digital.', 'img' => 'http://www.intouchbiz.com/template/crm.png'),
+
+    'development_3' => array('title' => 'Comércio B2B e B2C', 'subtitle' => 'Ao longo do tempo juntamos a melhor equipa de programadores para dar vida a criatividade da nossa equipa de design.', 'img' => 'http://www.intouchbiz.com/template/develop.png'),
+
+    'development_4' => array('title' => 'Comércio On-line', 'subtitle' => 'Ao longo do tempo juntamos a melhor equipa de programadores para dar vida a criatividade da nossa equipa de design.', 'img' => 'http://www.intouchbiz.com/template/develop.png'),
+    //-------------------------------------------------//
 
 
+
+    //--------------------Accomodation-----------------//
+    'accomodation_0' => array ('title' => 'Servidor', 'subtitle' => 'Servidores dedicados, com alto desempenho e ligações redundantes em fibra óptica, monitorização de falhas de conectividade.', 'img' => 'http://intouchbiz.com/template/servidor.png'),
+
+    'accomodation_1' => array ('title' => 'Manutenção', 'subtitle' => 'Os nossos servidores tem  ligação a um sistema ininterrupto de fornecimento de energia. Monitorização constante de hardware e serviços (24×7×365).', 'img' => 'http://intouchbiz.com/template/manutencao.png'),
+
+    'accomodation_2' => array ('title' => 'Competência Técnica', 'subtitle' => 'A manutenção é garantida por profissionais de elevada competência técnica.', 'img' => 'http://intouchbiz.com/template/tecnica.png'),
+
+    'accomodation_3' => array ('title' => 'Suporte Técnico', 'subtitle' => 'Incluindo por telefone e e-mail.', 
+        'img' => 'http://intouchbiz.com/template/suporte.png'),
+
+    'accomodation_4' => array ('title' => 'Controlo de Spam', 'subtitle' => 'O uso abusivo de correio electrónico causa transtornos à infraestrutura da Intouchbiz assim como aos restantes utilizadores, ao pôr em causa o normal funcionamento dos sistemas e do suporte ao serviço.', 'img' => 'http://intouchbiz.com/template/spam.png'),
+
+    'accomodation_5' => array ('title' => 'Antivírus', 'subtitle' => 'Alertas por email e SMS para equipa técnica em caso de falhas, Configuração e gestão de firewall por técnicos da Intouchbiz, Backup para servidor central, Backup e Restore de ficheiros através de painel de controlo.', 'img' => 'http://intouchbiz.com/template/antivirus.png'),
+    //-------------------------------------------------//
+
+
+
+    //------------------Portfolio---------------------//
 	'port_0' => array ( 'act' => 'Veterinário'), 
     'port_1' => array ( 'act' => 'Restaurante'),
     'port_2' => array ( 'act' => 'Drogaria'),
@@ -144,7 +184,7 @@ return array(
     'port_23' => array ( 'act' => 'Material Restauração'),
 
 
-
+    
 	'port1_0' => array('act' => "Site Instuticional"),
     'port1_1' => array('act' => "Site Single Page"),
     'port1_2' => array('act' => "Site à Medida"),

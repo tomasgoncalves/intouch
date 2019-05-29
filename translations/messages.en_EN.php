@@ -1,4 +1,5 @@
 <?php
+
 return array(
     'creation' => 'Creation',
     'products' => 'Products',
@@ -53,12 +54,15 @@ return array(
     'follow_us' => 'Follow us',
     'site_map' => 'Map',
     'safe_payment' => 'Payment',
+    'we_call' => 'We call',
+    'development' => 'Development',
+    'title' => 'All of our website creation services are based on our own technology and through this specific and proprietary software.',
+    'subtitle' => 'As well as automatic version updates and our servers are prepared for this, we can only guarantee a high quality and 100% professional service if the pages we create are hosted on our servers.',
+    'registration' => 'Domain of registration',
+    'registration1' => 'Your domain www.asuaempresa.pt, .com, .eu, etc., is your image on the internet.',
 
-    
 
-
-
-    //--------------------Index--------------------------------//
+    //--------------------Index------------------------------------//
     'article_0' => array ( 'title' => 'What we do', 'subtitle' => 'We provide the interaction of your business with your customers. ', 'text' => 'Our secret is to listen carefully to your needs, to fully understand your goals, to realize your idea, for this we have a highly specialized team, experienced, with Know How in several areas of the process (Marketeer, Designer, Programmers, SEO) we are focused on turning your unique idea into a unique online presence.'),
 
     'article_1' => array ( 'title' => 'How we do', 'subtitle' => 'We provide the interaction of your business with your customers. ', 'text' => 'Our secret is to listen carefully to your needs, to fully understand your goals, to realize your idea, for this we have a highly specialized team, experienced, with Know How in several areas of the process (Marketeer, Designer, Programmers, SEO) we are focused on turning your unique idea into a unique online presence.'),
@@ -68,10 +72,11 @@ return array(
     'article_3' => array ( 'title' => 'Where we make diference', 'subtitle' => 'We provide the interaction of your business with your customers. ', 'text' => 'Our secret is to listen carefully to your needs, to fully understand your goals, to realize your idea, for this we have a highly specialized team, experienced, with Know How in several areas of the process (Marketeer, Designer, Programmers, SEO) we are focused on turning your unique idea into a unique online presence.'),
 
     'article_4' => array ( 'title' => 'We call', 'subtitle' => 'We provide the interaction of your business with your customers. ', 'text' => 'Our secret is to listen carefully to your needs, to fully understand your goals, to realize your idea, for this we have a highly specialized team, experienced, with Know How in several areas of the process (Marketeer, Designer, Programmers, SEO) we are focused on turning your unique idea into a unique online presence.'),
-    //-----------------------------------------------------------//
+    //-------------------------------------------------------------//
 
 
-    //--------------------Creation--------------------------------//
+
+    //--------------------Creation---------------------------------//
     'creation_0' => array ('title' => 'Design & Image', 'subtitle' => 'All you need to get started is to focus on your business area, we take care of the rest.', 'img' => 'http://www.intouchbiz.com/template/online_shop.png'),
 
     'creation_1' => array ('title' => 'Web Design', 'subtitle' => 'Creativity and originality are essential to becoming like people in an online presence.', 'img' => 'http://www.intouchbiz.com/template/webdesign_1.png'),
@@ -82,7 +87,8 @@ return array(
     //-----------------------------------------------------------//
 
 
-    //--------------------SEO--------------------------------//
+
+    //--------------------SEO------------------------------------//
     'seo_0' => array( 'title' => 'SEO Optimização', 'subtitle' => 'All you need to get started is to focus on your business area, we take care of the rest.', 'img' => 'http://www.intouchbiz.com/template/online_shop.png'),
 
     'seo_1' => array( 'title' => 'SEM', 'subtitle' => 'Creativity and originality are essential to becoming like people in an online presence.', 'img' => 'https://www.intouchbiz.com/template/webdesign_1.png'),
@@ -96,14 +102,15 @@ return array(
 
 
 
-    //--------------------HOST--------------------------------//
+    //--------------------HOST-----------------------------------//
     'host_0' => array('title' => 'Accommodation', 'subtitle' => 'All of our website creation services are based on proprietary technology and therefore require specific and proprietary software.', 'img' => '{{asset("img/alojamento.png"}}'),
 
     'host_1' => array('title' => 'Domain Registration', 'subtitle' => 'Your domain www.asuaempresa.pt, .com, .eu, etc., is your image on the internet.', 'img' => '{{asset("img/registo.png"}}'),
     //-----------------------------------------------------------//
 
 
-    //--------------------Products--------------------------------//
+
+    //--------------------Products-------------------------------//
     'product_0' => array ('title' => 'Institutional Site ', 'subtitle' => 'All you need to get started is to focus on your business area, we take care of the rest.', 'img' => 'http://www.intouchbiz.com/template/online_shop.png'),
 
     'product_1' => array ('title' => 'Site Single Page', 'subtitle' => 'Creativity and originality are essential to becoming like people in an online presence.', 'img' => 'http://www.intouchbiz.com/template/webdesign_1.png'),
@@ -113,12 +120,42 @@ return array(
     'product_3' => array ('title' => 'Online stores', 'subtitle' => 'Over time we have put together the best team of programmers to bring the creativity of our design team to life.', 'img' => 'http://www.intouchbiz.com/template/develop.png'),
 
      'product_4' => array ('title' => 'Lodging', 'subtitle' => 'Over time we have put together the best team of programmers to bring the creativity of our design team to life.', 'img' => 'http://www.intouchbiz.com/template/develop.png'),
-    //-----------------------------------------------------------//
+    //---------------------------------------------------------//
 
 
-    /*------------------Portfolio-------------------------*/
 
-     
+    //--------------------Development-------------------------//
+    'development_0' => array ('title' => 'Platforms', 'subtitle' => 'All you need to get started is to focus on your business area, we take care of the rest.', 'img' => 'http://www.intouchbiz.com/template/online_shop.png'),
+
+    'development_1' => array ('title' => 'APP Android e IOS', 'subtitle' => 'Creativity and originality are essential to becoming like people in an online presence.', 'img' => 'http://www.intouchbiz.com/template/webdesign_1.png'),
+
+    'development_2' => array ('title' => 'Solutions and measurement', 'subtitle' => 'The platform that helps you manage your contacts and define your Digital Marketing strategies.', 'img' => 'http://www.intouchbiz.com/template/crm.png'),
+
+    'development_3' => array ('title' => 'B2B and B2C trade', 'subtitle' => 'Over time we have put together the best team of programmers to bring the creativity of our design team to life.', 'img' => 'http://www.intouchbiz.com/template/develop.png'),
+
+     'development_4' => array ('title' => 'Online Trading', 'subtitle' => 'Over time we have put together the best team of programmers to bring the creativity of our design team to life.', 'img' => 'http://www.intouchbiz.com/template/develop.png'),
+    //---------------------------------------------------------//
+
+
+
+    //---------------------Accomodation------------------------//
+    'accomodation_0' => array ('title' => 'Server', 'subtitle' => 'Dedicated servers with high performance and redundant fiber optic connections, connectivity failure monitoring.', 'img' => 'http://intouchbiz.com/template/servidor.png'),
+
+    'accomodation_1' => array ('title' => 'Maintenance', 'subtitle' => 'Our servers are connected to an uninterrupted power supply system. Constant monitoring of hardware and services (24×7×365).', 'img' => 'http://intouchbiz.com/template/manutencao.png'),
+
+    'accomodation_2' => array ('title' => 'Technical Competence', 'subtitle' => 'The maintenance is guaranteed by professionals of high technical competence.', 'img' => 'http://intouchbiz.com/template/tecnica.png'),
+
+    'accomodation_3' => array ('title' => 'Technical support', 'subtitle' => 'Including by phone and email.', 
+        'img' => 'http://intouchbiz.com/template/suporte.png'),
+
+    'accomodation_4' => array ('title' => 'Spam Control', 'subtitle' => 'The abusive use of electronic mail causes disruptions to the infrastructure of Intouchbiz as well as to the other users, when it jeopardizes the normal operation of the systems and the support to the service.', 'img' => 'http://intouchbiz.com/template/spam.png'),
+
+    'accomodation_5' => array ('title' => 'Antivírus', 'subtitle' => 'Alerts by e-mail and SMS to technical team in case of failures, Configuration and management of firewall by technicians of Intouchbiz, Backup to central server, Backup and Restore of files through control panel.', 'img' => 'http://intouchbiz.com/template/antivirus.png'),
+    //------------------------------------------------------//
+
+
+
+    //------------------Portfolio---------------------------//
     'port_0' => array ( 'act' => 'Vet'), 
     'port_1' => array ( 'act' => 'Restaurant'),
     'port_2' => array ( 'act' => 'Drugstore'),
@@ -143,7 +180,8 @@ return array(
     'port_21' => array ( 'act' => 'Air conditioning'),
     'port_22' => array ( 'act' => 'Fences'),
     'port_23' => array ( 'act' => 'Food & Beverage Outlets'),
-    
+
+
 
     'port1_0' => array('act' => "Instuticional Site"),
     'port1_1' => array('act' => "Site Single Page"),
