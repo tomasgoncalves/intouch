@@ -7,6 +7,7 @@
         <!-- CART BUTTON AND LANG -->
         <ul id="cart-list" class="borderBottomHeader">
             <li>
+                <!--Icon Social Media on nav bar-->
                 <a href="https://www.facebook.com/connectedintouchbiz/" target="_blank">
                     <div class="social-flag">
                         <img src="{{asset ('img/facebook.png')}}" alt="facebook" id="facebook">
@@ -107,31 +108,45 @@
                 <div class="panel-body">
                     <h3 class="contact-title">{% trans %}contact{%endtrans%}</h3>
                     <div class="row">
-                        <form   id="contactform">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <div class="form-group">
-                                    <input type="text" name="name" class="form-control" id="nome" placeholder="{% trans %}name{% endtrans %}">                                   
-                                </div>
+                         <form>
+                        <!-- Code that corresponds to the Name input field on the footer form -->
+                        {{ form_start(form) }}
 
-                                <div class="form-group">
-                                    <input type="text" name="email" class="form-control" id="email" placeholder="Email">             
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="text" name="subject" class="form-control" id="assunto" placeholder="{% trans %}sub{% endtrans %}">                       
-                                </div>
-
-                                <div class="form-group">
-                                    <textarea type="text" name="message" class="form-control input-msg" id="mensagem" placeholder="{% trans %}msg{% endtrans %}"></textarea>
-                                </div>
-
-                                <button name="submit" id="submit" class="btn-marg botaoEnviar hvr-sweep-to-left">{% trans %}send{%endtrans%}</button>                               
-                            </div>                           
-                        </form>
+                        {{ form_end(form) }}
+                    </form>
                     </div>
                 </div>
             </div>
         </section>
     </div>
-</div>               
+</div>
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<script>
+    //submit do form
+    $("form").submit(function(e) {
+        e.preventDefault();//cancela o evento se for cancelável
+        var $this = $(this);
+        console.log('teste' + $(this).serialize())//converte os elementos todos para uma string
+        //requesição ajax
+        $.ajax({
+            type: 'POST',
+            url: 'errorContact',
+            data: $this.serialize(),//converte os elementos todos para uma string
+            success: function(data) {
+                    
+                if(data.status==0)
+                {
+                    alert("Falta preencher: " + data.data);
+                }
+
+                if(data.status == 1)
+                {
+                    alert("Sucesso");
+                }   
+            }
+        });
+    });
+</script>               
 {% endblock %}                                

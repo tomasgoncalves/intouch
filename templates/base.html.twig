@@ -4,11 +4,10 @@
 
 <!-- Title -->
 <title>Intouchbiz Connected We Stand | Criação de Sites, SEO | Algarve</title>
-<!-- Meta tags -->
-<!-- <link href="https://plus.google.com/{plusPageUrl}" rel="publisher" /> -->
+
 <link rel="Publisher" href="https://plus.google.com/u/0/111192249106908035114" />
 <link rel="alternate" href="https://www.intouchbiz.com/pt/" hreflang="pt-pt" />            
-<!-- Facebook Meta Tags -->
+
 
 <meta property="og:site_name" content="Intouchbiz"/>
 <meta property="og:image" content="https://www.intouchbiz.com/admin/img/slider/slidehome.png" />
@@ -16,7 +15,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Intouchbiz" />
 <meta property="og:description" content="Web Design Algarve, criação e desenvolvimento websites, software house no Algarve. Marketing e Comunicação à sua implementação de Sites. Criação de Mobile Apps"/>
-<!-- Google + Meta Tags -->
+
 
 <meta itemprop="name" content="Intouchbiz" />
 <meta itemprop="description" content="Web Design Algarve, criação e desenvolvimento websites, software house no Algarve. Marketing e Comunicação à sua implementação de Sites. Criação de Mobile Apps"/>
@@ -49,7 +48,7 @@
 <script type="text/javascript" src="https://www.intouchbiz.com/js/jquery.dropdown.js"></script>
 <script type="text/javascript" src="https://www.intouchbiz.com/js/modernizr.custom.63321.js"></script>
 <script type="text/javascript" src="https://www.intouchbiz.com/js/jquery.mb.slider.js"></script>
-
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <!-- CSS Colors Style -->
 <style>
 html, body {
@@ -102,6 +101,7 @@ background: transparent;
                     <ul id="languages">
                         <li>
                             <a href="#">
+                                <!--Flags to translate the page-->
                                 <div class="lang-flag">
                                     <a href="{{ path('translation', {lang: 'en_EN', page: page}) }}" onclick="$('.w3-overlay').show()"><img style="height: 40px" src="{{asset ('img/pt.png')}}" styleclass="w3-image"></a>
 
@@ -224,6 +224,7 @@ background: transparent;
                         </div>
                     </div>-->
 
+                    <!--footer-->
                     <div class="container-fluid" id="botfooter">
                        <div class="container">
                            <div class="row">
@@ -265,7 +266,7 @@ background: transparent;
                               
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <p class="text-center" id="footer-text">
-                                        <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;" target="_top" class="simpleLink">&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;</a> | +351 282 353 994 | Rua Município S. Domingos Lote 2  | 8400 - 415 Lagoa | Algarve | Portugal  <br><br> Copyright &copy; 2019 <a href="https://www.intouchbiz.com/" class="simpleLink" target="_blank">IntouchBiz</a>.{% trans %}rights{% endtrans %}<br><br><br>                       
+                                        <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;" target="_top" class="simpleLink">&#105;&#110;&#102;&#111;&#64;&#105;&#110;&#116;&#111;&#117;&#99;&#104;&#98;&#105;&#122;&#46;&#99;&#111;&#109;</a> | +351 282 353 994 | Rua Município S. Domingos Lote 2  | 8400 - 415 Lagoa | Algarve | Portugal  <br><br> Copyright &copy; 2019 <a href="https://www.intouchbiz.com/" class="simpleLink" target="_blank">IntouchBiz</a>. {% trans %}rights{% endtrans %}<br><br><br>                       
                                         <a href="{{ path('map') }}">
                                             {% trans %} site_map {% endtrans %}&emsp;&emsp;&emsp;&emsp;&emsp;
                                         </a>
@@ -311,7 +312,7 @@ var $btns = $('.btn').on('change', function(e){
 </script> 
 
 <script>
-//VIDEO SLIDER DA HOME PAGE
+//VIDEO SLIDER OF HOME PAGE
 $(document).ready(function () {
 
     scaleVideoContainer();
@@ -367,63 +368,6 @@ function scaleBannerVideoSize(element) {
 }
 </script>
 
-<script>
- 
-$("#contactform").on("submit", function(event) {
-    event.preventDefault();
-    console.log($(this).serialize());
-    $.ajax({
-      url:'{{ path("contactForm") }}',
-      type:"POST",
-      data: $(this).serialize(),
-      success: function(data)
-      {   
-        if( status == 0 ){
-            console.log("Preencha todos os campos ")  
-            alert('error');
-        }
-
-        if( status == 1 ){            
-            alert('Sucesso');
-        }
-      }
-    });
-});
-    
-</script> 
-
-<script>
- 
-	$("#footerform").on("submit", function(event) {
-	    event.preventDefault();
-	    console.log($(this).serialize());
-	    $.ajax({
-	      url:'{{ path("footerForm") }}',
-	      type:"POST",
-	      data: $(this).serialize(),
-	      success: function(data)
-	      {   
-	        if( status == 1 ){
-	           
-	            alert('Sucesso');
-	        }
-
-	        if( status == 0 ){
-	            
-	            alert('error');
-	        }
-	      },
-	      
-	      error: function(data)
-	      {
-	        
-	      }
-
-	    });
-	});
-
-    
-</script>
 <script>
 /* MOVE BACKGROUND HOME */
 $(function () {

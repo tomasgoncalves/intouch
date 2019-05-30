@@ -11,6 +11,11 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\FormBuilderInterface;
 
 
 
@@ -24,7 +29,7 @@ class HomeController extends AbstractController
   }
 
   //Sending email in Contact
-  public function contactForm(Request $request, \Swift_Mailer $mailer) {
+  /*public function contactForm(Request $request, \Swift_Mailer $mailer) {
 
       $error = array();
 
@@ -45,9 +50,9 @@ class HomeController extends AbstractController
             return new JsonResponse(array('status' => 0,'err' => $error)); 
       } else {  
           //If there is no error sends an email
-          $transport = (new \Swift_SmtpTransport('mail.intouchbiz.com', 465, 'ssl'))
-            ->setUsername('tomas.goncalves@intouchbiz.com')
-            ->setPassword('intouchbiz#2019')
+          $transport = (new \Swift_SmtpTransport('smtp.sapo.pt', 465, 'ssl'))
+            ->setUsername('alticedoraul@sapo.pt')
+            ->setPassword('Altice12')
           ;
 
           // Create the Mailer using your created Transport
@@ -55,20 +60,152 @@ class HomeController extends AbstractController
 
           // Create a message
           $mail = (new \Swift_Message(''))
-            ->setFrom(['tomas.goncalves@intouchbiz.com' => 'Tomás'])
+            ->setFrom(['alticedoraul@sapo.pt' => 'Tomás'])
             ->setTo([$request->request->get('email')])
-            ->setBody('asdasf')
-            ;
+            ->setBody('asdasf');
 
           // Send the message
           $result = $mailer->send($mail);
 
           return new JsonResponse(array('status' => 1, 'name' => $request->request->get('name'), 'email' => $request->request->get('email'), 'subject' => $request->request->get('subject'), 'message' => $request->request->get('message')));
       }
+  }*/
+
+  public function contacts(Request $request)
+  {
+    //Formulário para enviar dados com estilos do w3 css    
+    $mensagem_default = ['message' => ''];//mensagem default a ser enviada
+    //cria um form type
+    $form = $this->createFormBuilder($mensagem_default)
+    //Adiciona o campo nome
+    ->add('name', TextType::class, [
+        'attr'=>[ 'class' => 'form-control'], 'extra_fields_message' => 'Name',  'required' => false 
+    ])
+    
+    //Adiciona o campo email
+    ->add('email', TextType::class, [
+        'attr'=>[ 'class' => 'form-control'], 'required' => false
+    ])
+    
+    //adiciona o assunto  
+    ->add('subject', TextType::class, [
+         'attr'=>[ 'class' => 'form-control'], 'required' => false 
+    ])
+        
+    //Adiciona o campo mensagem
+    ->add('message', TextareaType::class, [
+        'attr'=>[ 'class' => 'form-control'], 'required' => false
+    ])
+    //Adiciona o campo botão enviar dados
+    ->add('send', SubmitType::class, [
+         'attr'=>[ 'class' => 'btn-marg botaoEnviar hvr-sweep-to-left']
+    ])
+    ->getForm();
+              
+      
+    // Renderiza os arreio para a página principal e Renderiza o formulario para o body
+    return $this -> render('lucky/contacts.html.twig', ['page'=> 'contacts', 'form'=> $form ->createView(),]);
+  }
+
+  public function errorContact(Request $request) 
+  {
+  //Formulário para enviar dados com estilos do w3 css    
+      $mensagem_default = ['message' => ''];//mensagem default a ser enviada
+      //cria um form type
+      $form = $this->createFormBuilder($mensagem_default)
+      //Adiciona o campo nome
+      ->add('name', TextType::class, [
+          'label'=> 'O seu Nome', 'attr'=>[ 'class' => 'form-control'], 'required' => false 
+      ])
+      
+      //Adiciona o campo email
+      ->add('email', TextareaType::class, [
+          'label'=> 'Email', 'attr'=>[ 'class' => 'form-control'], 'required' => false
+      ])
+      
+      //adiciona o assunto  
+      ->add('subject', TextType::class, [
+          'label'=> 'Assunto', 'attr'=>[ 'class' => 'form-control'], 'required' => false 
+      ])
+          
+      //Adiciona o campo mensagem
+      ->add('message', TextareaType::class, [
+          'label'=> 'Mensagem', 'attr'=>[ 'class' => 'form-control'], 'required' => false
+      ])
+      //Adiciona o campo botão enviar dados
+      ->add('send', SubmitType::class, [
+           'attr'=>[ 'class' => 'btn-marg botaoEnviar hvr-sweep-to-left']
+      ])
+      ->getForm();
+  
+  //vai buscar aos campos do formulario os dados que vão ser enviados
+  $form->handleRequest($request);
+      //se existe submissão do form e o mesmo é válido
+      if($form->isSubmitted() && $form->isValid())
+      {
+       // vai buscar o nome, o email, e a mensagem ao formulário do ficheiro base
+       //método getData() serve para ir buscar os dados da requisição ajax
+       $name=$form["name"]->getData();
+       $email=$form["email"]->getData();
+       $subject=$form["subject"]->getData();
+       $message=$form["message"]->getData();
+        //declaração do array  
+       $error=array(); 
+          //se o valor name estiver preenchido deixa seguir 
+          //caso contrario mete no array error o name para imprimir no ficheiro base
+          if(!$name)
+          {
+              $error[]='name';
+          }              
+          if(!$email)
+          {
+              $error[]='email';
+          }
+          if(!$subject)
+          {
+              $error[]='subject';
+          }
+          if(!$message)
+          {
+              $error[]='message';
+          }
+          //se a variavel erro estiver prenchida, ele faz return para o ficheiro base
+          if(!empty($error))
+          {
+              // da return do status que é 0 para fazer o boolean no ficheiro base e retorna tambem a variavel data que contem o array
+              return new JsonResponse(array(
+              // status=0 é quando falha e manda a dizer o campo que falhou
+              'status'=>0,
+              // a variavel data contem o nome dos erros se for o nome que falta retorna o nome, se for o email retorna o erro do email, se for a mensagem retorna o erro da emnsagem e se for todos retorna todos, etc...
+              'data'=>$error,       
+              ));
+          }
+          //a variavel response vai ficar com o que vem do array
+          $response = 'array';
+          }
+          
+          // Create the Transport
+
+       $transport = (new \Swift_SmtpTransport('smtp.sapo.pt', 465, 'ssl'))
+       ->setUsername('alticedoraul@sapo.pt')
+       ->setPassword('Altice12');
+
+       // Create the Mailer using your created Transport
+       $mailer = new \Swift_Mailer($transport);
+
+           // Create a message
+       $mail = (new \Swift_Message())
+        ->setFrom(['alticedoraul@sapo.pt' => 'Testes Email Intoucbiz'])
+       ->setTo([$email=$form["email"]->getData()])
+       ->setBody($message);
+       // Send the message
+       // set subject etc...
+       $mailer->send($mail);
+       return new JsonResponse(array('status'=>1));          
   }
 
   //Sending email in Footer
-  public function footerForm(Request $request, \Swift_Mailer $mailer) {
+  /*public function footerForm(Request $request, \Swift_Mailer $mailer) {
 
       $error = array();
 
@@ -94,22 +231,22 @@ class HomeController extends AbstractController
             ->setPassword('intouchbiz#2019')
           ;
 
-          // Create the Mailer using your created Transport
+          //Create the Mailer using your created Transport
           $mailer = new \Swift_Mailer($transport);
 
-          // Create a message
+          //Create a message
           $mail = (new \Swift_Message(''))
             ->setFrom(['tomas.goncalves@intouchbiz.com' => 'Tomás'])
             ->setTo([$request->request->get('email')])
             ->setBody('asdasf')
             ;
 
-          // Send the message
+          //Send the message
           $result = $mailer->send($mail);
 
           return new JsonResponse(array('status' => 1, 'name' => $request->request->get('name'), 'email' => $request->request->get('email'), 'subject' => $request->request->get('subject'), 'message' => $request->request->get('message')));
       }
-  }
+  }*/
 
   //Array of the page index
   public function index()
@@ -135,8 +272,10 @@ class HomeController extends AbstractController
   //Array of the page who
   public function who(){
 
+    $who = ['','','','','','',''];
+
     return $this->render('/lucky/who.html.twig', [ 
-      'page' => 'who'
+      'page' => 'who', 'who' => $who
       ]);
   }
 
@@ -189,13 +328,7 @@ class HomeController extends AbstractController
     ]);
   }
 
-  //Array of the page contacts
-  public function contacts(){
 
-   return $this->render('/lucky/contacts.html.twig', [
-      'page' => 'contacts'
-     ]);
-  }
 
   //Array of the page accomodation 
   public function accomodation(){

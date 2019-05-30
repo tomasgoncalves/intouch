@@ -1,11 +1,13 @@
 {% extends "base.html.twig" %}
 {% block content %}
 
+<!--Banner-->
 <header>
     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
         <!-- CART BUTTON AND LANG -->
         <ul id="cart-list" class="borderBottomHeader">
             <li>
+                <!--Icon Social Media on nav bar-->
                 <a href="https://www.facebook.com/connectedintouchbiz/" target="_blank">
                     <div class="social-flag">
                         <img src="{{asset ('img/facebook.png')}}" alt="facebook" id="facebook">
@@ -55,7 +57,7 @@
                                     <source  src="{{asset('video/Mock-up.ogv')}}" type="video/ogv" />Your browser does not support the video tag. I suggest you upgrade your browser.
                                 </video>
                                 <div class="poster hidden">
-                                    <img class="imgSlider" style="height=100% !important" src="{{ asset('img/slidehome.png')}}" alt="rendimento mensal garantido">
+                                    <img class="imgSlider" style="height:100%!important" src="{{ asset('img/slidehome.png')}}" alt="rendimento mensal garantido">
                                 </div>
                             </div>
                         </div>
@@ -64,244 +66,128 @@
                             <hr class="textUnderline ">
                             <h2 class="desc-slider"><p></p></h2>
                             <a class="page-scroll" href="#firstSection"><img src="{{ asset('img/setaBottom.png')}}" class="setaBottom" alt="rendimento mensal garantido"></a>
-                        </div>                       
+                        </div>
+                        
                     </div>                    
                 </div>
             </div>
         </div>
-	</div>               
+    </div>
 </div>
 
 <div class="container ">
+    <section>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h1 class="tituloCinza">{% trans %}who_we_are{%endtrans%}</h1>
+            </div>
+        </div>
 
-<section>
-<div class="row">
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-<h1 class="tituloCinza">{% trans %}who we are{%endtrans%}</h1>
-</div>
-</div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h1 class="tituloBold">{% trans %}intouch{%endtrans%}</h1>
+            </div>
+        </div>
 
-<div class="row">
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-<h1 class="tituloBold">{% trans %}intouch{%endtrans%}</h1>
-</div>
-</div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <p>{% trans %}who_we_are1{% endtrans %}</p><br><br>
+                    <h1 class="tituloCinza">{% trans %}page{%endtrans%}</h1>                  
+            </div>
+        </div>
 
-<div class="row">
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-<p>Uma evolução natural do negócio da FPF Sistemas de Gestão, Lda que tem como objectivo implementar soluções de gestão de processos com ERP sendo desde 1999 parceiro PHC, atualmente é parceiro certificado de trés grandes marcas de software a nível nacional, Parceiro PHC Advanced, Eticadata, Zonesoft.<br><br>
-Naturalmente e devido as necessidades dos clientes que na altura tínhamos de forma a responder a essas necessidades, vimo-nos obrigados a desenvolver algumas soluções web, ao nos apercebermos das necessidades e da oferta existente no mercado, verificamos que podíamos fazer a diferença e decidimos criar a Intouchbiz Soluções Integradas, mais do que a criação de um simples site, mas criamos conceitos desde 2005, altura em que começou a surgir os primeiros desenvolvimentos executados por nós.<br><br>
-desde ai até hoje já com 11 anos de experiência, temos sido agraciados com clientes exigentes e desafiadores que nos ajudam a sermos cada vez melhores.<br><br> 
-Aqui fica um muito obrigado a todos os clientes que nos confiaram os seus projetos e que continuam a confiar.</p><br><br>
+        <!--Array of who-->
+        {% for array in who %}
+        {% set a = 'who_are_art_' ~ loop.index0 ~ '.img'  %}
+        {% set b = 'who_are_art_' ~ loop.index0 ~ '.title'  %}
+        {% set c = 'who_are_art_' ~ loop.index0 ~ '.subtitle'  %}
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 paddingServicos">
+            <a href="{{array}}">
+                <div class="servicosHome" style="background-image: url('{{ a|trans }}');">
+                    <div class="servicosHomeHover">
+                        <div class="row containerServicosHome">
+                            <div class="wrapper efectLogo">
+                                <!--Icon-->
+                                <svg viewBox="0 0 175 256" style="background-color:#ffffff00" xmlns="https://www.w3.org/2000/svg" width="175" height="256">
+                                    <g class="svgClass" stroke-width="1" fill="none">
+                                        <g>
+                                            <rect x="0.6" y="0.6" class="st0" width="45.6" height="45.6"/>
+                                            <path class="st0" d="M36,3.1c0.8,0,1.5,0.7,1.5,1.5C37.5,5.4,36.8,6,36,6c-0.8,0-1.5-0.7-1.5-1.5C34.6,3.8,35.2,3.1,36,3.1L36,3.1z"/>
+                                            <path class="st0" d="M41.2,6c-0.8,0-1.5-0.7-1.5-1.5c0-0.8,0.7-1.5,1.5-1.5c0.8,0,1.5,0.7,1.5,1.5C42.7,5.4,42,6,41.2,6L41.2,6z"/>
+                                            <path class="st0" d="M41.2,6"/>
+                                            <rect x="0.6" y="0.6" class="st0" width="45.6" height="8.1"/>
+                                        </g>
 
-<h1 class="tituloCinza">Outras páginas de informação</h1>                    </div>
-</div>
+                                        <g>
+                                            <rect x="0.5" y="0.5" class="st0" width="45.3" height="45.3"/>
+                                            <path class="st0" d="M35.7,3c0.8,0,1.5,0.7,1.5,1.5c0,0.8-0.7,1.5-1.5,1.5c-0.8,0-1.5-0.7-1.5-1.5C34.2,3.6,34.9,3,35.7,3L35.7,3z"
+                                            />
+                                            <path class="st0" d="M40.8,5.9c-0.8,0-1.5-0.7-1.5-1.5C39.4,3.6,40,3,40.8,3c0.8,0,1.5,0.7,1.5,1.5C42.3,5.2,41.6,5.9,40.8,5.9
+                                            L40.8,5.9z"/>
+                                            <path class="st0" d="M40.8,5.9"/>
+                                            <rect x="4.8" y="12.9" class="st0" width="37.4" height="8.4"/>
+                                            <rect x="4.8" y="24" class="st0" width="14.5" height="18.3"/>
+                                            <rect x="22.2" y="24" class="st0" width="19.9" height="18.3"/>
+                                            <rect x="0.5" y="0.5" class="st0" width="45.3" height="8"/>
+                                        </g>
+                                    </g>
+                                </svg>                                                        
+                            </div>
 
+                            <h4 class="servicosColorText servicosHomeTitle">{{ b|trans }}</h4><br>
+                            <p class="servicosColorText  servicosHomeText">{{ c|trans }}</p>
+                        </div>
+                    </div>
 
-
-<div class="row">
-
-
-<a href="http://www.intouchbiz.com/pt/quem-somos-solucoes-integradas-fpf-sistemas-de-gestao-erp-phc-eticadata-zonesoft-solucoes-web-site-clientes-desafiadores-confiar">
-
-<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 paddingServicos">
-<div class="servicosHome" style="background-image: url('http://www.intouchbiz.com/template/quemsomos.png');">
-<div class="servicosHomeHover">
-
-<div class="row containerServicosHome">
-
-<div class="wrapper efectLogo">
-<i class="fa fa-users icon-style"></i>                                        
-</div>
-
-
-<h4 class="servicosColorText servicosHomeTitle">Quem Somos</h4>
-
-<p class="servicosColorText  servicosHomeText">A Intouchbiz Soluções Integradas é uma associada da FPF Sistemas de Gestão.</p>
-</div>
-
-</div>
-<div class="servicosHomeHoverAmarelo">
-<div class="containerServicosHomeSeta">
-<img src="http://www.intouchbiz.com/template/setaService.png" class="setaService" alt="desenvolvimento e integração de sites">
-</div>
-</div>
-
-</div>
-</div>
-
-</a><a href="http://www.intouchbiz.com/pt/atitude-empresa-jovem-dinamica-design-programacao-satisfacao-saber-inovacao-criatividade-dedicacao-qualidade-funcionalidade">
-
-<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 paddingServicos">
-<div class="servicosHome" style="background-image: url('http://www.intouchbiz.com/template/atitude.png');">
-<div class="servicosHomeHover">
-
-<div class="row containerServicosHome">
-
-<div class="wrapper efectLogo">
-<i class="fa fa-thumbs-up icon-style "></i>                                        </div>
-
-
-<h4 class="servicosColorText servicosHomeTitle">Atitude</h4>
-
-<p class="servicosColorText  servicosHomeText">A Intouchbiz é uma empresa jovem e dinâmica, especializada em Design e programação.</p>
-</div>
-
-</div>
-<div class="servicosHomeHoverAmarelo">
-<div class="containerServicosHomeSeta">
-<img src="http://www.intouchbiz.com/template/setaService.png" class="setaService" alt="desenvolvimento e integração de sites">
-</div>
+                    <div class="servicosHomeHoverAmarelo">
+                        <div class="containerServicosHomeSeta">
+                            <img src="{{ asset('img/setaService.png')}}" class="setaService" alt="serviços criação de sites">
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
 </div>
 
-</div>
-</div>
-
-</a><a href="http://www.intouchbiz.com/pt/missao-colectanea-estrategias-ampliacao-dos-lucros-negocios-empresa-competencia-retorno-investimentos-ponto-a-ponto-multi-plataforma-integra-produtos-fluxo-ilimitado-multi-canal-suporte-networking-webizacao-processos-trabalho-colaborativo-e-formacao">
-
-<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 paddingServicos">
-<div class="servicosHome" style="background-image: url('http://www.intouchbiz.com/template/mission.png');">
-<div class="servicosHomeHover">
-
-<div class="row containerServicosHome">
-
-<div class="wrapper efectLogo">
-<i class="fa fa-flag icon-style"></i>                                        </div>
-
-
-<h4 class="servicosColorText servicosHomeTitle">Missão</h4>
-
-<p class="servicosColorText  servicosHomeText">"Uma colectânea de estratégias para ampliação dos lucros e a realização dos seus negócios via internet"</p>
-</div>
-
-</div>
-<div class="servicosHomeHoverAmarelo">
-<div class="containerServicosHomeSeta">
-<img src="http://www.intouchbiz.com/template/setaService.png" class="setaService" alt="desenvolvimento e integração de sites">
-</div>
-</div>
-
-</div>
-</div>
-
-</a><a href="http://www.intouchbiz.com/pt/filosofia-de-trabalho-investimentos-tecnologia-informacao-negocio-empresa-valores-forca-identidade-compromisso-principios-confianca-experiencia-simplicidade-transparencia-inovacao-orientacao-para-o-cliente-espirito-de-equipa-clientes-mercado">
-
-<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 paddingServicos">
-<div class="servicosHome" style="background-image: url('http://www.intouchbiz.com/template/filosofia.png');">
-<div class="servicosHomeHover">
-
-<div class="row containerServicosHome">
-
-<div class="wrapper efectLogo">
-<i class="fa fa-book icon-style"></i>                                        </div>
-
-
-<h4 class="servicosColorText servicosHomeTitle">Filosofia</h4>
-
-<p class="servicosColorText  servicosHomeText">Nossa filosofia de trabalho fundamenta-se em que os investimentos realizados na Tecnologia de Informação devem estar intimamente relacionados no negócio da empresa.</p>
-</div>
-
-</div>
-<div class="servicosHomeHoverAmarelo">
-<div class="containerServicosHomeSeta">
-<img src="http://www.intouchbiz.com/template/setaService.png" class="setaService" alt="desenvolvimento e integração de sites">
-</div>
-</div>
-
-</div>
-</div>
-
-</a><a href="http://www.intouchbiz.com/pt/equipa-profissionais-jovem-dinamica-qualificada-negocios-consultoria-design-programacao-conteudos-comunicacao-marketing-imagem-som-movimento-cor-alegria-comercial-desenvolvimento-seo-apoio-ao-cliente-contabilidade">
-
-<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 paddingServicos">
-<div class="servicosHome" style="background-image: url('http://www.intouchbiz.com/template/teamwork.png');">
-<div class="servicosHomeHover">
-
-<div class="row containerServicosHome">
-
-<div class="wrapper efectLogo">
-<i class="fa fa-users icon-style"></i>                                        </div>
-
-
-<h4 class="servicosColorText servicosHomeTitle">Equipa</h4>
-
-<p class="servicosColorText  servicosHomeText">Contamos com uma equipa de profissionais, jovem dinámica e altamente qualificada, com especialistas nas áreas de: negócios e consultoria, design, programação, contéudos, comunicação e marketing.</p>
-</div>
-
-</div>
-<div class="servicosHomeHoverAmarelo">
-<div class="containerServicosHomeSeta">
-<img src="https://www.intouchbiz.com/template/setaService.png" class="setaService" alt="desenvolvimento e integração de sites">
-</div>
-</div>
-
-</div>
-</div>
-
-</a><a href="http://www.intouchbiz.com/pt/protocolo-socios-portimonense-sporting-clube-aquisicao-de-servicos-construcao-websites-desconto-apresentacao-cartao-quotas-em-dia">
-
-<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 paddingServicos">
-<div class="servicosHome" style="background-image: url('https://www.intouchbiz.com/template/protocol.png');">
-<div class="servicosHomeHover">
-
-<div class="row containerServicosHome">
-
-<div class="wrapper efectLogo">
-<i class="fa fa-futbol-o icon-style"></i>                                        </div>
-
-
-<h4 class="servicosColorText servicosHomeTitle">Protocolo</h4>
-
-<p class="servicosColorText  servicosHomeText">Os sócios do portimonense na aquisição de serviços ou construção de websites na intouchbiz.</p>
-</div>
-
-</div>
-<div class="servicosHomeHoverAmarelo">
-<div class="containerServicosHomeSeta">
-<img src="http://www.intouchbiz.com/template/setaService.png" class="setaService" alt="desenvolvimento e integração de sites">
-</div>
-</div>
-
-</div>
-</div>
-
-</a><a href="http://www.intouchbiz.com/pt/parceiros-rede-foco-know-how-criar-desenvolver-implementar-solucoes-clientes-empresa-oportunidade-web-tecnologia-certificacao-parceiros-formacao-capacitacao-negocio-competitiva">
-
-<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 paddingServicos">
-<div class="servicosHome" style="background-image: url('http://www.intouchbiz.com/template/partner.png');">
-<div class="servicosHomeHover">
-
-<div class="row containerServicosHome">
-
-<div class="wrapper efectLogo">
-<i class="fa fa-briefcase icon-style"></i>                                        </div>
-
-
-<h4 class="servicosColorText servicosHomeTitle">Parceiros</h4>
-
-<p class="servicosColorText  servicosHomeText">A Intouchbiz tem como objectivo crescer por intermédio de uma rede parceiros, não queremos sair do nosso foco e know how, que é o de criar, desenvolver e implementar soluções a medida dos nossos clientes.</p>
-</div>
-</div>
-<div class="servicosHomeHoverAmarelo">
-<div class="containerServicosHomeSeta">
-<img src="http://www.intouchbiz.com/template/setaService.png" class="setaService" alt="desenvolvimento e integração de sites">
-</div>
-</div>
-</div>
-</div>
-</a>                    
-</div>
-<section>
-</section> 
 <section>
 </section>
-<!-- END CONTENT -->
-</div><!--/#background-->
+
+
+<div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 </div>
+
+<a href="{{ asset('img/setaService.png')}}">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 botaoVerde hvr-sweep-to-right">
+        <h1>{% trans %}more{% endtrans %}</h1>
+    </div>
+</a>
+
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+</div>
+</div>
+
+<section>
+</section>
+
+</div>
+<div>
+    <section class="parallaxHome parallaxHomeMicrobiz">
+    </section>
+</div>
+
+<div class="container" id="funcionalidades">
+    <section></section>
+</div>
+
+<section>
+</section>
+
 </div>
 </div>
 </body>
-
 </html>
 
 {% endblock %}

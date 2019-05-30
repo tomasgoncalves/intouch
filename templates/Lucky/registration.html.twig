@@ -7,6 +7,7 @@
         <!-- CART BUTTON AND LANG -->
         <ul id="cart-list" class="borderBottomHeader">
             <li>
+                <!--Icon Social Media on nav bar-->
                 <a href="https://www.facebook.com/connectedintouchbiz/" target="_blank">
                     <div class="social-flag">
                         <img src="{{asset ('img/facebook.png')}}" alt="facebook" id="facebook">
@@ -75,61 +76,73 @@
 </div>
 
 <div class="container">
+    <section>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h1 class="tituloCinza">{% trans %}registration{% endtrans %}</h1>
+            </div>
+        </div>
 
-<section>
-<div class="row">
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-<h1 class="tituloCinza">{% trans %}registration{% endtrans %}</h1>
-</div>
-</div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h1 class="tituloBold">{% trans %}registration1{% endtrans %}</h1>
+            </div>
+        </div>
 
-<div class="row">
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-<h1 class="tituloBold">{% trans %}registration{% endtrans %}</h1>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <p>{% trans %}registration2{% endtrans %}
+                <br><br>
+                {% trans %}registration3{% endtrans %}
+                <br><br>
+                {% trans %}registration4{% endtrans %}
+                <br><br>
+                {% trans %}registration5{% endtrans %}
+                <br><br>{% trans %}registration6{% endtrans %}<br><br>
+                <a href="http://intouchbiz.com/pt/contactos-rua-municipio-domingos-lagoa-portimao-algarve-portugal" style="color:#21409A">{% trans %}contact_us{% endtrans %}</a>
+                <br><br>
+                {% trans %}registration7{% endtrans %}</p>               
+            </div>
+        </div>
+    </section>
 </div>
-</div>
-
-<div class="row">
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-<p>Na intouchbiz os domínios .com ou .net estão incluídos no serviço de alojamento que disponibilizamos de acordo com a opção que escolha, mas podemos registar outros domínios como por exemplo o .pt.
-<br><br>
-E porque somos parceiros da FCCN(Fundação para a Computação Cientifica Nacional), a Intouchbiz efectua o registo do seu domínio www.asuaempresa.pt em 24H.
-<br><br>
-Temos pessoas qualificadas que o ajudam a escolher e registar o melhor domínio para a sua empresa.
-<br><br>
-Conte com a nossa experiência para gerir o seu domínio de uma forma activa, garantindo a sua manutenção e renovação. Sabemos o quanto o seu nome e imagem é importante para si.
-<br><br>Todos os domínios que estão sobre a gestão da Intouchbiz, são propriedade dos nossos clientes e numa necessidade de mudança a Intouchbiz não colocará qualquer obstáculo desde que as contas com a Intouchbiz estejam saldadas, num motivo de transferência, assim que dermos a autorização de transferência o cliente deverá proceder ao mesmo num prazo máximo de sete dias, a partir do momento em que autorizamos uma transferência as nossas responsabilidades cessam automaticamente, não podendo ser exigidas ao cliente quaisquer direitos de assistência.<br><br>
-<a href="http://intouchbiz.com/pt/contactos-rua-municipio-domingos-lagoa-portimao-algarve-portugal" style="color:#21409A">Contacte-nos</a>
-<br><br>
-A Intouchbiz avalia as suas necessidades e apresenta-lhe a solução.</p>
 
 <section>
 </section>
 
-<section>
-</section>
 
 <div class="row">
-<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 </div>
 
-<a href="http://intouchbiz.com/pt/proposta-com-budget-web-makers-negocio-clientes-objetivo-designers-programadores-presenca-online">
-<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 botaoVerde hvr-sweep-to-right">
-<h1>Saiba Mais</h1>
-</div>
+<a href="{{ asset('img/setaService.png')}}">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 botaoVerde hvr-sweep-to-right">
+        <h1>{% trans %}more{% endtrans %}</h1>
+    </div>
 </a>
 
 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 </div>
 </div>
+
 <section>
 </section>
+
+</div>
+<div>
+    <section class="parallaxHome parallaxHomeMicrobiz">
+    </section>
+</div>
+
+<div class="container" id="funcionalidades">
+    <section></section>
+</div>
+
 <section>
 </section>
+
 </div>
 </div>
-</div>
-</section>
 </body>
 </html>
 {% endblock %}

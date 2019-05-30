@@ -1,5 +1,6 @@
 {% extends "base.html.twig" %}
 {% block content %}
+
 <header>
     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
         <!-- CART BUTTON AND LANG -->
@@ -71,936 +72,938 @@
     </div>
 </div>
 <!--Image parallax Home Page-->
-</div>
-	<div class="container">
-		<section>
-			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<h1 class="title" style="font-weight:400; color:#A7A9AC;">{% trans %}work{% endtrans %}</h1>
+<div class="container">
+	<section>
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<h1 class="tituloCinza" style="font-weight:400; color:#A7A9AC;">{% trans %}work{% endtrans %}</h1>
+			</div>
+		</div>
+	</section>
+
+	<style>
+	#circle {
+	margin-right:5px;
+	float:left;
+	width: 15px;
+	height: 15px;
+	-moz-border-radius: 70px;
+	-webkit-border-radius: 70px;
+	border-radius: 70px;
+	}
+	</style>
+
+
+
+	<style>
+	.form-control{
+	border-top: 0px;
+	border-bottom: 0px;
+	}
+	</style>
+
+	<table style="margin-top:15px;" class="table table-bordered table-hover" >
+		<tbody>
+			<tr>
+				<td style="border-left: 1px solid #fff; font-weight:400; letter-spacing:7px; font-size: 17pt;">
+					<select onChange="window.location.href=this.value" class="form-control" id="categoria">
+						<option selected disabled>{% trans %}category{% endtrans %}</option>
+						<!--Array of category's-->
+						{% for array in port1 %}
+						{% set a = 'port1_' ~ loop.index0 ~ '.act'  %}
+						<option id="all">{{ a| trans}}</option>					
+						{% endfor %}                              
+					</select>
+				</td>
+
+				<td style="border-left: 1px solid #fff; font-weight:400; letter-spacing:7px; font-size: 17pt;">
+					<select class="form-control btn" id="activity">
+						<option selected disabled>{% trans %}activity{% endtrans %}</option>
+						<!--Array of activity's-->
+						{% for array in port %}
+						{% set a = 'port_' ~ loop.index0 ~ '.act'  %}
+						<option id="all">{{ a| trans}}</option>
+						{% endfor %}                              
+					</select>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!--All the websites-->
+	<section class="cover">
+		<div class="row container" id="parent">
+			<div class="8">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Veterinário" style="margin:100px 0 30px 0;">
+					<a href="http://www.intouchbiz.com/pt/descricao/7"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/115animal.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">115 Animal</h1>
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Businessbiz</td>
+								</tr>
+
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}vet{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+										<div style="background: #333333" id="circle"></div><div style="background: #F76F16" id="circle"></div>                              
+									</td>
+								</tr>
+
+								<tr>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 				</div>
 			</div>
-		</section>
-		<style>
-		#circle {
-		margin-right:5px;
-		float:left;
-		width: 15px;
-		height: 15px;
-		-moz-border-radius: 70px;
-		-webkit-border-radius: 70px;
-		border-radius: 70px;
-		}
-		</style>
-	<br/>
 
+			<div class="18">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Restaurante" style="margin:100px 0 30px 0;">
+					<a href="http://www.intouchbiz.com/pt/descricao/20"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/restaurante3palmeiras.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">3 Palmeiras</h1>
 
-		<style>
-		.form-control{
-		border-top: 0px;
-		border-bottom: 0px;
-		}
-		</style>
-
-		<table style="margin-top:15px;" class="table table-bordered table-hover" >
-			<tbody>
-				<tr>
-					<td style="border-left: 1px solid #fff; font-weight:400; letter-spacing:7px; font-size: 17pt;">
-						<select onChange="window.location.href=this.value" class="form-control" id="categoria">
-							<option selected disabled>{% trans %}category{% endtrans %}</option>
-							{% for array in port1 %}
-							{% set a = 'port1_' ~ loop.index0 ~ '.act'  %}
-							<option id="all">{{ a| trans}}</option>					
-							{% endfor %}                              
-						</select>
-					</td>
-
-					<td style="border-left: 1px solid #fff; font-weight:400; letter-spacing:7px; font-size: 17pt;">
-						<select class="form-control btn" id="activity">
-							<option selected disabled>{% trans %}activity{% endtrans %}</option>
-							{% for array in port %}
-							{% set a = 'port_' ~ loop.index0 ~ '.act'  %}
-							<option id="all">{{ a| trans}}</option>
-							{% endfor %}                              
-						</select>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-
-		<section class="cover">
-			<div class="row container" id="parent">
-				<div class="8">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Veterinário" style="margin:100px 0 30px 0;">
-						<a href="http://www.intouchbiz.com/pt/descricao/7"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/115animal.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">115 Animal</h1>
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Businessbiz</td>
-									</tr>
-
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}vet{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: #333333" id="circle"></div><div style="background: #F76F16" id="circle"></div>                              
-										</td>
-									</tr>
-
-									<tr>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="18">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Restaurante" style="margin:100px 0 30px 0;">
-						<a href="http://www.intouchbiz.com/pt/descricao/20"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/restaurante3palmeiras.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">3 Palmeiras</h1>
-
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Microbiz</td>
-									</tr>
-
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}res{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: #7b002c" id="circle"></div><div style="background: #000000" id="circle"></div><div style="background: #FFF8DC" id="circle"></div>                              
-										</td>
-									</tr>
-
-									<tr>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="4">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Drogaria" style="margin:100px 0 30px 0;">
-						<a href="http://www.intouchbiz.com/pt/descricao/27"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/admaquinas.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">ADN Máquinas</h1>
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
 								<tr>
-									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Posnet</td>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Microbiz</td>
 								</tr>
 
 								<tr>
-									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}drug{% endtrans %}</td>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}res{% endtrans %}</td>
 									<td style="border-right: 1px solid #fff;" class="text-center">
-										<div style="background: #D77A06" id="circle"></div><div style="background: #58595B" id="circle"></div>                              
+										<div style="background: #7b002c" id="circle"></div><div style="background: #000000" id="circle"></div><div style="background: #FFF8DC" id="circle"></div>                              
 									</td>
-
 								</tr>
 
 								<tr>
 								</tr>
-								</tbody>
-							</table>
-						</div>
+							</tbody>
+						</table>
 					</div>
 				</div>
+			</div>
 
-				<div class="15">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Construção" style="margin:100px 0 30px 0;">			
-						<a href="http://www.intouchbiz.com/pt/descricao/18"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/agconstrucoes.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">AGConstruções</h1>
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Microbiz</td>
-									</tr>
-
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}cons{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: #872C2B" id="circle"></div>                              
-										</td>
-									</tr>
-
-									<tr>			
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="21">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Plantas" style="margin:100px 0 30px 0;">
-						<a href="http://www.intouchbiz.com/pt/descricao/35"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/algarveplantas.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Algarve Plantas</h1>
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Firstbiz</td>
-									</tr>
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}plants{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: " id="circle"></div>                              
-										</td>
-									</tr>
-
-									<tr>								
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="13">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Igreja" style="margin:100px 0 30px 0;">
-						<a href="http://www.intouchbiz.com/pt/descricao/13"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/miguelsilva.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Armando Miguel</h1>
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Firstbiz</td>
-									</tr>
-
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}church{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: #E4BF8F" id="circle"></div><div style="background: #000000" id="circle"></div>                              
-										</td>
-									</tr>
-
-									<tr>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-			
-				<div class="18">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Restaurante" style="margin:100px 0 30px 0;">
-						<a href="http://www.intouchbiz.com/pt/descricao/21"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/restaurantebistroitaliano.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Bistro Italiano</h1>
-
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Microbiz</td>
-									</tr>
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}res{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: #D02E36" id="circle"></div><div style="background: #689247" id="circle"></div>                          
-										</td>
-									</tr>
-
-									<tr>								
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="27">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Eventos" style="margin:100px 0 30px 0;">		
-						<a href="http://www.intouchbiz.com/pt/descricao/32"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/clubemais.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">ClubeMais Algarve</h1>
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">CRM</td>
-									</tr>
-
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}events{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: #048BB5" id="circle"></div><div style="background: #ED1624" id="circle"></div>                              
-										</td>
-									</tr>
-
-									<tr>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="6">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Electrico" style="margin:100px 0 30px 0;">				
-						<a href="http://www.intouchbiz.com/pt/descricao/5"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/duarteneves.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Duarte Neves</h1>
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Businessbiz</td>
-									</tr>
-
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}ele{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: #98C0E4" id="circle"></div><div style="background: #004990" id="circle"></div><div style="background: #303030" id="circle"></div>                              
-										</td>
-									</tr>
-
-									<tr>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="12">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Escola Condução" style="margin:100px 0 30px 0;">				
-						<a href="http://www.intouchbiz.com/pt/descricao/12"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/ecfa-almancil.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">ECFA</h1>
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Firstbiz</td>
-									</tr>
-
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}school{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: #0052a4" id="circle"></div>                              
-										</td>
-									</tr>
-
-									<tr>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="29">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Fisioterapia" style="margin:100px 0 30px 0;">
-						<a href="http://www.intouchbiz.com/pt/descricao/34"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/fisiomiguel.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Fisio Miguel</h1>
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Firstbiz</td>
-									</tr>
-
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}phy{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: " id="circle"></div>                              
-										</td>
-
-									</tr>
-
-									<tr>							
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="14">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Cabeleireiro" style="margin:100px 0 30px 0;">
-						<a href="http://www.intouchbiz.com/pt/descricao/14"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/glamour-beleza.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Glamour Beleza</h1>
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
+			<div class="4">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Drogaria" style="margin:100px 0 30px 0;">
+					<a href="http://www.intouchbiz.com/pt/descricao/27"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/admaquinas.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">ADN Máquinas</h1>
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
 							<tbody>
 							<tr>
-							<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Firstbiz</td>
+								<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Posnet</td>
 							</tr>
+
 							<tr>
-							<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}hair{% endtrans %}</td>
-							<td style="border-right: 1px solid #fff;" class="text-center">
-							<div style="background: #222" id="circle"></div><div style="background: #623662" id="circle"></div>                              </td>
+								<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}drug{% endtrans %}</td>
+								<td style="border-right: 1px solid #fff;" class="text-center">
+									<div style="background: #D77A06" id="circle"></div><div style="background: #58595B" id="circle"></div>                              
+								</td>
 
 							</tr>
+
 							<tr>
-							<!--<td style="border: 1px solid #fff; font-weight:400; letter-spacing:7px; font-size: 17pt;"></td>-->
 							</tr>
 							</tbody>
 						</table>
-						</div>
 					</div>
 				</div>
+			</div>
 
-				<div class="4">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Drogaria" style="margin:100px 0 30px 0;">
-						<a href="http://www.intouchbiz.com/pt/descricao/2"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/gloria&silvestre.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Glória & Silvestre</h1>
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Businessbiz</td>
-									</tr>
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}drug{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: #FFBD33" id="circle"></div><div style="background: #FF5733" id="circle"></div><div style="background: #666666" id="circle"></div><div style="background: #33FF57" id="circle"></div><div style="background: #2588A6" id="circle"></div>      
-										</td>
-									</tr>
-
-									<tr>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="5">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Distribuição" style="margin:100px 0 30px 0;">
-						<a href="http://www.intouchbiz.com/pt/descricao/4"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/goldexpresso.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Gold Expresso</h1>
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Businessbiz</td>
-									</tr>
-
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}distribution{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: #444" id="circle"></div><div style="background: #dac383" id="circle"></div><div style="background: #4a3131" id="circle"></div>                              
-										</td>
-									</tr>
-
-									<tr>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="24">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Moveis" style="margin:100px 0 30px 0;">
-						<a href="http://www.intouchbiz.com/pt/descricao/36"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/i9hotels.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">i9Hotels</h1>
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Firstbiz</td>
-									</tr>
-
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}furniture{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-										<div style="background: " id="circle"></div>                              
-										</td>
-									</tr>
-
-									<tr>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="20">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Papelaria" style="margin:100px 0 30px 0;">
-						<a href="http://www.intouchbiz.com/pt/descricao/25"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/impresst.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">ImpressT</h1>
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Posnet</td>
-									</tr>
-
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}store{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: #CC0066" id="circle"></div><div style="background: #e6e6e6" id="circle"></div><div style="background: #222" id="circle"></div>                              
-										</td>
-									</tr>
-
-									<tr>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="21">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Plantas" style="margin:100px 0 30px 0;">				
-						<a href="http://www.intouchbiz.com/pt/descricao/23"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/jarrosflorista.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Jarros Florista</h1>
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Posnet</td>
-									</tr>
-
-									<tr>										
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}plants{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: #1E5506" id="circle"></div><div style="background: #61A127" id="circle"></div>                              
-										</td>
-									</tr>
-
-									<tr>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="16">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Electricista" style="margin:100px 0 30px 0;">
-						<a href="http://www.intouchbiz.com/pt/descricao/17"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/jraposo.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Jeronimo Raposo</h1>
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Microbiz</td>
-									</tr>
-
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}electrician{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: #A81C1F" id="circle"></div>                              
-										</td>
-									</tr>
-
-									<tr>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="25">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Stand maquinas" style="margin:100px 0 30px 0;">
-						<a href="http://www.intouchbiz.com/pt/descricao/30"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/joaomartins.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">João Martins</h1>
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">ShowRoom</td>
-									</tr>
-
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}stand{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: #c42c2e" id="circle"></div><div style="background: #686767" id="circle"></div><div style="background: #222" id="circle"></div>                              
-										</td>
-
-									</tr>
-
-									<tr>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="28">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Parque" style="margin:100px 0 30px 0;">
-						<a href="http://www.intouchbiz.com/pt/descricao/3"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/krazyworld.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Krazy World</h1>	
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Businessbiz</td>
-									</tr>
-
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}park{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: #581845" id="circle"></div><div style="background: #012437" id="circle"></div><div style="background: #C70039" id="circle"></div><div style="background: #02EC01" id="circle"></div><div style="background: #FF3399" id="circle"></div>      
-										</td>
-									</tr>
-
-									<tr>								
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="14">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Cabeleireiro" style="margin:100px 0 30px 0;">
-						<a href="http://www.intouchbiz.com/pt/descricao/24"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/lamaisondobrasil.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">La Maison do Brasil</h1>
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Posnet</td>
-									</tr>
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}hair{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: #780203" id="circle"></div><div style="background: #550101" id="circle"></div>                              
-										</td>
-									</tr>
-
-									<tr>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="9">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Agricultura" style="margin:100px 0 30px 0;">
-						<a href="http://www.intouchbiz.com/pt/descricao/9"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/machadosholding.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Machados Holding</h1>
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Firstbiz</td>
-									</tr>
-
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}agriculture{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: #F66C16" id="circle"></div><div style="background: #87A62F" id="circle"></div>                              
-										</td>
-									</tr>
-
-									<tr>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="24">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Moveis" style="margin:100px 0 30px 0;">
-						<a href="http://www.intouchbiz.com/pt/descricao/29"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/moveisjeronimo.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Moveis Jeronimo</h1>
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">ShowRoom</td>
-									</tr>
-
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}furniture{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-									  		<div style="background: #371015" id="circle"></div><div style="background: #FCD120" id="circle"></div>                
-									    </td>
-									</tr>
-
-									<tr>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="17">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Electrodomésticos" style="margin:100px 0 30px 0;">
-						<!--<div style="background-color:#000; min-height:100%; min-width:100%;">123
-						</div>-->
-						<a href="http://www.intouchbiz.com/pt/descricao/19"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/nptecnica.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">NP Técnica</h1>
-
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Microbiz</td>
-									</tr>
-
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}house{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: #7D395F" id="circle"></div><div style="background: #0D59A4" id="circle"></div><div style="background: #BD1E2D" id="circle"></div>                              
-										</td>
-									</tr>
-
-									<tr>								
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="18">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Restaurante" style="margin:100px 0 30px 0;">
-						<!--<div style="background-color:#000; min-height:100%; min-width:100%;">123
-						</div>-->
-						<a href="http://www.intouchbiz.com/pt/descricao/8"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/aribeiraalvor.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Pescador da Ribeira</h1>
-
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Firstbiz</td>
-									</tr>
-
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}res{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-										 	<div style="background: #F1F1F1" id="circle"></div><div style="background: #F48D64" id="circle"></div>                
-						               </td>
-									</tr>
-
-									<tr>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="10">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Alojamento Local" style="margin:100px 0 30px 0;">						
-						<a href="http://www.intouchbiz.com/pt/descricao/16"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/propertiesadmin.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">PropertiesAdmin</h1>
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Lodging</td>
-									</tr>
-
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}local{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: #40aab8" id="circle"></div><div style="background: #5bc0de" id="circle"></div><div style="background: #15262F" id="circle"></div>                              
-										</td>
-									</tr>
-
-									<tr>							
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="19">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Seguros" style="margin:100px 0 30px 0;">					
-						<a href="http://www.intouchbiz.com/pt/descricao/22"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/seguros-loule.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Seguros Loulé</h1>
-
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Microbiz</td>
-									</tr>
-
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}insurance{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: #0272a7" id="circle"></div><div style="background: #fc6100" id="circle"></div>                              
-										</td>
-									</tr>
-
-									<tr>						
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="11">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Ar Condicionado" style="margin:100px 0 30px 0;">
-						<a href="http://www.intouchbiz.com/pt/descricao/11"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/tolmanservices.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Tolman Services</h1>
-
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Firstbiz</td>
-									</tr>
-
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}air{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: #99CC33" id="circle"></div><div style="background: #000" id="circle"></div>                             
-										</td>
-									</tr>
-
-									<tr>									
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="10">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Alojamento Local" style="margin:100px 0 30px 0;">
-						<a href="http://www.intouchbiz.com/pt/descricao/15"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/tonel-apartments.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Tonel</h1>
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Lodging</td>
-									</tr>
-
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}local{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: #1d1d1d" id="circle"></div><div style="background: #f0ba3d" id="circle"></div><div style="background: #235885" id="circle"></div>                              
-										</td>
-									</tr>
-
-									<tr>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="7">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Vedações" style="margin:100px 0 30px 0;">
-						<a href="http://www.intouchbiz.com/pt/descricao/6"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/vedamisto.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Vedamisto</h1>
-
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Businessbiz</td>
-									</tr>
-
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}fences{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: #4e4e4e" id="circle"></div><div style="background: #1F2326" id="circle"></div><div style="background: #F00F0F" id="circle"></div>                              
-										</td>
-									</tr>
-
-									<tr>									
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="10">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Alojamento Local" style="margin:100px 0 30px 0;">
-						<a href="http://www.intouchbiz.com/pt/descricao/10"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/villacostadosol.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Villa Costa do Sol</h1>
-
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Firstbiz</td>
-									</tr>
-
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}local{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: #39D1FE" id="circle"></div>                              
-										</td>
-									</tr>
-
-									<tr>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="22">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Material Restauração" style="margin:100px 0 30px 0;">
-						<a href="http://www.intouchbiz.com/pt/descricao/26"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/vimaguese.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Vimaguese</h1>
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
+			<div class="15">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Construção" style="margin:100px 0 30px 0;">			
+					<a href="http://www.intouchbiz.com/pt/descricao/18"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/agconstrucoes.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">AGConstruções</h1>
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
 							<tbody>
 								<tr>
-									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Posnet</td>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Microbiz</td>
 								</tr>
 
 								<tr>
-									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}food{% endtrans %}</td>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}cons{% endtrans %}</td>
 									<td style="border-right: 1px solid #fff;" class="text-center">
-										<div style="background: #930000" id="circle"></div>                              
+										<div style="background: #872C2B" id="circle"></div>                              
+									</td>
+								</tr>
+
+								<tr>			
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="21">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Plantas" style="margin:100px 0 30px 0;">
+					<a href="http://www.intouchbiz.com/pt/descricao/35"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/algarveplantas.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Algarve Plantas</h1>
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Firstbiz</td>
+								</tr>
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}plants{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+										<div style="background: " id="circle"></div>                              
+									</td>
+								</tr>
+
+								<tr>								
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="13">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Igreja" style="margin:100px 0 30px 0;">
+					<a href="http://www.intouchbiz.com/pt/descricao/13"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/miguelsilva.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Armando Miguel</h1>
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Firstbiz</td>
+								</tr>
+
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}church{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+										<div style="background: #E4BF8F" id="circle"></div><div style="background: #000000" id="circle"></div>                              
 									</td>
 								</tr>
 
 								<tr>
 								</tr>
 							</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div class="18">
-					<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Restaurante" style="margin:100px 0 30px 0;">
-						<a href="http://www.intouchbiz.com/pt/descricao/41"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/ocharco.png
-						ocharco.png
-						ocharco.png"></a>
-						<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Restaurante O Charco</h1>
-						<div class="table-responsive">
-							<table style="margin-top:15px;" class="table table-bordered table-hover" >
-								<tbody>
-									<tr>
-										<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Businessbiz</td>
-									</tr>
-
-									<tr>
-										<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}res{% endtrans %}</td>
-										<td style="border-right: 1px solid #fff;" class="text-center">
-											<div style="background: " id="circle"></div>                              
-										</td>
-									</tr>
-
-									<tr>									
-									</tr>
-								</tbody>
-							</table>
-						</div>
+						</table>
 					</div>
 				</div>
 			</div>
-		</section>
-	</div>
+		
+			<div class="18">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Restaurante" style="margin:100px 0 30px 0;">
+					<a href="http://www.intouchbiz.com/pt/descricao/21"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/restaurantebistroitaliano.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Bistro Italiano</h1>
+
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Microbiz</td>
+								</tr>
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}res{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+										<div style="background: #D02E36" id="circle"></div><div style="background: #689247" id="circle"></div>                          
+									</td>
+								</tr>
+
+								<tr>								
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="27">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Eventos" style="margin:100px 0 30px 0;">		
+					<a href="http://www.intouchbiz.com/pt/descricao/32"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/clubemais.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">ClubeMais Algarve</h1>
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">CRM</td>
+								</tr>
+
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}events{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+										<div style="background: #048BB5" id="circle"></div><div style="background: #ED1624" id="circle"></div>                              
+									</td>
+								</tr>
+
+								<tr>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="6">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Electrico" style="margin:100px 0 30px 0;">				
+					<a href="http://www.intouchbiz.com/pt/descricao/5"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/duarteneves.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Duarte Neves</h1>
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Businessbiz</td>
+								</tr>
+
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}ele{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+										<div style="background: #98C0E4" id="circle"></div><div style="background: #004990" id="circle"></div><div style="background: #303030" id="circle"></div>                              
+									</td>
+								</tr>
+
+								<tr>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="12">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Escola Condução" style="margin:100px 0 30px 0;">				
+					<a href="http://www.intouchbiz.com/pt/descricao/12"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/ecfa-almancil.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">ECFA</h1>
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Firstbiz</td>
+								</tr>
+
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}school{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+										<div style="background: #0052a4" id="circle"></div>                              
+									</td>
+								</tr>
+
+								<tr>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="29">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Fisioterapia" style="margin:100px 0 30px 0;">
+					<a href="http://www.intouchbiz.com/pt/descricao/34"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/fisiomiguel.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Fisio Miguel</h1>
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Firstbiz</td>
+								</tr>
+
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}phy{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+										<div style="background: " id="circle"></div>                              
+									</td>
+
+								</tr>
+
+								<tr>							
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="14">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Cabeleireiro" style="margin:100px 0 30px 0;">
+					<a href="http://www.intouchbiz.com/pt/descricao/14"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/glamour-beleza.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Glamour Beleza</h1>
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+						<tbody>
+						<tr>
+						<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Firstbiz</td>
+						</tr>
+						<tr>
+						<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}hair{% endtrans %}</td>
+						<td style="border-right: 1px solid #fff;" class="text-center">
+						<div style="background: #222" id="circle"></div><div style="background: #623662" id="circle"></div>                              </td>
+
+						</tr>
+						<tr>
+						<!--<td style="border: 1px solid #fff; font-weight:400; letter-spacing:7px; font-size: 17pt;"></td>-->
+						</tr>
+						</tbody>
+					</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="4">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Drogaria" style="margin:100px 0 30px 0;">
+					<a href="http://www.intouchbiz.com/pt/descricao/2"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/gloria&silvestre.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Glória & Silvestre</h1>
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Businessbiz</td>
+								</tr>
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}drug{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+										<div style="background: #FFBD33" id="circle"></div><div style="background: #FF5733" id="circle"></div><div style="background: #666666" id="circle"></div><div style="background: #33FF57" id="circle"></div><div style="background: #2588A6" id="circle"></div>      
+									</td>
+								</tr>
+
+								<tr>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="5">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Distribuição" style="margin:100px 0 30px 0;">
+					<a href="http://www.intouchbiz.com/pt/descricao/4"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/goldexpresso.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Gold Expresso</h1>
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Businessbiz</td>
+								</tr>
+
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}distribution{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+										<div style="background: #444" id="circle"></div><div style="background: #dac383" id="circle"></div><div style="background: #4a3131" id="circle"></div>                              
+									</td>
+								</tr>
+
+								<tr>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="24">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Moveis" style="margin:100px 0 30px 0;">
+					<a href="http://www.intouchbiz.com/pt/descricao/36"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/i9hotels.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">i9Hotels</h1>
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Firstbiz</td>
+								</tr>
+
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}furniture{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+									<div style="background: " id="circle"></div>                              
+									</td>
+								</tr>
+
+								<tr>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="20">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Papelaria" style="margin:100px 0 30px 0;">
+					<a href="http://www.intouchbiz.com/pt/descricao/25"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/impresst.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">ImpressT</h1>
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Posnet</td>
+								</tr>
+
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}store{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+										<div style="background: #CC0066" id="circle"></div><div style="background: #e6e6e6" id="circle"></div><div style="background: #222" id="circle"></div>                              
+									</td>
+								</tr>
+
+								<tr>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="21">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Plantas" style="margin:100px 0 30px 0;">				
+					<a href="http://www.intouchbiz.com/pt/descricao/23"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/jarrosflorista.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Jarros Florista</h1>
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Posnet</td>
+								</tr>
+
+								<tr>										
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}plants{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+										<div style="background: #1E5506" id="circle"></div><div style="background: #61A127" id="circle"></div>                              
+									</td>
+								</tr>
+
+								<tr>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="16">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Electricista" style="margin:100px 0 30px 0;">
+					<a href="http://www.intouchbiz.com/pt/descricao/17"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/jraposo.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Jeronimo Raposo</h1>
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Microbiz</td>
+								</tr>
+
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}electrician{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+										<div style="background: #A81C1F" id="circle"></div>                              
+									</td>
+								</tr>
+
+								<tr>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="25">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Stand maquinas" style="margin:100px 0 30px 0;">
+					<a href="http://www.intouchbiz.com/pt/descricao/30"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/joaomartins.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">João Martins</h1>
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">ShowRoom</td>
+								</tr>
+
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}stand{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+										<div style="background: #c42c2e" id="circle"></div><div style="background: #686767" id="circle"></div><div style="background: #222" id="circle"></div>                              
+									</td>
+
+								</tr>
+
+								<tr>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="28">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Parque" style="margin:100px 0 30px 0;">
+					<a href="http://www.intouchbiz.com/pt/descricao/3"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/krazyworld.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Krazy World</h1>	
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Businessbiz</td>
+								</tr>
+
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}park{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+										<div style="background: #581845" id="circle"></div><div style="background: #012437" id="circle"></div><div style="background: #C70039" id="circle"></div><div style="background: #02EC01" id="circle"></div><div style="background: #FF3399" id="circle"></div>      
+									</td>
+								</tr>
+
+								<tr>								
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="14">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Cabeleireiro" style="margin:100px 0 30px 0;">
+					<a href="http://www.intouchbiz.com/pt/descricao/24"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/lamaisondobrasil.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">La Maison do Brasil</h1>
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Posnet</td>
+								</tr>
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}hair{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+										<div style="background: #780203" id="circle"></div><div style="background: #550101" id="circle"></div>                              
+									</td>
+								</tr>
+
+								<tr>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="9">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Agricultura" style="margin:100px 0 30px 0;">
+					<a href="http://www.intouchbiz.com/pt/descricao/9"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/machadosholding.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Machados Holding</h1>
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Firstbiz</td>
+								</tr>
+
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}agriculture{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+										<div style="background: #F66C16" id="circle"></div><div style="background: #87A62F" id="circle"></div>                              
+									</td>
+								</tr>
+
+								<tr>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="24">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Moveis" style="margin:100px 0 30px 0;">
+					<a href="http://www.intouchbiz.com/pt/descricao/29"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/moveisjeronimo.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Moveis Jeronimo</h1>
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">ShowRoom</td>
+								</tr>
+
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}furniture{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+								  		<div style="background: #371015" id="circle"></div><div style="background: #FCD120" id="circle"></div>                
+								    </td>
+								</tr>
+
+								<tr>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="17">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Electrodomésticos" style="margin:100px 0 30px 0;">
+					<!--<div style="background-color:#000; min-height:100%; min-width:100%;">123
+					</div>-->
+					<a href="http://www.intouchbiz.com/pt/descricao/19"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/nptecnica.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">NP Técnica</h1>
+
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Microbiz</td>
+								</tr>
+
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}house{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+										<div style="background: #7D395F" id="circle"></div><div style="background: #0D59A4" id="circle"></div><div style="background: #BD1E2D" id="circle"></div>                              
+									</td>
+								</tr>
+
+								<tr>								
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="18">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Restaurante" style="margin:100px 0 30px 0;">
+					<!--<div style="background-color:#000; min-height:100%; min-width:100%;">123
+					</div>-->
+					<a href="http://www.intouchbiz.com/pt/descricao/8"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/aribeiraalvor.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Pescador da Ribeira</h1>
+
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Firstbiz</td>
+								</tr>
+
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}res{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+									 	<div style="background: #F1F1F1" id="circle"></div><div style="background: #F48D64" id="circle"></div>                
+					               </td>
+								</tr>
+
+								<tr>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="10">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Alojamento Local" style="margin:100px 0 30px 0;">						
+					<a href="http://www.intouchbiz.com/pt/descricao/16"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/propertiesadmin.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">PropertiesAdmin</h1>
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Lodging</td>
+								</tr>
+
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}local{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+										<div style="background: #40aab8" id="circle"></div><div style="background: #5bc0de" id="circle"></div><div style="background: #15262F" id="circle"></div>                              
+									</td>
+								</tr>
+
+								<tr>							
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="19">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Seguros" style="margin:100px 0 30px 0;">					
+					<a href="http://www.intouchbiz.com/pt/descricao/22"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/seguros-loule.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Seguros Loulé</h1>
+
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Microbiz</td>
+								</tr>
+
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}insurance{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+										<div style="background: #0272a7" id="circle"></div><div style="background: #fc6100" id="circle"></div>                              
+									</td>
+								</tr>
+
+								<tr>						
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="11">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Ar Condicionado" style="margin:100px 0 30px 0;">
+					<a href="http://www.intouchbiz.com/pt/descricao/11"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/tolmanservices.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Tolman Services</h1>
+
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Firstbiz</td>
+								</tr>
+
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}air{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+										<div style="background: #99CC33" id="circle"></div><div style="background: #000" id="circle"></div>                             
+									</td>
+								</tr>
+
+								<tr>									
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="10">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Alojamento Local" style="margin:100px 0 30px 0;">
+					<a href="http://www.intouchbiz.com/pt/descricao/15"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/tonel-apartments.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Tonel</h1>
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Lodging</td>
+								</tr>
+
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}local{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+										<div style="background: #1d1d1d" id="circle"></div><div style="background: #f0ba3d" id="circle"></div><div style="background: #235885" id="circle"></div>                              
+									</td>
+								</tr>
+
+								<tr>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="7">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Vedações" style="margin:100px 0 30px 0;">
+					<a href="http://www.intouchbiz.com/pt/descricao/6"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/vedamisto.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Vedamisto</h1>
+
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Businessbiz</td>
+								</tr>
+
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}fences{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+										<div style="background: #4e4e4e" id="circle"></div><div style="background: #1F2326" id="circle"></div><div style="background: #F00F0F" id="circle"></div>                              
+									</td>
+								</tr>
+
+								<tr>									
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="10">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Alojamento Local" style="margin:100px 0 30px 0;">
+					<a href="http://www.intouchbiz.com/pt/descricao/10"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/villacostadosol.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Villa Costa do Sol</h1>
+
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Firstbiz</td>
+								</tr>
+
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}local{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+										<div style="background: #39D1FE" id="circle"></div>                              
+									</td>
+								</tr>
+
+								<tr>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="22">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Material Restauração" style="margin:100px 0 30px 0;">
+					<a href="http://www.intouchbiz.com/pt/descricao/26"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/vimaguese.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Vimaguese</h1>
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+						<tbody>
+							<tr>
+								<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Posnet</td>
+							</tr>
+
+							<tr>
+								<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}food{% endtrans %}</td>
+								<td style="border-right: 1px solid #fff;" class="text-center">
+									<div style="background: #930000" id="circle"></div>                              
+								</td>
+							</tr>
+
+							<tr>
+							</tr>
+						</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="18">
+				<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 box Restaurante" style="margin:100px 0 30px 0;">
+					<a href="http://www.intouchbiz.com/pt/descricao/41"><img class="img-responsive" src="http://www.intouchbiz.com/admin/img/portfolio/ocharco.png
+					ocharco.png
+					ocharco.png"></a>
+					<h1 class="textomuitoSimples" style="margin-top:50px; letter-spacing:7px; font-weight:500; font-size: 1.5em; color:#39B54A;">Restaurante O Charco</h1>
+					<div class="table-responsive">
+						<table style="margin-top:15px;" class="table table-bordered table-hover" >
+							<tbody>
+								<tr>
+									<td style="border-left: 1px solid #fff; border-right: 1px solid #fff; font-weight:200; letter-spacing:7px; font-size: 1.2em; color:#414042;">Businessbiz</td>
+								</tr>
+
+								<tr>
+									<td style="border-left: 1px solid #fff;  letter-spacing:7px; font-weight:200; font-size: 1.2em; color:#414042;">{% trans %}res{% endtrans %}</td>
+									<td style="border-right: 1px solid #fff;" class="text-center">
+										<div style="background: " id="circle"></div>                              
+									</td>
+								</tr>
+
+								<tr>									
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </div>
 
 </body>

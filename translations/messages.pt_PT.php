@@ -61,6 +61,17 @@ return array(
     'subtitle' => 'Assim como actualizações automáticas de versões e os nossos servidores estão preparados para isso, apenas conseguimos garantir uma alta qualidade e serviço 100 % profissional, se as páginas que criamos estiverem alojadas nos nossos servidores.',
     'registration' => 'Registo de Dominios',
     'registration1' => 'O seu domínio www.asuaempresa.pt, .com, .eu, etc., é a sua imagem na internet.',
+    'registration2' => 'Na intouchbiz os domínios .com ou .net estão incluídos no serviço de alojamento que disponibilizamos de acordo com a opção que escolha, mas podemos registar outros domínios como por exemplo o .pt.',
+    'registration3' => 'E porque somos parceiros da FCCN(Fundação para a Computação Cientifica Nacional), a Intouchbiz efectua o registo do seu domínio www.asuaempresa.pt em 24H.',
+    'registration4' => 'Temos pessoas qualificadas que o ajudam a escolher e registar o melhor domínio para a sua empresa.',
+    'registration5' => 'Conte com a nossa experiência para gerir o seu domínio de uma forma activa, garantindo a sua manutenção e renovação. Sabemos o quanto o seu nome e imagem é importante para si.',
+    'registration6' => 'Todos os domínios que estão sobre a gestão da Intouchbiz, são propriedade dos nossos clientes e numa necessidade de mudança a Intouchbiz não colocará qualquer obstáculo desde que as contas com a Intouchbiz estejam saldadas, num motivo de transferência, assim que dermos a autorização de transferência o cliente deverá proceder ao mesmo num prazo máximo de sete dias, a partir do momento em que autorizamos uma transferência as nossas responsabilidades cessam automaticamente, não podendo ser exigidas ao cliente quaisquer direitos de assistência.',
+    'registration7' => 'E porque somos parceiros da FCCN(Fundação para a Computação Cientifica Nacional), a Intouchbiz efectua o registo do seu domínio www.asuaempresa.pt em 24H.',
+    'who_we_are1' => 'Uma evolução natural do negócio da FPF Sistemas de Gestão, Lda que tem como objectivo implementar soluções de gestão de processos com ERP sendo desde 1999 parceiro PHC, atualmente é parceiro certificado de trés grandes marcas de software a nível nacional, Parceiro PHC Advanced, Eticadata, Zonesoft.',
+    'page' => 'OUTRAS PÁGINAS DE INFORMAÇÃO',
+
+
+
 
 
 
@@ -153,6 +164,24 @@ return array(
     'accomodation_4' => array ('title' => 'Controlo de Spam', 'subtitle' => 'O uso abusivo de correio electrónico causa transtornos à infraestrutura da Intouchbiz assim como aos restantes utilizadores, ao pôr em causa o normal funcionamento dos sistemas e do suporte ao serviço.', 'img' => 'http://intouchbiz.com/template/spam.png'),
 
     'accomodation_5' => array ('title' => 'Antivírus', 'subtitle' => 'Alertas por email e SMS para equipa técnica em caso de falhas, Configuração e gestão de firewall por técnicos da Intouchbiz, Backup para servidor central, Backup e Restore de ficheiros através de painel de controlo.', 'img' => 'http://intouchbiz.com/template/antivirus.png'),
+    //-------------------------------------------------//
+
+
+
+    //--------------------Who_we_are-------------------//
+    'who_are_art_0' => array ( 'title' => 'Quem Somos', 'subtitle' => 'A Intouchbiz Soluções Integradas é uma associada da FPF Sistemas de Gestão.', 'img' => 'img/quemsomos.png'),
+
+    'who_are_art_1' => array ( 'title' => 'Atitude', 'subtitle' => 'A Intouchbiz é uma empresa jovem e dinâmica, especializada em Design e programação.', 'img' => 'img/atitude.png'),
+
+    'who_are_art_2' => array ( 'title' => 'Missão', 'subtitle' => 'Uma colectânea de estratégias para ampliação dos lucros e a realização dos seus negócios via internet', 'img' => 'https://www.intouchbiz.com/template/develop.png'),
+
+    'who_are_art_3' => array ( 'title' => 'Filosofia', 'subtitle' => 'Nossa filosofia de trabalho fundamenta-se em que os investimentos realizados na Tecnologia de Informação devem estar intimamente relacionados no negócio da empresa.'),
+
+    'who_are_art_4' => array ( 'title' => 'Equipa', 'subtitle' => 'Contamos com uma equipa de profissionais, jovem dinámica e altamente qualificada, com especialistas nas áreas de: negócios e consultoria, design, programação, contéudos, comunicação e marketing.', 'img' => 'https://www.intouchbiz.com/template/develop.png'),
+
+    'who_are_art_5' => array ( 'title' => 'Protocolo', 'subtitle' => 'Os sócios do portimonense na aquisição de serviços ou construção de websites na intouchbiz.', 'img' => 'https://www.intouchbiz.com/template/develop.png'),
+
+    'who_are_art_6' => array ( 'title' => 'Parceiros', 'subtitle' => 'A Intouchbiz tem como objectivo crescer por intermédio de uma rede parceiros, não queremos sair do nosso foco e know how, que é o de criar, desenvolver e implementar soluções a medida dos nossos clientes.', 'img' => 'https://www.intouchbiz.com/template/develop.png'),
     //-------------------------------------------------//
 
 

@@ -60,6 +60,16 @@ return array(
     'subtitle' => 'As well as automatic version updates and our servers are prepared for this, we can only guarantee a high quality and 100% professional service if the pages we create are hosted on our servers.',
     'registration' => 'Domain of registration',
     'registration1' => 'Your domain www.asuaempresa.pt, .com, .eu, etc., is your image on the internet.',
+    'registration2' => 'In intouchbiz .com or .net domains are included in the hosting service that we offer according to the option you choose, but we can register other domains such as .pt.',
+    'registration3' => 'And because we are partners of FCCN (Foundation for National Scientific Computing), Intouchbiz registers its domain www.asuaempresa.pt in 24H.',
+    'registration4' => 'We have qualified people who help you choose and register the best domain for your company.',
+    'registration5' => 'Count on our experience to actively manage your domain, ensuring its maintenance and renewal. We know how much your name and image are important to you.',
+    'registration6' => 'All domains that are about the management of Intouchbiz, are owned by our clients and in a need of change Intouchbiz will not pose any obstacle as long as the accounts with Intouchbiz are settled, in a reason for transfer, once we give the transfer authorization the client must do so within a maximum period of seven days, from the moment we authorize a transfer our responsibilities cease automatically, and the customer can not be required any rights of assistance.',
+    'registration7' => 'And because we are partners of FCCN (Foundation for National Scientific Computing), Intouchbiz registers its domain www.asuaempresa.pt in 24H.',
+    'who_we_are1' => 'A natural evolution of the business of FPF Sistemas de Gestão, Lda, which aims to implement process management solutions with ERP, and since 1999, PHC partner, is currently a certified partner of three major national software brands, Partner PHC Advanced, Eticadata, Zonesoft.Naturally and due to the needs of the customers that we had at the time to respond to these needs, we were forced to develop some web solutions, when we realized the needs and the existing offer in the market, we realized that we could make a difference and we decided to create Intouchbiz Soluções Integradas, more than the creation of a simple website, but we created concepts since 2005, when the first developments developed by us began to appear. from now until now with 11 years of experience, we have been awarded with demanding and challenging clients that help us to become better and better. Here is a thank you to all the clients who entrusted us with their projects and who continue to trust us.',
+    'another_pages' => 'Other information pages',
+    'page' => 'OTHER INFORMATION PAGES',
+
 
 
     //--------------------Index------------------------------------//
@@ -155,6 +165,24 @@ return array(
 
 
 
+    //--------------------Who_we_are-------------------------//
+    'who_are_art_0' => array ( 'title' => 'Who we are', 'subtitle' => 'Intouchbiz Soluções Integradas is an associate of FPF Management Systems.', 'img' => 'img/quemsomos.png'),
+
+    'who_are_art_1' => array ( 'title' => 'Attitude', 'subtitle' => 'Intouchbiz is a young and dynamic company specialized in Design and Programming.', 'img' => 'img/quemsomos.png'),
+
+    'who_are_art_2' => array ( 'title' => 'Mission', 'subtitle' => 'A collection of strategies to increase profits and conduct your business via the internet', 'img' => 'img/quemsomos.png'),
+
+    'who_are_art_3' => array ( 'title' => 'Philosophy', 'subtitle' => "Our philosophy of work is based on the fact that the investments made in Information Technology must be closely related in the company's business.", 'img' => 'img/quemsomos.png'),
+
+    'who_are_art_4' => array ( 'title' => 'Team', 'subtitle' => 'We have a team of professionals, young dynamic and highly qualified, with specialists in the areas of: business and consulting, design, programming, content, communication and marketing.', 'img' => 'img/quemsomos.png'),
+
+    'who_are_art_5' => array ( 'title' => 'Protocol', 'subtitle' => 'Portimonense partners in acquiring services or building websites in intouchbiz.', 'img' => 'img/quemsomos.png'),
+
+    'who_are_art_6' => array ( 'title' => 'Partners', 'subtitle' => 'Intouchbiz aims to grow through a network partners, we do not want to leave our focus and know how, which is to create, develop and implement solutions tailored to our customers.', 'img' => 'img/quemsomos.png'),
+    //------------------------------------------------------//
+
+
+    
     //------------------Portfolio---------------------------//
     'port_0' => array ( 'act' => 'Vet'), 
     'port_1' => array ( 'act' => 'Restaurant'),

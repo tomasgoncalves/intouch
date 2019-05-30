@@ -1,11 +1,13 @@
 {% extends "base.html.twig" %}
 {% block content %}
 
+<!--Banner-->
 <header>
     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
         <!-- CART BUTTON AND LANG -->
         <ul id="cart-list" class="borderBottomHeader">
             <li>
+                <!--Icon Social Media on nav bar-->
                 <a href="https://www.facebook.com/connectedintouchbiz/" target="_blank">
                     <div class="social-flag">
                         <img src="{{asset ('img/facebook.png')}}" alt="facebook" id="facebook">
@@ -64,7 +66,8 @@
                             <hr class="textUnderline ">
                             <h2 class="desc-slider"><p></p></h2>
                             <a class="page-scroll" href="#firstSection"><img src="{{ asset('img/setaBottom.png')}}" class="setaBottom" alt="rendimento mensal garantido"></a>
-                        </div>                       
+                        </div>
+                        
                     </div>                    
                 </div>
             </div>
@@ -78,13 +81,14 @@
 			<h1 class="tituloCinza">HOST</h1>
 		</div>
 
+        <!--Array of two host's above banner-->
 		{% for array in host %}
 		{% set a = 'host_' ~ loop.index0 ~ '.img'  %}
 		{% set b = 'host_' ~ loop.index0 ~ '.title'  %}
 		{% set c = 'host_' ~ loop.index0 ~ '.subtitle'  %}
 
 		<a href="{{array}}">
-		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 paddingServicos">
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 paddingServicos">           
 			<div class="servicosHome" style="background-image: url('{{ a|trans }}');">
 				<div class="servicosHomeHover">
 					<div class="row containerServicosHome">
@@ -107,40 +111,44 @@
 		{% endfor %}
 	</div>
 </div>
+
 <section>
 </section>
-<section>
-</section>
+
+
 <div class="row">
-	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 </div>
 
-<a href="https://www.intouchbiz.com/pt/proposta-sem-budget-web-makers-negocio-clientes-objetivo-designers-programadores-presenca-online">
-<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 botaoVerde hvr-sweep-to-right">
-	<h1>{% trans %}more{% endtrans %}</h1>
-</div>
+<a href="{{ asset('img/setaService.png')}}">
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 botaoVerde hvr-sweep-to-right">
+        <h1>{% trans %}more{% endtrans %}</h1>
+    </div>
 </a>
+
 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 </div>
 </div>
+
 <section>
 </section>
-<section>
-</section>
-</section>
+
 </div>
 <div>
-<section class="parallaxHome parallaxHomeMicrobiz">
-</section>
+    <section class="parallaxHome parallaxHomeMicrobiz">
+    </section>
 </div>
+
 <div class="container" id="funcionalidades">
-<section>
+    <section></section>
 </div>
-</section>
+
 <section>
 </section>
+
 </div>
 </div>
 </body>
 </html>
+
 {% endblock %}

@@ -38,6 +38,11 @@ contacts:
   path: /contacts
   controller: App\Controller\HomeController::contacts
 
+contacts1:
+  path: /contacts1
+  controller: App\Controller\HomeController::contacts1
+
+
 accomodation:
   path: /host/accomodation
   controller: App\Controller\HomeController::accomodation
@@ -73,3 +78,8 @@ map:
 we_call:
   path: /we_call
   controller: App\Controller\HomeController::we_call
+
+errorContact:
+  path: /errorContact
+  controller: App\Controller\HomeController::errorContact
+
