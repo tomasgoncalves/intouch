@@ -28,225 +28,196 @@ class HomeController extends AbstractController
         $this->session = $session;
   }
 
-  //Sending email in Contact
-  /*public function contactForm(Request $request, \Swift_Mailer $mailer) {
-
-      $error = array();
-
-      //Field's variable of the form
-      $request->request->get('name');
-      $request->request->get('email');
-      $request->request->get('subject');
-      $request->request->get('message');
-
-      //If there is any error
-      !$request->request->get('name') ? $error[] = 'nome' : false;
-      !$request->request->get('email') ? $error[] = 'email' : false;
-      !$request->request->get('subject') ? $error[] = 'assunto' : false;
-      !$request->request->get('message') ? $error[] = 'mensagem' : false;
-
-      //Counts how many error's exists
-      if (count($error)>0){
-            return new JsonResponse(array('status' => 0,'err' => $error)); 
-      } else {  
-          //If there is no error sends an email
-          $transport = (new \Swift_SmtpTransport('smtp.sapo.pt', 465, 'ssl'))
-            ->setUsername('alticedoraul@sapo.pt')
-            ->setPassword('Altice12')
-          ;
-
-          // Create the Mailer using your created Transport
-          $mailer = new \Swift_Mailer($transport);
-
-          // Create a message
-          $mail = (new \Swift_Message(''))
-            ->setFrom(['alticedoraul@sapo.pt' => 'Tomás'])
-            ->setTo([$request->request->get('email')])
-            ->setBody('asdasf');
-
-          // Send the message
-          $result = $mailer->send($mail);
-
-          return new JsonResponse(array('status' => 1, 'name' => $request->request->get('name'), 'email' => $request->request->get('email'), 'subject' => $request->request->get('subject'), 'message' => $request->request->get('message')));
-      }
-  }*/
-
   public function contacts(Request $request)
   {
-    //Formulário para enviar dados com estilos do w3 css    
-    $mensagem_default = ['message' => ''];//mensagem default a ser enviada
-    //cria um form type
+    //Form to send data with the style of w3 css    
+    $mensagem_default = ['message' => ''];//message default to be sent
+
+    //creates a form type
     $form = $this->createFormBuilder($mensagem_default)
-    //Adiciona o campo nome
+
+    //Adds the name field
     ->add('name', TextType::class, [
         'attr'=>[ 'class' => 'form-control'], 'extra_fields_message' => 'Name',  'required' => false 
     ])
     
-    //Adiciona o campo email
+    //Adds the email field
     ->add('email', TextType::class, [
         'attr'=>[ 'class' => 'form-control'], 'required' => false
     ])
     
-    //adiciona o assunto  
+    //Adds the subject field 
     ->add('subject', TextType::class, [
          'attr'=>[ 'class' => 'form-control'], 'required' => false 
     ])
         
-    //Adiciona o campo mensagem
+    //Adds the message field
     ->add('message', TextareaType::class, [
         'attr'=>[ 'class' => 'form-control'], 'required' => false
     ])
-    //Adiciona o campo botão enviar dados
+    //Adds the send button
     ->add('send', SubmitType::class, [
          'attr'=>[ 'class' => 'btn-marg botaoEnviar hvr-sweep-to-left']
     ])
+
     ->getForm();
-              
-      
-    // Renderiza os arreio para a página principal e Renderiza o formulario para o body
-    return $this -> render('lucky/contacts.html.twig', ['page'=> 'contacts', 'form'=> $form ->createView(),]);
+                   
+    //Renders the array for the main page and renders the form for the body
+    return $this -> render('lucky/contacts.html.twig', ['page'=> 'contacts', 'form'=> $form ->createView()]);
+  }
+
+  public function footer(Request $request)
+  {
+    //Form to send data with the style of w3 css    
+    $mensagem_default = ['message' => ''];//message default to be sent
+
+    //creates a form type
+    $form = $this->createFormBuilder($mensagem_default)
+
+    //Adds the name field
+    ->add('name', TextType::class, [
+        'attr'=>[ 'class' => 'form-control'], 'extra_fields_message' => 'Name',  'required' => false 
+    ])
+    
+    //Adds the email field
+    ->add('email', TextType::class, [
+        'attr'=>[ 'class' => 'form-control'], 'required' => false
+    ])
+    
+    //Adds the subject field 
+    ->add('subject', TextType::class, [
+         'attr'=>[ 'class' => 'form-control'], 'required' => false 
+    ])
+        
+    //Adds the message field
+    ->add('message', TextareaType::class, [
+        'attr'=>[ 'class' => 'form-control'], 'required' => false
+    ])
+    //Adds the send button
+    ->add('send', SubmitType::class, [
+         'attr'=>[ 'class' => 'btn-marg botaoEnviar hvr-sweep-to-left']
+    ])
+
+    ->getForm();
+                   
+    //Renders the array for the main page and renders the form for the body
+    return $this -> render('Lucky/footer.html.twig', ['page'=> 'footer', 'form'=> $form ->createView()]);
   }
 
   public function errorContact(Request $request) 
   {
-  //Formulário para enviar dados com estilos do w3 css    
-      $mensagem_default = ['message' => ''];//mensagem default a ser enviada
-      //cria um form type
-      $form = $this->createFormBuilder($mensagem_default)
-      //Adiciona o campo nome
-      ->add('name', TextType::class, [
-          'label'=> 'O seu Nome', 'attr'=>[ 'class' => 'form-control'], 'required' => false 
-      ])
-      
-      //Adiciona o campo email
-      ->add('email', TextareaType::class, [
-          'label'=> 'Email', 'attr'=>[ 'class' => 'form-control'], 'required' => false
-      ])
-      
-      //adiciona o assunto  
-      ->add('subject', TextType::class, [
-          'label'=> 'Assunto', 'attr'=>[ 'class' => 'form-control'], 'required' => false 
-      ])
-          
-      //Adiciona o campo mensagem
-      ->add('message', TextareaType::class, [
-          'label'=> 'Mensagem', 'attr'=>[ 'class' => 'form-control'], 'required' => false
-      ])
-      //Adiciona o campo botão enviar dados
-      ->add('send', SubmitType::class, [
-           'attr'=>[ 'class' => 'btn-marg botaoEnviar hvr-sweep-to-left']
-      ])
-      ->getForm();
+    //Form to send data with the style of w3 css    
+    $mensagem_default = ['message' => ''];//message default to be sent
+
+    //creates a form type
+    $form = $this->createFormBuilder($mensagem_default)
+
+    //Adds the name field
+    ->add('name', TextType::class, [
+        'attr'=>[ 'class' => 'form-control'], 'extra_fields_message' => 'Name',  'required' => false 
+    ])
+    
+    //Adds the email field
+    ->add('email', TextType::class, [
+        'attr'=>[ 'class' => 'form-control'], 'required' => false
+    ])
+    
+    //Adds the subject field 
+    ->add('subject', TextType::class, [
+         'attr'=>[ 'class' => 'form-control'], 'required' => false 
+    ])
+        
+    //Adds the message field
+    ->add('message', TextareaType::class, [
+        'attr'=>[ 'class' => 'form-control'], 'required' => false
+    ])
+
+    //Adds the send button
+    ->add('send', SubmitType::class, [
+         'attr'=>[ 'class' => 'btn-marg botaoEnviar hvr-sweep-to-left']
+    ])
+
+    ->getForm();
   
-  //vai buscar aos campos do formulario os dados que vão ser enviados
-  $form->handleRequest($request);
-      //se existe submissão do form e o mesmo é válido
-      if($form->isSubmitted() && $form->isValid())
+    //will fetch the fields from the form of the data that will be sent
+    $form->handleRequest($request);
+
+    //if form submission exists and the same is valid
+    if($form->isSubmitted() && $form->isValid())
+    {
+      // will fetch the name, email, and message to the base file form
+      //getData () method serves to fetch data from the ajax request
+      $name=$form["name"]->getData();
+      $email=$form["email"]->getData();
+      $subject=$form["subject"]->getData();
+      $message=$form["message"]->getData();
+
+      //array declaration 
+      $error=array();
+
+      //if the name value is filled, will let 
+      //otherwise it puts in the error array the name to print in the base file
+      if(!$name)
       {
-       // vai buscar o nome, o email, e a mensagem ao formulário do ficheiro base
-       //método getData() serve para ir buscar os dados da requisição ajax
-       $name=$form["name"]->getData();
-       $email=$form["email"]->getData();
-       $subject=$form["subject"]->getData();
-       $message=$form["message"]->getData();
-        //declaração do array  
-       $error=array(); 
-          //se o valor name estiver preenchido deixa seguir 
-          //caso contrario mete no array error o name para imprimir no ficheiro base
-          if(!$name)
-          {
-              $error[]='name';
-          }              
-          if(!$email)
-          {
-              $error[]='email';
-          }
-          if(!$subject)
-          {
-              $error[]='subject';
-          }
-          if(!$message)
-          {
-              $error[]='message';
-          }
-          //se a variavel erro estiver prenchida, ele faz return para o ficheiro base
-          if(!empty($error))
-          {
-              // da return do status que é 0 para fazer o boolean no ficheiro base e retorna tambem a variavel data que contem o array
-              return new JsonResponse(array(
-              // status=0 é quando falha e manda a dizer o campo que falhou
-              'status'=>0,
-              // a variavel data contem o nome dos erros se for o nome que falta retorna o nome, se for o email retorna o erro do email, se for a mensagem retorna o erro da emnsagem e se for todos retorna todos, etc...
-              'data'=>$error,       
-              ));
-          }
-          //a variavel response vai ficar com o que vem do array
-          $response = 'array';
-          }
-          
-          // Create the Transport
+        $error[]='name';
+      } 
 
-       $transport = (new \Swift_SmtpTransport('smtp.sapo.pt', 465, 'ssl'))
-       ->setUsername('alticedoraul@sapo.pt')
-       ->setPassword('Altice12');
+      //if the email value is filled, will let 
+      //otherwise it puts in the error array the email to print in the base file
+      if(!$email)
+      {
+        $error[]='email';
+      }
 
-       // Create the Mailer using your created Transport
-       $mailer = new \Swift_Mailer($transport);
+      //if the subject value is filled, will let 
+      //otherwise it puts in the error array the subject to print in the base file
+      if(!$subject)
+      {
+        $error[]='subject';
+      }    
 
-           // Create a message
-       $mail = (new \Swift_Message())
-        ->setFrom(['alticedoraul@sapo.pt' => 'Testes Email Intoucbiz'])
-       ->setTo([$email=$form["email"]->getData()])
-       ->setBody($message);
-       // Send the message
-       // set subject etc...
-       $mailer->send($mail);
-       return new JsonResponse(array('status'=>1));          
+      //if the message value is filled, will let 
+      //otherwise it puts in the error array the message to print in the base file
+      if(!$message)
+      {
+        $error[]='message';
+      }
+
+      //if the error variable is filled, it returns to the base file
+      if(!empty($error))
+      {
+        //gives status return which is 0 to make the boolean in the base file and also returns the variable data that contains the array
+        return new JsonResponse(array(
+          // status=0 is when it fails and tells you to say the field that failed
+          'status'=>0,
+          // the variable data contains the name of the errors if it is the missing name returns the name, if it is the email returns the email error, if it is the message it returns the error of the emsage and if it is all returns all, etc ...
+          'data'=>$error,       
+        )); 
+      }
+
+      //the response variable will stay with what comes from the array
+      $response = 'array';
+    }
+       
+    // Create the Transport
+    $transport = (new \Swift_SmtpTransport('smtp.sapo.pt', 465, 'ssl'))
+    ->setUsername('alticedoraul@sapo.pt')
+    ->setPassword('Altice12');
+
+    // Create the Mailer using your created Transport
+    $mailer = new \Swift_Mailer($transport);
+
+    // Create a message
+    $mail = (new \Swift_Message())
+    ->setFrom(['alticedoraul@sapo.pt' => 'Testes Email Intoucbiz'])
+    ->setTo([$email=$form["email"]->getData()])
+    ->setBody($message);
+
+    // Send the message
+    $mailer->send($mail);
+    return new JsonResponse(array('status'=>1));          
   }
 
-  //Sending email in Footer
-  /*public function footerForm(Request $request, \Swift_Mailer $mailer) {
-
-      $error = array();
-
-      //Field's variable of the form
-      $request->request->get('name');
-      $request->request->get('email');
-      $request->request->get('subject');
-      $request->request->get('message');
-
-      //If there is any error
-      !$request->request->get('name') ? $error[] = 'nome' : false;
-      !$request->request->get('email') ? $error[] = 'email' : false;
-      !$request->request->get('subject') ? $error[] = 'assunto' : false;
-      !$request->request->get('message') ? $error[] = 'mensagem' : false;
-
-      //Counts how many error's exists
-      if (count($error)>0){
-            return new JsonResponse(array('status' => 0,'err' => $error)); 
-      } else { 
-          //If there is no error sends an email 
-          $transport = (new \Swift_SmtpTransport('mail.intouchbiz.com', 465, 'ssl'))
-            ->setUsername('tomas.goncalves@intouchbiz.com')
-            ->setPassword('intouchbiz#2019')
-          ;
-
-          //Create the Mailer using your created Transport
-          $mailer = new \Swift_Mailer($transport);
-
-          //Create a message
-          $mail = (new \Swift_Message(''))
-            ->setFrom(['tomas.goncalves@intouchbiz.com' => 'Tomás'])
-            ->setTo([$request->request->get('email')])
-            ->setBody('asdasf')
-            ;
-
-          //Send the message
-          $result = $mailer->send($mail);
-
-          return new JsonResponse(array('status' => 1, 'name' => $request->request->get('name'), 'email' => $request->request->get('email'), 'subject' => $request->request->get('subject'), 'message' => $request->request->get('message')));
-      }
-  }*/
 
   //Array of the page index
   public function index()
@@ -368,15 +339,15 @@ class HomeController extends AbstractController
   }
 
   //Array of the page safe_payment
-  public function safe_payment(){
+  public function safePayment(){
 
     return $this->render('/lucky/safe_payment.html.twig', [
-     'page' => 'safe_payment'
+     'page' => 'safePayment'
     ]);
   }
 
   //Array of the page map
-  public function map (){
+  public function map(){
 
     return $this->render('/lucky/map.html.twig', [
      'page' => 'map'
@@ -392,10 +363,10 @@ class HomeController extends AbstractController
   }
 
   //Array of the page we_call
-  public function we_call(){
+  public function weCall(){
 
     return $this->render('/lucky/we_call.html.twig', [
-       'page' => 'we_call'
+       'page' => 'weCall'
     ]);
   }
 }

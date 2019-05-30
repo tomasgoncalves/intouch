@@ -2,14 +2,6 @@ index:
   path: /
   controller: App\Controller\HomeController::index
 
-contactForm:
-  path: /contactForm
-  controller: App\Controller\HomeController::contactForm
-
-footerForm:
-  path: /footerForm
-  controller: App\Controller\HomeController::footerForm     
-
 creation:
   path: /creation
   controller: App\Controller\HomeController::creation
@@ -38,11 +30,6 @@ contacts:
   path: /contacts
   controller: App\Controller\HomeController::contacts
 
-contacts1:
-  path: /contacts1
-  controller: App\Controller\HomeController::contacts1
-
-
 accomodation:
   path: /host/accomodation
   controller: App\Controller\HomeController::accomodation
@@ -63,9 +50,9 @@ terms:
   path: /terms
   controller: App\Controller\HomeController::terms
 
-safe_payment:
-  path: /safe_payment
-  controller: App\Controller\HomeController::safe_payment
+safePayment:
+  path: /safePayment
+  controller: App\Controller\HomeController::safePayment
 
 deliveries:
   path: /deliveries
@@ -75,11 +62,15 @@ map:
   path: /map
   controller: App\Controller\HomeController::map
 
-we_call:
-  path: /we_call
-  controller: App\Controller\HomeController::we_call
+weCall:
+  path: /weCall
+  controller: App\Controller\HomeController::weCall
 
 errorContact:
   path: /errorContact
   controller: App\Controller\HomeController::errorContact
+
+base:
+  path: /base
+  controller: App\Controller\HomeController::footer
 
