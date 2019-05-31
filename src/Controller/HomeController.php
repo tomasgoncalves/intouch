@@ -173,9 +173,18 @@ class HomeController extends AbstractController
 
     // Create a message
     $mail = (new \Swift_Message())
-    ->setFrom(['alticedoraul@sapo.pt' => 'Intoucbiz PT'])
+    ->setFrom(['alticedoraul@sapo.pt' => 'Intouch PT'])
     ->setTo($email)
-    ->setBody($subject);
+    ->setBody($this->renderView('email/registration.html.twig',
+                    array(
+                        'name' => $name,
+                        'email' => $email,
+                        'subject' => $subject,
+                        'message' => $message,
+                        'logo' => 'https://www.intouchbiz.com/template/logo.png',
+                        
+                        )
+                    ),'text/html');
 
     // Send the message
     $mailer->send($mail);

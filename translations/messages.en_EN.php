@@ -87,7 +87,7 @@ return array(
 
 
     //--------------------Creation---------------------------------//
-    'creation_0' => array ('title' => 'Design & Image', 'subtitle' => 'All you need to get started is to focus on your business area, we take care of the rest.', 'img' => 'http://www.intouchbiz.com/template/online_shop.png'),
+    'creation_0' => array ('title' => 'Design & Image', 'subtitle' => 'All you need to get started is to focus on your business area, we take care of the rest.', 'img' => 'img/online_shop.png'),
 
     'creation_1' => array ('title' => 'Web Design', 'subtitle' => 'Creativity and originality are essential to becoming like people in an online presence.', 'img' => 'http://www.intouchbiz.com/template/webdesign_1.png'),
 
