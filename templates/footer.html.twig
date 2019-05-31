@@ -2,15 +2,19 @@
    <div class="container">
        <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <h1 class="contact-us" style="text-align: center; color: ">{%trans%} contact_us {%endtrans%}</h1><br>
-                <form role="form" action="" method="POST" id="footerform">
-                    <input type="text" name="nome" class="form-control" style="background: white;" id="nome" placeholder="{% trans %}name{% endtrans %}"><br>
-                    <input type="text" name="email" class="form-control" style="background: white;" id="email" placeholder="Email"><br>
-                    <input type="text" name="assunto" class="form-control" style="background: white;" id="assunto" placeholder="{% trans %}sub{% endtrans %}"><br>
-                    <textarea type="text" name="mensagem" class="form-control" style="background: white;" id="mensagem" placeholder="{% trans %}msg{% endtrans %}" maxlength="755"></textarea><br>
-                    <button name="submit" id="btn-cont" class="btn botaoEnviar hvr-sweep-to-left">{% trans %}send{%endtrans%}</button>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h3 class="contact-title">{% trans %}contact{%endtrans%}</h3>
+                        <div class="row">
+                            <form>
+                                <!-- Code that corresponds to the Name input field on the footer form -->
+                                {{ form_start(form) }}
+
+                                {{ form_end(form) }}
+                            </form>
+                        </div>
                     </div>
-                </form>
+                </div>
             </div>
             
             <div class="row">
@@ -49,3 +53,34 @@
         </div>
    </div>
 </div>
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<script>
+    //submit the form
+    $("form").submit(function(e) {
+        e.preventDefault();//cancel event if cancelable
+        var $this = $(this);
+        console.log($(this).serialize())//converts all elements to a string
+        //ajax request
+        $.ajax({
+            type: 'POST',
+            url: 'error',
+            data: $this.serialize(),//converts all elements to a string
+            success: function(data) {
+
+                //If status is 0 show an alert to fill the fields     
+                if(data.status==0)
+                {
+                    alert("Falta preencher: " + data.data);
+                }
+
+                //If status is 1 the email is send sucessfuly and show an alert
+                if(data.status == 1)
+                {
+                    alert("Sucesso");
+                }   
+            }
+        });
+    });
+</script>

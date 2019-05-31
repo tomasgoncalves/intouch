@@ -124,23 +124,25 @@
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
 <script>
-    //submit do form
+    //submit the form
     $("form").submit(function(e) {
-        e.preventDefault();//cancela o evento se for cancelável
+        e.preventDefault();//cancel event if cancelable
         var $this = $(this);
-        console.log('teste' + $(this).serialize())//converte os elementos todos para uma string
-        //requesição ajax
+        console.log($(this).serialize())//converts all elements to a string
+        //ajax request
         $.ajax({
             type: 'POST',
-            url: 'errorContact',
-            data: $this.serialize(),//converte os elementos todos para uma string
+            url: 'errorForm',
+            data: $this.serialize(),//converts all elements to a string
             success: function(data) {
-                    
+
+                //If status is 0 show an alert to fill the fields     
                 if(data.status==0)
                 {
                     alert("Falta preencher: " + data.data);
                 }
 
+                //If status is 1 the email is send sucessfuly and show an alert
                 if(data.status == 1)
                 {
                     alert("Sucesso");

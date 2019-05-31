@@ -102,13 +102,13 @@ return array(
 
 
     //--------------------SEO--------------------------------//
-    'seo_0' => array( 'title' => 'SEO Optimização', 'subtitle' => 'Tudo o que precisa para começar, é concentrar-se na sua sua área de negócio, nós cuidamos do resto.', 'img' => 'http://www.intouchbiz.com/template/online_shop.png'),
+    'seo_0' => array( 'title' => 'SEO Optimização', 'subtitle' => 'Tratamos na integra de optimizar os resultados obtidos por si para que possa superar a sua concorrência, nos motores de busca mais utilizados na internet. ', 'img' => 'http://www.intouchbiz.com/template/online_shop.png'),
 
-    'seo_1' => array( 'title' => 'SEM', 'subtitle' => 'Criatividade e originalidade são essenciais para se tornar como pessoas em uma presença online.', 'img' => 'https://www.intouchbiz.com/template/webdesign_1.png'),
+    'seo_1' => array( 'title' => 'SEM', 'subtitle' => 'Optimização para motores de busca (SEO ? Search Engine Optimization).', 'img' => 'https://www.intouchbiz.com/template/webdesign_1.png'),
 
-   	'seo_2' => array( 'title' => 'WEB MARKETING', 'subtitle' => 'A plataforma que o ajuda a gerir os seus contactos e a definir as suas estratégias de Marketing Digital.', 'img' => 'https://www.intouchbiz.com/template/crm.png'),
+   	'seo_2' => array( 'title' => 'WEB MARKETING', 'subtitle' => 'Web marketing e Optimização para motores de busca SEO SEO (Search Engine Optimization).', 'img' => 'https://www.intouchbiz.com/template/crm.png'),
 
-    'seo_3' => array( 'title' => 'Gestão Redes Sociais', 'subtitle' => 'Ao longo do tempo juntamos a melhor equipa de programadores para dar vida a criatividade da nossa equipa de design.', 'img' => 'https://www.intouchbiz.com/template/develop.png'),
+    'seo_3' => array( 'title' => 'Gestão Redes Sociais', 'subtitle' => 'Criação de página noutra rede social a escolha Twitter, Hi 5,Blog etc.', 'img' => 'https://www.intouchbiz.com/template/develop.png'),
       
     'seo_4' => array( 'title' => 'Inteligênçia Artificial', 'subtitle' => 'Ao longo do tempo juntamos a melhor equipa de programadores para dar vida a criatividade da nossa equipa de design.', 'img' => 'https://www.intouchbiz.com/template/develop.png'),
     //-----------------------------------------------------//

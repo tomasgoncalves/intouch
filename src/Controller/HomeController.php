@@ -28,6 +28,7 @@ class HomeController extends AbstractController
         $this->session = $session;
   }
 
+  //Creates and build a form
   public function contacts(Request $request)
   {
     //Form to send data with the style of w3 css    
@@ -66,45 +67,8 @@ class HomeController extends AbstractController
     return $this -> render('lucky/contacts.html.twig', ['page'=> 'contacts', 'form'=> $form ->createView()]);
   }
 
-  public function footer(Request $request)
-  {
-    //Form to send data with the style of w3 css    
-    $mensagem_default = ['message' => ''];//message default to be sent
-
-    //creates a form type
-    $form = $this->createFormBuilder($mensagem_default)
-
-    //Adds the name field
-    ->add('name', TextType::class, [
-        'attr'=>[ 'class' => 'form-control'], 'extra_fields_message' => 'Name',  'required' => false 
-    ])
-    
-    //Adds the email field
-    ->add('email', TextType::class, [
-        'attr'=>[ 'class' => 'form-control'], 'required' => false
-    ])
-    
-    //Adds the subject field 
-    ->add('subject', TextType::class, [
-         'attr'=>[ 'class' => 'form-control'], 'required' => false 
-    ])
-        
-    //Adds the message field
-    ->add('message', TextareaType::class, [
-        'attr'=>[ 'class' => 'form-control'], 'required' => false
-    ])
-    //Adds the send button
-    ->add('send', SubmitType::class, [
-         'attr'=>[ 'class' => 'btn-marg botaoEnviar hvr-sweep-to-left']
-    ])
-
-    ->getForm();
-                   
-    //Renders the array for the main page and renders the form for the body
-    return $this -> render('Lucky/footer.html.twig', ['page'=> 'footer', 'form'=> $form ->createView()]);
-  }
-
-  public function errorContact(Request $request) 
+  //Error form
+  public function errorForm(Request $request) 
   {
     //Form to send data with the style of w3 css    
     $mensagem_default = ['message' => ''];//message default to be sent
@@ -159,28 +123,28 @@ class HomeController extends AbstractController
       //otherwise it puts in the error array the name to print in the base file
       if(!$name)
       {
-        $error[]='name';
+        $error[] = 'name';
       } 
 
       //if the email value is filled, will let 
       //otherwise it puts in the error array the email to print in the base file
       if(!$email)
       {
-        $error[]='email';
+        $error[] = 'email';
       }
 
       //if the subject value is filled, will let 
       //otherwise it puts in the error array the subject to print in the base file
       if(!$subject)
       {
-        $error[]='subject';
+        $error[] = 'subject';
       }    
 
       //if the message value is filled, will let 
       //otherwise it puts in the error array the message to print in the base file
       if(!$message)
       {
-        $error[]='message';
+        $error[] = 'message';
       }
 
       //if the error variable is filled, it returns to the base file
@@ -188,10 +152,10 @@ class HomeController extends AbstractController
       {
         //gives status return which is 0 to make the boolean in the base file and also returns the variable data that contains the array
         return new JsonResponse(array(
-          // status=0 is when it fails and tells you to say the field that failed
-          'status'=>0,
+          // status=0 is when it fails and tells you the field that isn't filled
+          'status' => 0,
           // the variable data contains the name of the errors if it is the missing name returns the name, if it is the email returns the email error, if it is the message it returns the error of the emsage and if it is all returns all, etc ...
-          'data'=>$error,       
+          'data' => $error,       
         )); 
       }
 
@@ -209,14 +173,54 @@ class HomeController extends AbstractController
 
     // Create a message
     $mail = (new \Swift_Message())
-    ->setFrom(['alticedoraul@sapo.pt' => 'Testes Email Intoucbiz'])
-    ->setTo([$email=$form["email"]->getData()])
-    ->setBody($message);
+    ->setFrom(['alticedoraul@sapo.pt' => 'Intoucbiz PT'])
+    ->setTo($email)
+    ->setBody($subject);
 
     // Send the message
     $mailer->send($mail);
-    return new JsonResponse(array('status'=>1));          
+
+    //If status=>1 sends the email
+    return new JsonResponse(array('status' => 1));          
   }
+
+  /*public function footer(Request $request)
+  {
+    //Form to send data with the style of w3 css    
+    $mensagem_default = ['message' => ''];//message default to be sent
+
+    //creates a form type
+    $form = $this->createFormBuilder($mensagem_default)
+
+    //Adds the name field
+    ->add('name', TextType::class, [
+        'attr'=>[ 'class' => 'form-control'], 'extra_fields_message' => 'Name',  'required' => false 
+    ])
+    
+    //Adds the email field
+    ->add('email', TextType::class, [
+        'attr'=>[ 'class' => 'form-control'], 'required' => false
+    ])
+    
+    //Adds the subject field 
+    ->add('subject', TextType::class, [
+         'attr'=>[ 'class' => 'form-control'], 'required' => false 
+    ])
+        
+    //Adds the message field
+    ->add('message', TextareaType::class, [
+        'attr'=>[ 'class' => 'form-control'], 'required' => false
+    ])
+    //Adds the send button
+    ->add('send', SubmitType::class, [
+         'attr'=>[ 'class' => 'btn-marg botaoEnviar hvr-sweep-to-left']
+    ])
+
+    ->getForm();
+                   
+    //Renders the array for the main page and renders the form for the body
+    return $this -> render('/Lucky/footer.html.twig', ['form'=> $form ->createView()]);
+  }*/
 
 
   //Array of the page index
@@ -270,7 +274,7 @@ class HomeController extends AbstractController
   //Array of the page products
   public function products(){
 
-    $product = ['who', 'who', 'who', 'who', 'who'];
+    $product = ['', '', '', '', ''];
       
     return $this->render('/lucky/products.html.twig', [ 
         'product' => $product, 'page' => 'products'

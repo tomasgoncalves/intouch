@@ -26,10 +26,6 @@ portfolio:
   path: /portfolio
   controller: App\Controller\HomeController::portfolio
 
-contacts:
-  path: /contacts
-  controller: App\Controller\HomeController::contacts
-
 accomodation:
   path: /host/accomodation
   controller: App\Controller\HomeController::accomodation
@@ -66,11 +62,14 @@ weCall:
   path: /weCall
   controller: App\Controller\HomeController::weCall
 
-errorContact:
-  path: /errorContact
-  controller: App\Controller\HomeController::errorContact
+contacts:
+  path: /contacts
+  controller: App\Controller\HomeController::contacts
 
-base:
-  path: /base
+errorForm:
+  path: /errorForm
+  controller: App\Controller\HomeController::errorForm
+
+footer:
+  path: /footer
   controller: App\Controller\HomeController::footer
-

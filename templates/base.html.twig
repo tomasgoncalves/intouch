@@ -100,12 +100,12 @@ background: transparent;
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <ul id="languages">
                         <li>
-                            <a href="#">
+                            <a href="#   ">
                                 <!--Flags to translate the page-->
                                 <div class="lang-flag">
-                                    <a href="{{ path('translation', {lang: 'en_EN', page: page}) }}" onclick="$('.w3-overlay').show()"><img style="height: 40px" src="{{asset ('img/pt.png')}}" class="w3-image"></a>
+                                    <a href="{{ path('translation', {lang: 'en_EN', page: page}) }}" onclick="$('.w3-overlay').show()"><img style="height: 40px;" src="{{asset ('img/pt.png')}}" class="w3-image"></a>
 
-                                    <a href="{{ path('translation', {lang: 'pt_PT', page:page}) }}" onclick="$('.w3-overlay').show()"><img style="height: 40px" src="{{asset ('img/uk.png')}}" class="w3-image"></a>
+                                    <a href="{{ path('translation', {lang: 'pt_PT', page:page}) }}" onclick="$('.w3-overlay').show()"><img style="height: 40px;" src="{{asset ('img/uk.png')}}" class="w3-image"></a>
                                 </div>
                             </a>
                         </li>
@@ -164,10 +164,8 @@ background: transparent;
                             </div><!-- /.container-fluid -->
                         </nav>
                     </div> 
-
-
-{% block content %}{% endblock %}
-{% include '/Lucky/footer.html.twig' %}                
+                    {% block content %}{% endblock %}
+                    {% include 'Lucky/footer.html.twig' %}                
                 </div>
             </div>
         </header>
